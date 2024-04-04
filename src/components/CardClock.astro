@@ -1,0 +1,40 @@
+---
+import '@fontsource-variable/kode-mono';
+---
+<div class="grid-shadow relative overflow-hidden row-start-3 col-start-3 flex flex-col flex-wrap justify-center px-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 text-[#38bdf8] text-pretty rounded-3xl">
+    <div id="spotClock1" class="absolute size-72 rounded-full bg-sky-900 opacity-50 blur-md ml-20 mb-64" />
+    <div id="spotClock2" class="absolute size-12 rounded-full bg-blue-800 opacity-70 blur-md ml-24 mt-16" />
+    <p id="time" class="text-[32px] font-bold" />
+    <p id="date" class="text-xs" />
+</div>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const scrolledY = window.scrollY; 
+        const spot1 = document.getElementById('spotClock1');
+        const spot2 = document.getElementById('spotClock2');
+        if (spot1 && spot2) {
+            spot1.style.transform = `translateY(${scrolledY / 3}px)`; 
+            spot2.style.transform = `translateY(${scrolledY / 3}px)`; 
+        }
+    });
+
+    function updateDateTime() {
+        const now = new Date();
+        const time = now.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit' });
+        const date = now.toLocaleDateString("es-ES", { weekday: 'long' }) + ', ' + now.toLocaleDateString("es-ES", { day: 'numeric' }) + ' de ' + now.toLocaleDateString("es-ES", { month: 'long' })
+
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+        
+        if (timeElement) {
+            timeElement.textContent = time;
+        }
+
+        if (dateElement) {
+            dateElement.textContent = date;
+        }
+    }
+
+    setInterval(updateDateTime, 1000);
+</script>

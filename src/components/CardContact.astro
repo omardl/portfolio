@@ -1,0 +1,43 @@
+---
+import Contact from '../components/Contact.astro'
+
+import GitHubIcon from '../icons/GitHub.astro'
+import GmailIcon from '../icons/Gmail.astro'
+import LinkedInIcon from '../icons/LinkedIn.astro'
+
+const CONTACT = [
+    {
+        icon: GmailIcon,
+        name: 'Mail',
+        link: 'mailto:omardelgadlop@gmail.com',
+        grid_col: 2,
+        grid_row: 4
+    },
+    {
+        icon: LinkedInIcon,
+        name: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/omar-d-l',
+        grid_col: 3,
+        grid_row: 4
+    },
+    {
+        icon: GitHubIcon,
+        name: 'GitHub',
+        link: 'https://github.com/omardl',
+        grid_col: 4,
+        grid_row: 4
+    },
+]
+---
+{
+    CONTACT.map(contact => (   
+        <div class={`row-start-${contact.grid_row} ol-start-${contact.grid_col} flex flex-row justify-center items-center `}>                    
+            <Contact href={contact.link} >    
+                <contact.icon />
+                {contact.name}   
+            </Contact>
+        </div>
+    ))
+}               
+
+

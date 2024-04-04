@@ -1,0 +1,52 @@
+---
+interface Props {
+	text1: string;
+	text1_span: string;
+    text2: string;
+    text2_span: string;
+    text3: string;
+    text3_span: string;
+}
+
+const { text1, text1_span, text2, text2_span, text3, text3_span } = Astro.props;
+---
+
+<div class="grid-shadow col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[#212121] border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
+    <div id="spotSub1" class="absolute size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
+    
+    <div id="spotSub2" class="absolute size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
+    
+    <div id="spotSub3" class="absolute size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
+    
+    <div id="spotSub4" class="absolute size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
+    
+    <h2 class="mx-6 lg:text-xl text-wrap max-w-[700px]"> 
+        <span class="opacity-80"> {text1} </span> 
+        <span class="text-sky-400"> {text1_span} </span> </a>
+        <span class="opacity-80"> {text2} </span> 
+        <span class="text-sky-400"> {text2_span} </span>
+        <br>
+        <br>
+        <span class="opacity-80"> {text3} </span> 
+        <span class="text-sky-400"> {text3_span} </span>
+    </h2>
+</div>
+
+
+<script>
+  
+  window.addEventListener('scroll', function() {
+      const scrolledY = window.scrollY; 
+      const spot1 = document.getElementById('spotSub1');
+      const spot2 = document.getElementById('spotSub2');
+      const spot3 = document.getElementById('spotSub3');
+      const spot4 = document.getElementById('spotSub4');
+      if (spot1 && spot2 && spot3 && spot4) {
+          spot1.style.transform = `translateY(${scrolledY / 3}px)`; 
+          spot2.style.transform = `translateY(${scrolledY / 3}px)`; 
+          spot3.style.transform = `translateY(${scrolledY / 3}px)`; 
+          spot4.style.transform = `translateY(${scrolledY / 3}px)`; 
+      }
+  });
+
+</script>

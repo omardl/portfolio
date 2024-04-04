@@ -1,0 +1,45 @@
+---
+import BuildingItem from '../icons/Building.astro'
+import CalendarItem from '../icons/Calendar.astro'
+
+interface Props {
+    date: string
+    img: string
+    location: string
+    place: string
+    title: string
+}
+
+const { 
+    date, 
+    img,
+    location, 
+    place,
+    title
+} = Astro.props
+---
+
+<span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-1 ring-blue-700 bg-white text-blue-700">
+    <CalendarItem class="size-4"/>
+</span>
+
+<time class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+    {date}
+</time>
+
+<div class="grid-education mt-4 grid-rows-1 grid-cols-3 gap-6">
+    <div class="grid-shadow group flex items-center col-start-1 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
+        <h3 class="text-lg font-semibold text-sky-700 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+            {title}
+        </h3>
+    </div>
+
+    <div class="grid-shadow flex items-end justify-center col-start-2 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size:cover;`}>
+        <h5 class="text-lg flex flex-row items-center justify-center p-1 w-full gap-2 font-semibold text-sky-200  backdrop-blur-sm rounded-br-3xl rounded-bl-3xl" >
+            <BuildingItem class="size-6" /> 
+            <span>
+                {place}
+            </span>
+        </h5>
+    </div>
+</div>

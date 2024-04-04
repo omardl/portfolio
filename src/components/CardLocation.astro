@@ -1,0 +1,25 @@
+---
+interface Props {
+    img: string;
+}
+
+const { img } = Astro.props;
+---
+<div class="grid-shadow pb-2 col-start-5 row-start-1 row-span-4 rounded-3xl overflow-hidden transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}');`}>
+    <div class="flex flex-row items-center justify-center gap-x-5">
+        
+        <div class="flex flex-col items-center justify-center">
+            <div class="size-7 mt-2 rounded-t-full rounded-br-full bg-[#dc2626] -rotate-45 z-20 after:absolute after:size-3 after:rounded-full after:bg-[#bebdbd] after:m-2">
+            </div>
+               
+            <div class="rounded-full size-3 bg-[#bebdbd] [transform:rotateX(55deg)] z-10 pulse after:absolute after:size-10 after:rounded-full after:shadow-location-pulse after:-inset-x-[14px] after:-inset-y-[14px] after:animate-[pulsate_1s_ease-out_infinite]">
+            </div>
+        </div>
+        
+        <div class="mt-3">
+            <h5 class="text-lg font-semibold text-[#dc2626]">
+                Vigo, Pontevedra
+            </h5>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+---
+import NavItem from '../components/NavItem.astro'
+
+import AboutMeIcon from '../icons/AboutMe.astro'
+import BooksIcon from '../icons/Books.astro'
+import ExperienceIcon from '../icons/Experience.astro'
+import HomeIcon from '../icons/Home.astro'
+import LogoIcon from '../icons/Logo2.astro'
+import ProyectsIcon from '../icons/Proyects.astro'
+
+const NAVs = [
+    {
+        title: 'Inicio',
+        link: '#inicio',
+        icon: HomeIcon
+    }, 
+    {
+        title: 'Formación',
+        link: '#formacion',
+        icon: BooksIcon
+    },
+    {
+        title: 'Experiencia',
+        link: '/#experiencia',
+        icon: ExperienceIcon
+    },
+    {
+        title: 'Proyectos',
+        link: '#proyectos',
+        icon: ProyectsIcon
+    },
+    {
+        title: 'Sobre mi',
+        link: '#sobremi',
+        icon: AboutMeIcon
+    }
+]
+---
+
+<header class=" flex items-center justify-between fixed top-0 z-10 right-0 left-0 py-2 border-b-2 border-[#030744]/90 backdrop-blur-sm w-[1240px] mx-auto">
+    
+    <LogoIcon class="size-16" /> 
+
+    <nav class="flex justify-center gap-x-4 md:gap-x-8 xl:gap-x-10 opacity-70">
+        {
+            NAVs.map(navItem => (  
+                <NavItem link={navItem.link}>
+                    <navItem.icon class="size-6"/>
+                    {navItem.title}
+                </NavItem>   
+            ))
+        } 
+    </nav>
+</header>

@@ -1,0 +1,31 @@
+---
+import LearningItem from "./EducationItem.astro"
+
+const LEARNING = [
+    {
+        date: 'Actualmente...',
+        img: 'teleco.webp',
+        location: 'Vigo, Pontevedra',
+        place: 'Universidad de Vigo',
+        title: 'Grado en Ingeniería de Tecnologías de Telecomunicación. Especialización en la rama de Telemática'
+    },
+
+    {
+        date: 'Finalizado en 2019',
+        img: 'farixa.webp',
+        location: 'Orense',
+        place: 'CIFP A Farixa',
+        title: 'FP Superior en Sistemas de Telecomunicación e Informáticos'
+    },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">   
+    {
+        LEARNING.map(learning => (
+            <li class="mb-10 ms-6">  
+                <LearningItem {... learning} />
+            </li>    
+        ))
+    }            
+</ol>
