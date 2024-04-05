@@ -52,6 +52,16 @@ export default {
 			},
 
 			keyframes: {
+				backgroundShine: {
+					from: {
+						backgroundPosition: "0 0"
+					},
+					
+					to: {
+						backgroundPosition: "-200% 0"
+					},
+				},
+
 				pulsate: {
 					'0%': {
 						transform: 'scale(0.1, 0.1)',
@@ -63,20 +73,20 @@ export default {
 					},
 					
 					'100%': {
-						transform: 'scale(1.2, 1.2)',
+						transform: 'scale(1.3, 1.3)',
 						opacity: '0'
 					},
 				},
 
-				backgroundShine: {
-					from: {
-						backgroundPosition: "0 0"
+				tilt: {
+					'0%': {
+						transform: 'scale(1, 1)',
 					},
 					
-					to: {
-						backgroundPosition: "-200% 0"
+					'100%': {
+						transform: 'scale(1.3, 1.3)',
 					},
-				},
+				}
 			},
 
 			rotate: {

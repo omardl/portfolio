@@ -1,8 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg"  width="194.000000pt" height="181.000000pt" viewBox="0 0 194.000000 181.000000" preserveAspectRatio="xMidYMid meet">
     <defs>
         <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:rgb(87, 97, 178);stop-opacity:1" />
-            <stop offset="100%" style="stop-color:rgb(31, 197, 168);stop-opacity:1" />
+            <stop offset="0%" style="stop-color:rgb(39, 18, 118);stop-opacity:1" />
+            <stop offset="15%" style="stop-color:rgb(0, 55, 255);stop-opacity:1" />
+            <stop offset="40%" style="stop-color:rgb(9, 109, 195);stop-opacity:1" />
+            <stop offset="80%" style="stop-color:rgb(78, 190, 255);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(119, 243, 242);stop-opacity:1" />
         </linearGradient>
     </defs>
     <g transform="translate(0.000000,181.000000) scale(0.100000,-0.100000)" stroke="none">

@@ -10,9 +10,6 @@ import '@fontsource-variable/roboto-mono';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-import Satellite from '../icons/Satellite.astro'
-
 ---
 
 <!doctype html>
@@ -27,8 +24,7 @@ import Satellite from '../icons/Satellite.astro'
 	</head>
 
 	<body>
-    <div id="mouse-effect" class="glowing-mouse">
-      <Satellite class="size-12 orbiting-icon"/>
+    <div id="mouse" class="glowing-mouse blur-2xl size-72 rounded-full">
     </div>
 
 		<div id="background-container retro-gradient animation: gradient 15s ease infinite" class="fixed inset-0 z-[-10] pointer-events-none"> 
@@ -45,23 +41,45 @@ import Satellite from '../icons/Satellite.astro'
       <slot />
       <Footer />
       <script>
-
         if (typeof window !== "undefined") {
           document.addEventListener("DOMContentLoaded", function () {
-            const follower = document.getElementById('mouse-effect');
-            
+            const follower = document.getElementById('mouse');
+
             if (follower) {
               document.addEventListener("mousemove", function (event) {
-                const center_position = 125
-                const x = event.clientX + center_position + window.scrollX;
-                const y = event.clientY + center_position + window.scrollY;
+                const x = event.clientX + window.scrollX;
+                const y = event.clientY + window.scrollY;
                 follower.style.left = x + 'px';
                 follower.style.top = y + 'px';
-
               });
             }
           });
         }
+      </script>
+      <script>
+        window.addEventListener('scroll', function() {
+          const follower = document.getElementById('mouse') ;
+
+          if (follower) {
+            follower.style.opacity = '0';
+
+            const scrolledY = window.scrollY; 
+
+            document.addEventListener('mouseover', function(event) {
+              follower.style.top = scrolledY + event.clientY + 'px';
+            })
+
+            setTimeout(function() {
+                follower.style.opacity = '1';
+            }, 1000); 
+          }
+          
+          
+    
+
+            
+          
+        });
       </script>
 	</body>
 </html>
@@ -81,6 +99,7 @@ import Satellite from '../icons/Satellite.astro'
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+    overflow-x: hidden;
 	}
 
   /** HEART ICON */
@@ -173,13 +192,11 @@ import Satellite from '../icons/Satellite.astro'
   /** MOUSE GLOW */
   .glowing-mouse  {
     position: absolute;
-    border: solid 16px;
-    border-color: rgba(0, 0, 255, 0.3);
-    border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
-    transform: translate(-147px, -147px);
-    background: radial-gradient(circle, rgba(0, 0, 255, 0.3) 0%, rgba(0, 0, 255, 0) 80%);
+    z-index: -1;
+    transform: translate(-142px, -140px);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(0, 0, 255, 0) 100%);
+    transition: opacity 1s ease-in-out;
   }
 
   .retro-gradient {
@@ -260,13 +277,13 @@ import Satellite from '../icons/Satellite.astro'
   .grid-education {
     display: grid;
     grid-template-columns: 590px 589.5px;
-    grid-template-rows: 150px;
+    grid-template-rows: 200px;
   }
 
   .grid-experience {
     display: grid;
-    grid-template-columns: 530px 253px 253px;
-    grid-template-rows: 150px 50px;
+    grid-template-columns: 590px 589.5px;
+    grid-template-rows: 240px;
   }
 
   .grid-projects-container {
