@@ -11,14 +11,14 @@ interface Props {
 const { text1, text1_span, text2, text2_span, text3, text3_span } = Astro.props;
 ---
 
-<div class="grid-shadow col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[#212121] border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotSub1" class="absolute size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
+<div class="shadow-grid hover:shadow-grid-hover col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[#212121] border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
+    <div id="spotSub1" class="absolute duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
     
-    <div id="spotSub2" class="absolute size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
+    <div id="spotSub2" class="absolute duration-1000 size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
     
-    <div id="spotSub3" class="absolute size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
+    <div id="spotSub3" class="absolute duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
     
-    <div id="spotSub4" class="absolute size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
+    <div id="spotSub4" class="absolute duration-1000 size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
     
     <h2 class="mx-6 lg:text-xl text-wrap max-w-[700px]"> 
         <span class="opacity-80"> {text1} </span> 

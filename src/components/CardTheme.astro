@@ -1,10 +1,57 @@
-<div class="grid-shadow grid-col-2 grid-row-3 flex items-center justify-center border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
-  <label class="inline-flex items-center cursor-pointer">
-    <input type="checkbox" value="" class="sr-only peer">
-    <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+<div class="shadow-grid hover:shadow-grid-hover grid-col-2 grid-row-3 flex flex-col items-center justify-center gap-y-2.5 border-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
+  <div class="flex flex-row justify-center items-center">
+    <span class="text-lg text-sky-400/80"> Dark mode: </span>
+    <span id="dark_toggle" class="text-lg text-sky-400/80"> </span>
+  </div>
+
+  <label class="inline-block w-[60px] h-[34px] relative">
+    <input id="themeToggle" type="checkbox" class="peer opacity-0 size-0">
+    <span class="slider absolute cursor-pointer inset-0 rounded-full duration-500 bg-blue-300/40 before:absolute before:content-[''] before:size-[24px] before:duration-500 before:bg-[linear-gradient(40deg,#ff0080,#ff8c00_70%)] before:left-[10%] before:top-1/2 before:rounded-full before:-translate-y-1/2 peer-checked:bg-[#303136] peer-checked:before:translate-x-full peer-checked:before:bg-[linear-gradient(40deg,#303136,#303136_70%)] peer-checked:before:shadow-moon-shadow"></span>
   </label>
 </div>
-  
 
-<!-- LINK LINK LINK -->
-<!-- https://uiverse.io/Pradeepsaranbishnoi/strong-treefrog-90  -->
+<script>
+
+  let checkbox = document.getElementById("themeToggle") as HTMLInputElement;
+
+  if (checkbox) {
+
+    if (localStorage.getItem('color-theme') === 'dark' || document.documentElement.classList.contains('dark')) {
+      checkbox.checked = true;
+    } else {
+      checkbox.checked = false;
+    }
+    
+    checkbox.addEventListener('change', function() {
+      const check_text = document.getElementById('dark_toggle') as HTMLInputElement;
+           
+      // if set via local storage previously
+      if (localStorage.getItem('color-theme')) {
+        if (localStorage.getItem('color-theme') === 'light') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+          check_text.textContent = 'On'
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+          check_text.textContent = 'Off'
+        }
+
+      // if NOT set via local storage previously
+      } else {
+        
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+          check_text.textContent = 'Off'
+        
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+          check_text.textContent = 'On'
+        }
+      } 
+    });
+  }
+
+</script>

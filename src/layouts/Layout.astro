@@ -21,6 +21,13 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+    <script>
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+      } else {
+          document.documentElement.classList.remove('dark')
+      }
+    </script>
 	</head>
 
 	<body>
@@ -29,60 +36,57 @@ import Footer from '../components/Footer.astro';
 
 		<div id="background-container retro-gradient animation: gradient 15s ease infinite" class="fixed inset-0 z-[-10] pointer-events-none"> 
       <div class="background-layer"></div>
-      <div class="wave bg-blue-600/25"></div>
-      <div class="wave bg-blue-600/25"></div>
-      <div class="wave bg-blue-600/25"></div>
-      <!-- retro-gradient -> bg-gradient -->
-      
-      <!--div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div></div-->
+      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
+      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
+      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
     </div>
     
 		<Header />
-      <slot />
-      <Footer />
-      <script>
-        if (typeof window !== "undefined") {
-          document.addEventListener("DOMContentLoaded", function () {
-            const follower = document.getElementById('mouse');
-
-            if (follower) {
-              document.addEventListener("mousemove", function (event) {
-                const x = event.clientX + window.scrollX;
-                const y = event.clientY + window.scrollY;
-                follower.style.left = x + 'px';
-                follower.style.top = y + 'px';
-              });
-            }
-          });
-        }
-      </script>
-      <script>
-        window.addEventListener('scroll', function() {
-          const follower = document.getElementById('mouse') ;
-
-          if (follower) {
-            follower.style.opacity = '0';
-
-            const scrolledY = window.scrollY; 
-
-            document.addEventListener('mouseover', function(event) {
-              follower.style.top = scrolledY + event.clientY + 'px';
-            })
-
-            setTimeout(function() {
-                follower.style.opacity = '1';
-            }, 1000); 
-          }
-          
-          
     
+    <slot />
+    
+    <Footer />
 
-            
-          
-        });
-      </script>
 	</body>
 </html>
+
+<!-- FUNCTION FOR MOUSE GLOW EFFECT FOLLOW -->
+<script>
+  if (typeof window !== "undefined") {
+    document.addEventListener("DOMContentLoaded", function () {
+      const follower = document.getElementById('mouse');
+
+      if (follower) {
+        setTimeout(function() {
+          follower.style.opacity = '1';
+        }, 1000);
+        document.addEventListener("mousemove", function (event) {
+          follower.style.left = event.clientX + window.scrollX + 'px';
+          follower.style.top = event.clientY + window.scrollY + 'px';
+        });
+      }
+    });
+  }
+</script>
+
+<!-- FUNCTION FOR MOUSE GLOW EFFECT REACTION WHEN SCROLL -->
+<script>
+  window.addEventListener('scroll', function() {
+    const follower = document.getElementById('mouse') ;
+
+    if (follower) {
+      follower.style.opacity = '0';
+
+      document.addEventListener('mousemove', function(event) {
+        follower.style.top = window.scrollY + event.clientY + 'px';
+
+        setTimeout(function() {
+          follower.style.opacity = '1';
+        }, 1000);
+      }) 
+    }  
+  });
+</script>
 
 <style is:global>
 	
@@ -130,20 +134,6 @@ import Footer from '../components/Footer.astro';
     100% { transform: translateY(15px); opacity: 0;}
   }
 
-  /** SATELLITE CURSOR ORBIT */
-  .orbiting-icon {
-    animation: orbit 4s linear infinite; /* Adjust duration and timing function as needed */
-  }
-
-  @keyframes orbit {
-    from {
-      transform: rotate(0deg) translate(-80px) rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg) translate(-80px) rotate(-360deg);
-    }
-  }
-
   /** SHINE EFFECT HOVER IMAGES */
   .shine-hover-effect:after {
     background: linear-gradient(
@@ -154,7 +144,6 @@ import Footer from '../components/Footer.astro';
       rgba(255, 255, 255, 0.0) 100%
     );
   }
-  
   
   .shine-hover-effect:hover:after {
     opacity: 1;
@@ -267,7 +256,7 @@ import Footer from '../components/Footer.astro';
     }
 }
   
-  /** GRID STYLES */
+  /** GRID SECTION STYLES */
   .grid-container {
     display: grid;
     grid-template-columns: 280px 194px 196px 194px 280px;
@@ -286,46 +275,10 @@ import Footer from '../components/Footer.astro';
     grid-template-rows: 240px;
   }
 
-  .grid-projects-container {
+  .grid-projects {
     display: grid;
-    grid-template-columns: 420px;
-    grid-template-rows: 250px;
+    grid-template-columns: 590px 589.5px;
+    grid-template-rows: 30px 240px 60px;
   }
-
-  /** SHADOW MONOCROMATIC */
-  .grid-shadow {
-    box-shadow: 5px 5px 10px rgb(25, 25, 25), -5px -5px 10px rgb(60, 60, 60);
-  }
-
-  .grid-shadow:hover {
-    box-shadow: 0px 0px 5px rgb(191, 219, 254), 0px 0px 20px rgb(29, 78, 216);
-  }
-
-  /** EFECTO ESCRITURA */
-
-  .typewriter {
-    color: #fff;
-    font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(30, end),
-      blink-caret .5s step-end infinite;
-  }
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange }
-} 
 
 </style>

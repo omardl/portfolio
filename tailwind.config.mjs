@@ -2,12 +2,15 @@
 
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	darkMode: 'selector',
+	darkMode: 'class',
 	theme: {
 		extend: {
 
 			boxShadow: {
 				'location-pulse': '0 0 1px 2px #dc2626',
+				'grid': '5px 5px 10px rgb(25, 25, 25), -5px -5px 10px rgb(60, 60, 60)',
+				'grid-hover': '0px 0px 5px rgb(191, 219, 254), 0px 0px 20px rgb(29, 78, 216)',
+				'moon-shadow': 'inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb'
 			},
 
 			colors: {
@@ -86,6 +89,20 @@ export default {
 					'100%': {
 						transform: 'scale(1.3, 1.3)',
 					},
+				},
+
+				typing: {
+					'0%': {
+						opacity: '0'
+					},
+
+					'50%': {
+						opacity: '0.6'
+					},
+
+					'100%': {
+						opacity: '0'
+					}
 				}
 			},
 
@@ -94,6 +111,8 @@ export default {
 			}
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('tailwindcss-animated')
+	],
 }
 

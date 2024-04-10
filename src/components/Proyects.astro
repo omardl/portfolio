@@ -3,7 +3,7 @@ import AngularIcon from '../icons/Angular.astro';
 import ArduinoIcon from '../icons/Arduino.astro';
 import DockerIcon from '../icons/Docker.astro';
 import GitHubIcon from '../icons/GitHub.astro';
-import LinkIcon from '../icons/Link.astro';
+import CodeIcon from '../icons/Code.astro';
 import MongoDBIcon from '../icons/MongoDB.astro';
 import MosquittoIcon from '../icons/Mosquitto.astro';
 import NFCIcon from '../icons/NFC.astro';
@@ -15,238 +15,314 @@ import SolidityIcon from '../icons/Solidity.astro';
 import SpringBootIcon from '../icons/SpringBoot.astro';
 import TensorFlowIcon from '../icons/TensorFlow.astro';
 
+const IMAGES = {
+    barcoSolar1: {
+        title: 'Web',
+        description: 'NodeRed dashboard for sensor responses',
+        image: '/project_images/barcoSolar.webp'
+    }, 
+
+    barcoSolar2: {
+        title: 'Scheme',
+        description: 'Scheme of technologies and protocols used in the project',
+        image: '/project_images/barcoSolar2.webp'
+    },
+
+    SOFASnapshot: {
+        title: 'SOFA snapshot',
+        description: 'Bowel preview of SOFA simulation',
+        image: 'project_images/TFG.webp'
+    }
+
+    /** SOFA 2: coming soon */
+}
+
 const TAGS = {
     Angular: {
         name: 'Angular',
         class: 'text-Angular-color bg-Angular-bg border-Angular-color',
-        icon: AngularIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#DE002D_0%,#590113_50%,#DE002D_100%)]',
+        icon: AngularIcon
     },
 
     Arduino: {
         name: 'Arduino',
         class: 'text-Arduino-color bg-Arduino-bg border-Arduino-color',
-        icon: ArduinoIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#02acbf_0%,#013036_50%,#02acbf_100%)]',    
+        icon: ArduinoIcon
     },
 
     Docker: {
         name: 'Docker',
         class: 'text-Docker-color bg-Docker-bg border-Docker-color',
-        icon: DockerIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#1D63ED_0%,#0c2659_50%,#1D63ED_100%)]',    
+        icon: DockerIcon
     },
 
     MongoDB: {
         name: 'MongoDB',
         class: 'text-MongoDB-color bg-MongoDB-bg border-MongoDB-color',
-        icon: MongoDBIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#00ed64_0%,#00461E_50%,#00ed64_100%)]',    
+        icon: MongoDBIcon
     },
 
     Mosquitto: {
         name: 'Mosquitto',
         class: 'text-Mosquitto-color bg-Mosquitto-bg border-Mosquitto-color',
-        icon: MosquittoIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#de8002_0%,#663b01_50%,#de8002_100%)]',    
+        icon: MosquittoIcon
     },
 
     NFC: {
         name: 'NFC',
         class: 'text-NFC-color bg-NFC-bg border-NFC-color',
-        icon: NFCIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#3a80c9_0%,#193859_50%,#3a80c9_100%)]',    
+        icon: NFCIcon
     },
 
     NodeJS: {
         name: 'NodeJS',
         class: 'text-NodeJS-color bg-NodeJS-bg border-opacity-100',
-        icon: NodeJSIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#70d156_0%,#35592C_50%,#70d156_100%)]',    
+        icon: NodeJSIcon
     },
 
     NodeRed: {
         name: 'NodeRed',
         class: 'text-NodeRed-color bg-NodeRed-bg border-NodeRed-color',
-        icon: NodeRedIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#c90000_0%,#660101_50%,#c90000_100%)]',    
+        icon: NodeRedIcon
     },
 
     Python: {
         name: 'Python',
         class: 'text-Python-color bg-Python-bg border-Python-color',
-        icon: PythonIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#e3bb02_0%,#655300_50%,#e3bb02_100%)]',    
+        icon: PythonIcon
     },
 
     SOFA: {
         name: 'SOFA',
         class: 'text-SOFA-color bg-SOFA-bg border-SOFA-color',
-        icon: SOFAIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#e84e1b_0%,#6e240b_50%,#e84e1b_100%)]',    
+        icon: SOFAIcon
     },
 
     Solidity: {
         name: 'Solidity',
         class: 'text-Solidity-color bg-Solidity-bg border-Solidity-color',
-        icon: SolidityIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#6259d4_0%,#2b275c_50%,#6259d4_100%)]',    
+        icon: SolidityIcon
     },
 
     SpringBoot: {
         name: 'SpringBoot',
         class: 'text-SpringBoot-color bg-SpringBoot-bg border-SpringBoot-color',
-        icon: SpringBootIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#81d936_0%,#325415_50%,#81d936_100%)]',    
+        icon: SpringBootIcon
     },
 
     TensorFlow: {
         name: 'TensorFlow',
         class: 'text-TensorFlow-color bg-TensorFlow-bg border-TensorFlow-color',
-        icon: TensorFlowIcon,
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#FF8C00_0%,#4f2c02_50%,#FF8C00_100%)]',    
+        icon: TensorFlowIcon
     }
 }
 
+/**
+ * listado:
+ * 1. tfg
+ * 2. ancora
+ * 3. nft
+ * 4. rest api
+ * 5.lpro
+ * 6. rsfm
+ * 7. seg B ¿?
+ */
 const PROJECTS = [
     {
         title: "TFG",
         description: "Parametrización de un modelo de intestino",
-        image: "/project_images/SOFA_snapshot.webp",
-        link: "#",
-        git: "Próximamente . . .",
+        image: '/project_images/TFG.webp',
+        link: '',
+        git: '',
         tags: [TAGS.SOFA, TAGS.Python],
     },
 
     {
         title:"NodeSec",
         description: "Sistema de control de aforo basado en blockchain y automatizado, enfocado a eventos masivos. Capacity control system based on blockchain and automated, focused on massive events.",
-        image: "/",
-        link: "#",
-        git: "#",
+        image: '',
+        link: '',
+        git: '',
         tags: [TAGS.Arduino, TAGS.Docker, TAGS.MongoDB, TAGS.NFC, TAGS.NodeRed, TAGS.Python, TAGS.SpringBoot, TAGS.TensorFlow],
     },
 
     {
         title:"Barco solar",
         description: "Diseño y programacion de las ¿comunicaciones? de un barco solar pilotado de forma remota. Configuración de sensores, protocolo de comunicación IoT y diseño de la web que mostrará la información obtenida en tiempo real.",
-        image: "/project_images/BarcoSolar.webp",
-        link: "#",
-        git: "#",
+        image: '/project_images/barcoSolar.webp',
+        link: '',
+        git: '',
         tags: [TAGS.Arduino, TAGS.Docker, TAGS.Mosquitto, TAGS.NodeRed, TAGS.Python],
     },
 
     {
         title: "Mint NFTs",
         description: "Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.",
-        image: '/',
-        link: '#',
-        git: '#',
+        image: '',
+        link: '',
+        git: '',
         tags: [TAGS.Angular, TAGS.Solidity],
     },
 
     {
         title: "Prueba técnica para el puesto de desarrollador Android y Kotlin Jr.",
         description: "Desarrollo de una aplicación Android sencilla mediante Kotlin, Jetpack Compose y arquitectura MVI.",
-        image: '/',
-        git: '#',
+        image: '',
+        git: '',
         tags: [],
     },
 
     {
         title: "Shop",
         description: "Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.",
-        image: '/',
-        link: '#',
-        git: '#',
+        image: '',
+        link: '',
+        git: '',
         tags: [TAGS.Angular, TAGS.NodeJS],
     },
 
     {
         title: 'Seg',
-        description: 'Desarrollo de una aplicación cliente y servidor que permitan el almacenamiento encriptado de archivos y su recuperación de manera segura, mediante certificado'
+        description: 'Desarrollo de una aplicación cliente y servidor que permitan el almacenamiento encriptado de archivos y su recuperación de manera segura, mediante certificado',
+        image: '',
+        link: '',
+        git: '',
+        tags: []
     }
 ]
 ---
 
 {/*
+
+SPAN BUENO:
+
+<span class={`flex flex-row items-center gap-x-2 text-xs font-medium me-2 my-2 px-2.5 py-0.5 rounded-full border text-opacity-100 bg-opacity-100 ${tag.class} `}>
+                            <tag.icon class={`size-6 bg-slate-50 rounded-full border ${tag.class}`}/> {tag.icon.name}
+</span>     
+*/}
 {
     PROJECTS.map(project => (
-        <article>
-            <h3 class="text-lg font-semibold text-sky-700 mb-4">{project.title}</h3>
-            <p class="text-base font-normal text-blue-300 text-pretty mb-8">{project.description}</p>
-            <div class="gap-x-4 mt-4 mb-4">
-                {project.tags.map((tag) => (      
-                    <span class={`flex flex-row inline-flex items-center gap-x-2 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full border text-opacity-100 bg-opacity-100 ${tag.class} `}>
-                        <tag.icon class={`size-6 bg-slate-50 rounded-full border ${tag.class}`}/> {tag.icon.name}
-                    </span>            
-                ))}
+        <div class="shadow-grid hover:shadow-grid-hover grid-projects group grid-rows-2 p-6 my-12 grid-cols-2 gap-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
+            <div class="row-start-1 col-start-1 col-span-2 flex items-center justify-center">
+                <span class="row-start-1 col-start-1 col-span-2 text-2xl font-semibold text-sky-300">
+                    {project.title}
+                </span>
             </div>
-            <div class="w-full md:w-1/2">
-                <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                    <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={project.image} />
+
+            <div class="row-start-2 row-span-2 col-start-1 flex flex-col gap-y-6 justify-center border-[#212121] border-[3px] rounded-3xl">
+                <span class="text-lg font-semibold text-sky-600 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+                    {project.description}
+                </span>  
+                <div class="h-[1px] bg-sky-400 "></div>
+                <div class="gap-x-4 mx-4 flex flex-wrap text-pretty">
+                    {project.tags.map((tag) => (        
+                        <span class="flex justify-center relative my-2 inline-flex h-[36px] overflow-hidden rounded-full p-0.5" >
+                            <span class={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] ${tag.bg_gradient}`} />
+                            <div class="inline-flex items-center justify-center px-3 py-1 gap-x-2 text-slate-50 bg-[#212121] rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap">
+                                <tag.icon class={`size-7 bg-slate-50 rounded-full border-[2px] ${tag.class}`}/> {tag.icon.name}
+                            </div>
+                        </span>       
+                    ))}    
                 </div>
             </div>
-        </article>
+            
+            <div class="relative flex flex-col items-center row-start-2 col-start-2 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+                    <img class="transition duration-500 md:group-hover:scale-95" loading="lazy" src={project.image} />
+            </div>
+
+            <div class="flex flex-row items-center justify-evenly col-start-2 row-start-3">
+                <a href={project.git} class="shadow-grid hover:shadow-grid-hover opacity-80 bg-[linear-gradient(110deg,#07090D,45%,#4D4B4B,55%,#07090D)] border border-white/30 animate-[backgroundShine_3s_linear_infinite] bg-[length:250%_100%] rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:text-sky-400 hover:border-sky-400" target="_blank" rel="noopener noreferrer">
+                    <GitHubIcon class="size-5" />
+                    GitHub
+                </a>
+                <a href={project.link} class="shadow-grid hover:shadow-grid-hover opacity-80 bg-[linear-gradient(110deg,#07090D,45%,#4D4B4B,55%,#07090D)] border border-white/30 animate-[backgroundShine_3s_linear_infinite] bg-[length:250%_100%] rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:text-sky-400 hover:border-sky-400" target="_blank" rel="noopener noreferrer">
+                    <CodeIcon class="size-5" />
+                    Preview
+                </a>
+            </div>
+        </div>                                                                  
     ))
-} 
-*/}
+}
 
 
-
-
-    {
-        PROJECTS.map(project => (
-        <div class="grid-projects-container grid-cols-2 grid-rows-3">
-            <article class="space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-                <div class="w-full md:w-1/2">
-                    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                        <img alt="Project image not loaded" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={project.image} />
-                    </div>
-                </div>
-    
-                <div class="w-full md:w-1/2 md:max-w-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                        {project.title}
-                    </h3>
-                </div>
-            </article>
-        </div>
-        ))
+<!--div id="carousel-container" class="relative w-full" data-carousel="static">
+    < Carousel wrapper >
+    <div id="carousel-items" class="relative h-56 overflow-hidden rounded-lg md:h-96">
+      < Carousel items will be dynamically generated here >
+    </div>
+    < Slider indicators >
+    <div id="slider-indicators" class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+      < Slider indicators will be dynamically generated here >
+    </div>
+    < Slider controls >
+    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+      < Previous button content >
+    </button>
+    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+      < Next button content >
+    </button>
+  </div-->
+  
+  <!--script>
+    // Your JavaScript code to dynamically generate carousel items and indicators
+  
+    // Sample items array (replace this with your actual items array)
+    const items = [
+      { images: ["/docs/images/carousel/carousel-1.svg", "/docs/images/carousel/carousel-2.svg"] },
+      { images: ["/docs/images/carousel/carousel-3.svg", "/docs/images/carousel/carousel-4.svg", "/docs/images/carousel/carousel-5.svg"] }
+      // Add more items as needed
+    ];
+  
+    const carouselItemsContainer = document.getElementById('carousel-items');
+    const sliderIndicatorsContainer = document.getElementById('slider-indicators');
+  
+    // Function to generate carousel items
+    function generateCarouselItems() {
+      carouselItemsContainer.innerHTML = ''; // Clear existing items
+  
+      items.forEach((item, index) => {
+        const carouselItem = document.createElement('div');
+        carouselItem.classList.add('hidden', 'duration-700', 'ease-in-out');
+        if (index === 0) {
+          carouselItem.dataset.carouselItem = 'active';
+        } else {
+          carouselItem.dataset.carouselItem = '';
+        }
+  
+        item.images.forEach(image => {
+          const img = document.createElement('img');
+          img.src = image;
+          img.classList.add('absolute', 'block', 'w-full', '-translate-x-1/2', '-translate-y-1/2', 'top-1/2', 'left-1/2');
+          img.alt = '...';
+          carouselItem.appendChild(img);
+        });
+  
+        carouselItemsContainer.appendChild(carouselItem);
+  
+        // Generate slider indicators
+        const indicatorButton = document.createElement('button');
+        indicatorButton.type = 'button';
+        indicatorButton.classList.add('w-3', 'h-3', 'rounded-full');
+        indicatorButton.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+        indicatorButton.setAttribute('aria-label', `Slide ${index + 1}`);
+        indicatorButton.dataset.carouselSlideTo = index;
+        sliderIndicatorsContainer.appendChild(indicatorButton);
+      });
     }
+  
+    generateCarouselItems();
+  </script-->
 
-
-             
-            {/** 
-                <div class="w-full md:w-1/2 md:max-w-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-                        {project.title}
-                    </h3>
-                    <div class="flex flex-wrap mt-2">
-
-                    <ul class="flex flex-row mb-2 gap-x-2">
-                        {project.tags.map((tag) => (
-                            <li>
-                                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-1 `}>
-                                    <tag.icon class="size-6" />
-                                </span>
-                                <span>
-                                    {tag.name}
-                                </span>
-                            </li>
-                        ))}
-                    </ul>
-    
-                    <div class="mt-2 text-gray-700 dark:text-gray-400">{project.description}</div>
-                        <footer class="flex items-end justify-start mt-4 gap-x-4">
-                            <a href='' class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
-                                <GitHubIcon class="size-6" />
-                                Code
-                            </a>
-                            
-                            <a href='' class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black">
-                                <LinkIcon class="size-4" />
-                                Preview
-                            </a>    
-                        </footer>
-                    </div>
-                </div>
-                <div class="inline-block">
-                    <span class="relative">
-                        <span class="bg-blue-500 text-white font-bold py-1 px-2 rounded-full text-xs">
-                            Badge
-                        </span>
-                        <span class="opacity-0 bg-black text-white text-xs rounded-sm py-1 px-2 absolute z-10 bottom-full left-1/2 transform -translate-x-1/2 transition duration-300 group-hover:opacity-100 group-hover:translate-y-2 bg-red-400 text-red-900">
-                            Hover Text
-                        </span>
-                    </span>
-                </div>
-                */}
- 
