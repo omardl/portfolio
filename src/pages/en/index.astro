@@ -1,28 +1,28 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../../layouts/Layout.astro'
 
-import AboutMe from '../components/AboutMe.astro'
-import Badge from '../components/Badge.astro'
-import CardContact from '../components/CardContact.astro'
-import CardProfilePhoto from '../components/CardProfilePhoto.astro'
-import CardLink from '../components/CardLink.astro'
-import CardSubtitle from '../components/CardSubtitle.astro'
-import CardTheme from '../components/CardTheme.astro'
-import CardTitle from '../components/CardTitle.astro'
-import Contact from '../components/Contact.astro'
-import Experiencie from '../components/ExperienceTimeline.astro'
-import Learning from '../components/EducationTimeline.astro'
-import Projects from '../components/Proyects.astro'
+import AboutMe from '../../components/AboutMe.astro'
+import Badge from '../../components/Badge.astro'
+import CardContact from '../../components/CardContact.astro'
+import CardProfilePhoto from '../../components/CardProfilePhoto.astro'
+import CardLink from '../../components/CardLink.astro'
+import CardSubtitle from '../../components/CardSubtitle.astro'
+import CardTheme from '../../components/CardTheme.astro'
+import CardTitle from '../../components/CardTitle.astro'
+import Contact from '../../components/Contact.astro'
+import Experiencie from '../../components/ExperienceTimeline.astro'
+import Learning from '../../components/EducationTimeline.astro'
+import Projects from '../../components/Proyects.astro'
 
-import AboutMeIcon from '../icons/AboutMe.astro'
-import BooksIcon from '../icons/Books.astro'
-import ExperienceIcon from '../icons/Experience.astro'
-import ProjectsIcon from '../icons/Proyects.astro'
+import AboutMeIcon from '../../icons/AboutMe.astro'
+import BooksIcon from '../../icons/Books.astro'
+import ExperienceIcon from '../../icons/Experience.astro'
+import ProjectsIcon from '../../icons/Proyects.astro'
 import CardLocation from '@/components/CardLocation.astro'
 import CardBadge from '@/components/CardBadge.astro'
-import CardClock from '../components/CardClock.astro'
+import CardClock from '../../components/CardClock.astro'
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import CardLanguage from '@/components/CardLanguage.astro'
 
 const lang = getLangFromUrl(Astro.url);
@@ -30,8 +30,8 @@ const t = useTranslations(lang);
 ---
 
 <Layout 
-	title="Omar Delgado López - porfolio"
-	description="Contrata a Omar, futuro graduado para finales de junio de 2024 en Ingeniería de Tecnologías de Telecomunicación en la Universidad de Vigo."
+	title="Omar Delgado López - portfolio"
+	description="Hire Omar, future graduate by the end of June 2024 in Telecommunication Technologies Engineering at the University of Vigo."
 >
 	<main>
 		<section id="home" class="w-full mx-auto lg:w-[1240px] pt-28">
@@ -45,7 +45,7 @@ const t = useTranslations(lang);
 				<CardClock />
 
 				<CardContact />
-
+				
 				<CardLanguage />
 				
 				<CardLink />
@@ -62,8 +62,7 @@ const t = useTranslations(lang);
 
 				<CardTitle 
 					name='Omar Delgado'
-				/>	
-				
+				/>				
 			</div>
 			<a href="#education">
 				<div class="-mt-2 absolute flex justify-center bottom-1rem left-1/2 mr-2 w-6 h-10 px-2 py-3 border border-2 border-white rounded-full opacity-75">
@@ -77,7 +76,7 @@ const t = useTranslations(lang);
 		<section id="education" class="w-full mx-auto lg:w-[1240px] pt-24">
 			<h2 class="text-3xl font-semibold mb-5 flex gap-x-2 items-center">
 				<BooksIcon class="size-8"/>
-				{t('nav.education')}
+				{t('nav.education')}	
 			</h2>
 			<Learning />
 		</section>
@@ -112,16 +111,15 @@ const t = useTranslations(lang);
 </Layout>
 
 <style>
-/** animate-pop duration-500 ease-[cubic-bezier(0.26, 0.53, 0.74, 1.48)] */
-@keyframes pop {
-  0% {
-    opacity: 0;
-    transform: scale(0.5, 0.5);
-  }
+    @keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
 
-  100% {
-    opacity: 1;
-    transform: scale(1, 1);
-  }
-}
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+    }
 </style>

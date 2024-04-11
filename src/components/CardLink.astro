@@ -1,12 +1,17 @@
 ---
 import LinkIcon from '../icons/Link.astro'
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="shadow-grid hover:shadow-grid-hover relative overflow-hidden row-start-1 text-lg col-start-4 flex justify-center items-center border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotLink" class="absolute duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mt-44 ml-12" />
-    <a href="/CV" class="group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
+    <div id="spotLink" class="z-10 absolute duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mt-44 ml-12" />
+    <a href="/CV" class="z-20 group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
         <span class="flex flex-row gap-x-2 transform:none">
-            Ver mi CV
+            {t('cv.link')}
             <LinkIcon class="size-7 group-hover:-rotate-45 duration-300" /> 
         </span>
     <a>

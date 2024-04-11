@@ -15,6 +15,11 @@ import SolidityIcon from '../icons/Solidity.astro';
 import SpringBootIcon from '../icons/SpringBoot.astro';
 import TensorFlowIcon from '../icons/TensorFlow.astro';
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const IMAGES = {
     barcoSolar1: {
         title: 'Web',
@@ -142,8 +147,8 @@ const TAGS = {
  */
 const PROJECTS = [
     {
-        title: "TFG",
-        description: "Parametrización de un modelo de intestino",
+        title: t('project.title.1'),
+        description: t('project.description.1'),
         image: '/project_images/TFG.webp',
         link: '',
         git: '',
@@ -151,8 +156,8 @@ const PROJECTS = [
     },
 
     {
-        title:"NodeSec",
-        description: "Sistema de control de aforo basado en blockchain y automatizado, enfocado a eventos masivos. Capacity control system based on blockchain and automated, focused on massive events.",
+        title: t('project.title.2'),
+        description: t('project.description.2'),
         image: '',
         link: '',
         git: '',
@@ -160,8 +165,8 @@ const PROJECTS = [
     },
 
     {
-        title:"Barco solar",
-        description: "Diseño y programacion de las ¿comunicaciones? de un barco solar pilotado de forma remota. Configuración de sensores, protocolo de comunicación IoT y diseño de la web que mostrará la información obtenida en tiempo real.",
+        title: t('project.title.3'),
+        description: t('project.description.3'),
         image: '/project_images/barcoSolar.webp',
         link: '',
         git: '',
@@ -169,8 +174,8 @@ const PROJECTS = [
     },
 
     {
-        title: "Mint NFTs",
-        description: "Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.",
+        title: t('project.title.4'),
+        description: t('project.description.4'),
         image: '',
         link: '',
         git: '',
@@ -178,16 +183,16 @@ const PROJECTS = [
     },
 
     {
-        title: "Prueba técnica para el puesto de desarrollador Android y Kotlin Jr.",
-        description: "Desarrollo de una aplicación Android sencilla mediante Kotlin, Jetpack Compose y arquitectura MVI.",
+        title: t('project.title.5'),
+        description: t('project.description.5'),
         image: '',
         git: '',
         tags: [],
     },
 
     {
-        title: "Shop",
-        description: "Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.",
+        title: t('project.title.6'),
+        description: t('project.description.6'),
         image: '',
         link: '',
         git: '',
@@ -195,8 +200,8 @@ const PROJECTS = [
     },
 
     {
-        title: 'Seg',
-        description: 'Desarrollo de una aplicación cliente y servidor que permitan el almacenamiento encriptado de archivos y su recuperación de manera segura, mediante certificado',
+        title: t('project.title.7'),
+        description: t('project.description.7'),
         image: '',
         link: '',
         git: '',

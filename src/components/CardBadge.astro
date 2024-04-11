@@ -1,12 +1,16 @@
 ---
-import Badge from '../components/Badge.astro'
+import Badge from './Badge.astro'
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 interface Props {
     link: string;
 }
 
 const { link } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="flex flex-center justify-center row-start-4 col-start-1">
@@ -16,7 +20,7 @@ const { link } = Astro.props;
       rel="noopener noreferer"
       class="flex items-center transition md:justify-center"
     >
-        <Badge> Disponible para trabajar </Badge> 
+        <Badge> {t('badge')} </Badge> 
     </a>
 </div>
 

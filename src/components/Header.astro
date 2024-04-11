@@ -8,30 +8,35 @@ import HomeIcon from '../icons/Home.astro'
 import LogoIcon from '../icons/Logo2.astro'
 import ProyectsIcon from '../icons/Proyects.astro'
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const NAVs = [
     {
-        title: 'Inicio',
-        link: '#inicio',
+        title: t('nav.home'),
+        link: '#home',
         icon: HomeIcon
     }, 
     {
-        title: 'Formación',
-        link: '#formacion',
+        title: t('nav.education'),
+        link: '#education',
         icon: BooksIcon
     },
     {
-        title: 'Experiencia',
-        link: '#experiencia',
+        title: t('nav.experience'),
+        link: '#experience',
         icon: ExperienceIcon
     },
     {
-        title: 'Proyectos',
-        link: '#proyectos',
+        title: t('nav.projects'),
+        link: '#projects',
         icon: ProyectsIcon
     },
     {
-        title: 'Sobre mi',
-        link: '#sobremi',
+        title: t('nav.aboutme'),
+        link: '#aboutme',
         icon: AboutMeIcon
     }
 ]

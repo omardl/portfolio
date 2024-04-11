@@ -1,10 +1,19 @@
-<div class="shadow-grid hover:shadow-grid-hover grid-col-2 grid-row-3 flex flex-col items-center justify-center gap-y-2.5 border-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
-  <div class="flex flex-row justify-center items-center">
-    <span class="text-lg text-sky-400/80"> Dark mode: </span>
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="shadow-grid hover:shadow-grid-hover overflow-hidden grid-col-2 grid-row-3 flex flex-col items-center justify-center gap-y-2.5 border-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
+  <div id="spotTheme" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mt-24 mr-40" />
+  
+  <div class="z-20 flex flex-row justify-center items-center gap-x-2 font-semibold">
+    <span class="text-lg text-sky-400/80"> {t('theme')} </span>
     <span id="dark_toggle" class="text-lg text-sky-400/80"> </span>
   </div>
 
-  <label class="inline-block w-[60px] h-[34px] relative">
+  <label class="z-20 inline-block w-[60px] h-[34px] relative">
     <input id="themeToggle" type="checkbox" class="peer opacity-0 size-0">
     <span class="slider absolute cursor-pointer inset-0 rounded-full duration-500 bg-blue-300/40 before:absolute before:content-[''] before:size-[24px] before:duration-500 before:bg-[linear-gradient(40deg,#ff0080,#ff8c00_70%)] before:left-[10%] before:top-1/2 before:rounded-full before:-translate-y-1/2 peer-checked:bg-[#303136] peer-checked:before:translate-x-full peer-checked:before:bg-[linear-gradient(40deg,#303136,#303136_70%)] peer-checked:before:shadow-moon-shadow"></span>
   </label>
@@ -53,5 +62,13 @@
       } 
     });
   }
+
+  window.addEventListener('scroll', function() {
+      const scrolledY = window.scrollY; 
+      const spot = document.getElementById('spotTheme');
+      if (spot) {
+          spot.style.transform = `translateY(${scrolledY / 3}px)`; 
+      }
+  });
 
 </script>

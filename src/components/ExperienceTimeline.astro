@@ -1,44 +1,49 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const EXPERIENCE = [
     {
-        date: 'Julio - agosto, 2023',
+        date: t('experience.date.1'),
         img: '/Centum.webp',
-        job_description: 'Desarrollador de software',
+        job_description: t('experience.job.1'),
         location: 'Vigo, Pontevedra',
         place: 'Centum research & technology',
-        title: 'Prácticas del Grado en Ingeniería de Tecnologías de Telecomunicación',
+        title: t('experience.title.1'),
         web: 'https://www.centum-rt.com/'
     },
 
     {
-        date: 'Febrero - marzo, 2023',
+        date: t('experience.date.2'),
         img: '/UVigoForo.webp',
-        job_description: 'Atención y asistencia al personal de los estands y conferencias. Apoyo y ayuda a la organización del foro.',
+        job_description: t('experience.job.2'),
         location: 'Vigo, Pontevedra',
-        place: 'Universidad de Vigo',
-        title: 'Colaborador del Foro Tecnológico de Empleo de la Universidad de Vigo',
+        place: t('experience.place.2'),
+        title: t('experience.title.2'),
         web: 'https://minaseenerxia.uvigo.es/es/estudiantes/asociaciones-estudiantiles/foro-tecnoloxico-de-emprego/'
     },
 
     {
-        date: 'Mayo - junio, 2018',
+        date: t('experience.date.3'),
         img: '/RLA.webp',
-        job_description: 'Mantenimiento de sistemas informáticos y eléctricos',
+        job_description: t('experience.job.3'),
         location: 'San Ciprián de Viñas, Orense',
         place: 'Rodríguez López Auto',
-        title: 'Prácticas como técnico en Sistemas Informáticos',
+        title: t('experience.title.3'),
         web: 'https://www.rodriguezlopez.com/'
     },
     
     {
-        date: 'Marzo - abril, 2018',
+        date: t('experience.date.4'),
         img: '/Elecnor.webp',
-        job_description: 'Instalación y mantenimiento de sistemas de telecomunicación en viviendas y edificios',
+        job_description: t('experience.job.4'),
         location: 'Orense, Orense',
         place: 'Elecnor',
-        title: 'Prácticas como técnico en Sistemas de Telecomunicación',
+        title: t('experience.title.4'),
         web: 'https://www.elecnor.com/'
     },
 ]

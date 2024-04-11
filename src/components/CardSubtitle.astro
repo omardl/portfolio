@@ -1,34 +1,23 @@
 ---
-interface Props {
-	text1: string;
-	text1_span: string;
-    text2: string;
-    text2_span: string;
-    text3: string;
-    text3_span: string;
-}
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
-const { text1, text1_span, text2, text2_span, text3, text3_span } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="shadow-grid hover:shadow-grid-hover col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[#212121] border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotSub1" class="absolute duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
+    <div id="spotSub1" class="absolute z-10 duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
     
-    <div id="spotSub2" class="absolute duration-1000 size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
+    <div id="spotSub2" class="absolute z-10 duration-1000 size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
     
-    <div id="spotSub3" class="absolute duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
+    <div id="spotSub3" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
     
-    <div id="spotSub4" class="absolute duration-1000 size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
+    <div id="spotSub4" class="absolute z-10 duration-1000 size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
     
-    <h2 class="mx-6 lg:text-xl text-wrap max-w-[700px]"> 
-        <span class="opacity-80"> {text1} </span> 
-        <span class="text-sky-400"> {text1_span} </span> </a>
-        <span class="opacity-80"> {text2} </span> 
-        <span class="text-sky-400"> {text2_span} </span>
+    <h2 class="z-20 [&>p>strong]:text-sky-400 [&>p>strong]:font-semibold mx-6 lg:text-xl text-wrap max-w-[700px]"> 
+        <p> {t('subtitle.p1.text1')} <strong> {t('subtitle.p1.strongtext1')} </strong> {t('subtitle.p1.text2')} <strong> {t('subtitle.p1.strongtext2')} </strong> </p>
         <br>
-        <br>
-        <span class="opacity-80"> {text3} </span> 
-        <span class="text-sky-400"> {text3_span} </span>
+        <p> {t('subtitle.p2.text1')} <strong> {t('subtitle.p2.strongtext1')} </strong> </p>
     </h2>
 </div>
 

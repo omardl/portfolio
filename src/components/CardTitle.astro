@@ -4,29 +4,29 @@ interface Props {
 }
 
 const { name } = Astro.props;
----
-<!--div class="shadow-grid hover:shadow-grid-hover row-start-1 col-start-1 col-span-3 flex items-center border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <h1 class="text-white mx-6 text-2xl md:text-4xl lg:text-5xl font-bold"> 
-        Hola, soy <span class="text-blue-300/90"> {name} </span> 
-    </h1>	
-</div-->
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
 <div class="shadow-grid hover:shadow-grid-hover row-start-1 col-start-1 col-span-3 flex items-center overflow-hidden border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotTitle1" class="absolute duration-1000 size-96 rounded-full bg-indigo-700 opacity-30 blur-md mb-[320px] ml-[400px]" />
-    <div id="spotTitle2" class="absolute duration-1000 size-12 rounded-full bg-sky-700 opacity-50 blur-md mt-6 ml-[660px]" />
-    <div id="spotTitle3" class="absolute duration-1000 size-24 rounded-full bg-cyan-600 opacity-30 blur-md mt-1 ml-32" />
-    <h1 class="text-white mx-6 text-2xl md:text-4xl lg:text-5xl font-bold"> 
-        Hola, soy <span class="text-sky-400 bg-gradient-to-r from-sky-400 from-0% via-[#fff] via-5% to-sky-400 to-10% text-transparent bg-clip-text animate-[shine_3s_linear_infinite]"> {name} </span>
+    <div id="spotTitle1" class="absolute z-10 duration-1000 size-96 rounded-full bg-indigo-700 opacity-30 blur-md mb-[320px] ml-[400px]" />
+    <div id="spotTitle2" class="absolute z-10 duration-1000 size-12 rounded-full bg-sky-700 opacity-50 blur-md mt-6 ml-[660px]" />
+    <div id="spotTitle3" class="absolute z-10 duration-1000 size-24 rounded-full bg-cyan-600 opacity-30 blur-md mt-1 ml-32" />
+    
+    <h1 class="z-20 text-white mx-6 text-2xl md:text-4xl lg:text-5xl font-bold"> 
+        {t('title.text')} <span class="text-sky-400 bg-gradient-to-r from-sky-400 from-0% via-[#ffffff] via-5% to-sky-400 to-10% text-transparent bg-clip-text animate-[shine_3s_linear_infinite]"> {name} </span>
     </h1>	
 </div>
 
 <style>
     @keyframes shine {
         0% {
-        background-position: -10px;
+            background-position: -10px;
         }
         100% {
-        background-position: 330px;
+            background-position: 330px;
         }
     }
 </style>

@@ -1,21 +1,26 @@
 ---
 import LearningItem from "./EducationItem.astro"
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const LEARNING = [
     {
-        date: 'Actualmente...',
-        img: 'teleco.webp',
+        date: t('education.date.1'),
+        img: '/teleco.webp',
         location: 'Vigo, Pontevedra',
-        place: 'Universidad de Vigo',
-        title: 'Grado en Ingeniería de Tecnologías de Telecomunicación. Especialización en la rama de Telemática'
+        place: t('education.place.1'),
+        title: t('education.title.1')
     },
 
     {
-        date: 'Finalizado en 2019',
-        img: 'Farixa.webp',
+        date: t('education.date.2'),
+        img: '/Farixa.webp',
         location: 'Orense',
         place: 'CIFP A Farixa',
-        title: 'FP Superior en Sistemas de Telecomunicación e Informáticos'
+        title: t('education.title.2')
     },
 ]
 ---

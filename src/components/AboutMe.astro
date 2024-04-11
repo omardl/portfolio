@@ -1,26 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <section class='flex justify-center items-center gap-x-4'>
     <div class="shadow-grid hover:shadow-grid-hover flex flex-row items-center p-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl hover">
         <div class='flex flex-col justify-center py-4'>    
             <div class="[&>p>strong]:text-blue-300 [&>p>strong]:font-semibold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
-                <p> <strong> Empecé la carrera de Teleco, </strong> me apasionó, me obsesioné, me frustré y la abandoné para <strong> hacer un FP. </strong> Años después volví, la afronté, me apasionó de nuevo y la superé. No estoy tranquilo si no <strong> peleo por algo hasta el final. </strong> </p>
+                <p> <strong> {t('aboutme.p1.strongtext1')} </strong> {t('aboutme.p1.text1')} <strong>{t('aboutme.p1.strongtext2')} </strong> {t('aboutme.p1.text2')} <strong> {t('aboutme.p1.strongtext3')} </strong> </p>
             </div>
             <div class="[&>p>strong]:text-blue-300 [&>p>strong]:font-semibold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
-                <p> <strong> Soy un culo inquieto. </strong> Demasiado curioso por el desarrollo software, no puedo dejar pasar la oportunidad de aprender nuevos lenguajes, frameworks y tecnologías. </p>
+                <p> <strong> {t('aboutme.p2.strongtext1')} </strong> {t('aboutme.p2.text1')} </p>
             </div>
             <div class="[&>p>strong]:text-blue-300 [&>p>strong]:font-semibold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
-                <p> Un poco tímido e introvertido al principio, rodearme de gente con la que poder <strong> formar equipo </strong> aprendiendo de los mejores y ayudando me motiva y <strong> me impulsa a dar lo mejor de mi.</strong> </p>
+                <p> {t('aboutme.p3.text1')} <strong> {t('aboutme.p3.strongtext1')}  </strong> {t('aboutme.p3.text2')}  <strong> {t('aboutme.p3.strongtext2')}  </strong> </p>
             </div>
             <div class="[&>p>strong]:text-blue-300 [&>p>strong]:font-semibold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
-                <p> <strong> No me han contratado todavía pero </strong> la experiencia de todo lo aprendido en mis estudios, los proyectos realizados y cada trabajo en equipo <strong> me han enseñado mucho que aportar.</strong> </p>
+                <p> <strong> {t('aboutme.p4.strongtext1')}  </strong> {t('aboutme.p4.text1')} <strong> {t('aboutme.p4.strongtext2')} </strong> </p>
             </div>
             <div class="[&>p>strong]:text-blue-300 [&>p>strong]:font-semibold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
-                <p> La pasión por lo técnico <strong> no siempre lo es todo.</strong> Cuando un proyecto permite ayudar y aportar un beneficio a los demás, creo que <strong> realmente marca la diferencia. </strong> </p>
+                <p> {t('aboutme.p5.text1')} <strong> {t('aboutme.p5.strongtext1')} </strong> {t('aboutme.p5.text2')} <strong> {t('aboutme.p5.strongtext2')} </strong> </p>
             </div>
         </div>
         <img
-            class="rounded-full size-64 bg-inherit"
+            class="rounded-full size-64 bg-inherit hover:scale-105 duration-300"
             src="/programming.webp"
-            alt="profile photo"
+            alt="about me draw"
         />
     </div>
 </section>
@@ -28,22 +35,7 @@
 
 <section class="my-12">
     <div class="shadow-grid hover:shadow-grid-hover p-4 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
-        <span class="italic opacity-60"> “La única manera de estar verdaderamente satisfecho es hacer lo que crees que es un gran trabajo. Y la única manera de hacer un gran trabajo es amar lo que haces. Si aún no lo has encontrado, sigue buscando. No te conformes. Al igual que con todos los asuntos del corazón, lo sabrás cuando lo encuentres. - Steve Jobs.” </span>
+        <span class="italic opacity-60"> {t('aboutme.phrase')} </span>
         <span class="italic pr-2 border-[#fff] border-r-2 animate-[typing_1s_ease-in-out_infinite]"> </span>
     </div>
 </section>
-
-          
-<div class=" flex justify-center items-center dark:bg-gray-800">
-    <label class="flex items-center cursor-pointer">
-        <span class="text-gray-700 mr-2">Off</span>
-        <input type="checkbox" class="focus:ring-0 rounded-full w-8 h-8 bg-gray-300 dark:bg-gray-600 focus:ring-offset-0 focus:outline-none focus:ring-primary-500">
-        <span class="text-gray-700 ml-2">On</span>
-      </label>      
-</div>
-
-
-
-<!--div>
-        <p class="typewriter"> “The only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it. – Steve Jobs.” </p>
-</div-->

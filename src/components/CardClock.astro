@@ -1,14 +1,56 @@
----
-import '@fontsource-variable/kode-mono';
----
-<div class="shadow-grid hover:shadow-grid-hover relative overflow-hidden row-start-3 col-start-3 flex flex-col flex-wrap justify-center px-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 text-sky-400 text-pretty rounded-3xl">
-    <div id="spotClock1" class="absolute duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md ml-20 mb-64" />
-    <div id="spotClock2" class="absolute duration-1000 size-12 rounded-full bg-blue-800 opacity-70 blur-md ml-24 mt-16" />
-    <p id="time" class="text-[32px] font-bold" />
-    <p id="date" class="text-xs" />
+<div class="shadow-grid hover:shadow-grid-hover overflow-hidden relative row-start-3 col-start-3 flex flex-col px-6 py-3 gap-y-1 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 text-sky-400 text-pretty rounded-3xl">
+    <div id="spotClock1" class="absolute z-10 duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md ml-16 -mt-56" />
+    <div id="spotClock2" class="absolute z-10 duration-1000 size-12 rounded-full bg-blue-800 opacity-70 blur-md ml-24 mt-2" />
+    <p id="time" class="opacity-0 transition duration-1000 ease z-20 text-[32px] font-bold" />
+    <p id="date" class="opacity-0 transition duration-1000 ease z-20 text-xs font-semibold" />
 </div>
 
-<script>
+<script>    
+    
+    import { getLangFromUrl } from '../i18n/utils';
+
+    function updateDateTime() {
+
+        const lang = getLangFromUrl(new URL(window.location.href));
+
+        const now = new Date();
+
+        const timeElement = document.getElementById('time');
+        const dateElement = document.getElementById('date');
+
+        let time: string | null;
+        let date: string | null;
+
+        if (lang == 'es') {
+
+            time = now.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit' });
+            date = now.toLocaleDateString("es-ES", { weekday: 'long' }) + ', ' + now.toLocaleDateString("es-ES", { day: 'numeric' }) + ' de ' + now.toLocaleDateString("es-ES", { month: 'long' })
+
+        } else if (lang == 'en') {
+
+            time = now.toLocaleTimeString("en-EN", { hour: '2-digit', minute: '2-digit', hour12: false });
+            date = now.toLocaleDateString("en-EN", { weekday: 'long' }) + ', ' + now.toLocaleDateString("en-EN", { day: 'numeric' }) + ' ' + now.toLocaleDateString("en-EN", { month: 'long' })
+        
+        } else {
+
+            time = now.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit' });
+            date = now.toLocaleDateString("es-ES", { weekday: 'long' }) + ', ' + now.toLocaleDateString("es-ES", { day: 'numeric' }) + ' de ' + now.toLocaleDateString("es-ES", { month: 'long' })
+
+        }
+
+        if (timeElement) {
+            timeElement.textContent = time;
+            timeElement.style.opacity = '1';
+        }
+
+        if (dateElement) {
+            dateElement.textContent = date;
+            dateElement.style.opacity = '1';
+        }
+    }
+
+    setInterval(updateDateTime, 1000);
+
     window.addEventListener('scroll', function() {
         const scrolledY = window.scrollY; 
         const spot1 = document.getElementById('spotClock1');
@@ -19,22 +61,4 @@ import '@fontsource-variable/kode-mono';
         }
     });
 
-    function updateDateTime() {
-        const now = new Date();
-        const time = now.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit' });
-        const date = now.toLocaleDateString("es-ES", { weekday: 'long' }) + ', ' + now.toLocaleDateString("es-ES", { day: 'numeric' }) + ' de ' + now.toLocaleDateString("es-ES", { month: 'long' })
-
-        const timeElement = document.getElementById('time');
-        const dateElement = document.getElementById('date');
-        
-        if (timeElement) {
-            timeElement.textContent = time;
-        }
-
-        if (dateElement) {
-            dateElement.textContent = date;
-        }
-    }
-
-    setInterval(updateDateTime, 1000);
 </script>
