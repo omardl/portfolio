@@ -37,12 +37,12 @@ const lang = getLangFromUrl(Astro.url);
 	<body>
     <div id="mouse" class="glowing-mouse blur-2xl size-72 rounded-full">
     </div>
-
-		<div id="background-container retro-gradient animation: gradient 15s ease infinite" class="fixed inset-0 z-[-10] pointer-events-none"> 
-      <div class="background-layer"></div>
-      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
-      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
-      <div class="wave bg-slate-600/25 dark:bg-blue-600/25"></div>
+  
+		<div class="fixed inset-0 z-[-10] pointer-events-none"> 
+      <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-100 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,30,30,0),rgba(125,189,219,0.6))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
+      <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
+      <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
     </div>
     
 		<Header />
@@ -110,17 +110,17 @@ const lang = getLangFromUrl(Astro.url);
     overflow-x: hidden;
 	}
 
-  /** HEART ICON */
 	@media (prefers-reduced-motion) {
 		html {
 			scroll-behavior: auto;
 		}
 	}
 
+  /** HEART ICON */
 	.heart {
-			stroke-dasharray: 16; 
-			animation: move 30s linear infinite;
-		}
+		stroke-dasharray: 16; 
+	  animation: move 30s linear infinite;
+	}
 	
 	@keyframes move {
 		to {
@@ -157,18 +157,6 @@ const lang = getLangFromUrl(Astro.url);
     transition-timing-function: ease;
   }
 
-  /** BACKGROUND GRADIENT */
-	.background-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    animation-duration: 2s; /* Adjust the animation duration as needed */
-    animation-fill-mode: forwards;
-  }
-
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -188,18 +176,9 @@ const lang = getLangFromUrl(Astro.url);
     pointer-events: none;
     z-index: -1;
     transform: translate(-142px, -140px);
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, rgba(0, 0, 255, 0) 100%);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(0, 0, 255, 0.1) 100%);
     transition: opacity 1s ease-in-out;
   }
-
-  .retro-gradient {
-    background: linear-gradient(180deg, rgba(56,189,248,1) 0%, rgba(37,99,235,1) 25%, rgba(255,37,197,1) 50%, rgba(254,106,106,1) 75%, rgba(254,198,0,1) 100%);
-  }
-
-  .shadow-retro-gradient {
-    box-shadow: -5px -5px 10px rgb(60, 60, 60);
-  }
-
 
   @keyframes gradient {
     0% {
@@ -232,13 +211,13 @@ const lang = getLangFromUrl(Astro.url);
     opacity: 0.8;
   }
 
-.wave:nth-of-type(3) {
+  .wave:nth-of-type(3) {
     bottom: -2.5em;
     animation: wave 20s -1s reverse infinite;
     opacity: 0.9;
   }
 
-@keyframes wave {
+  @keyframes wave {
     2% {
         transform: translateX(1);
     }
@@ -258,7 +237,7 @@ const lang = getLangFromUrl(Astro.url);
     100% {
         transform: translateX(1);
     }
-}
+  }
   
   /** GRID SECTION STYLES */
   .grid-container {
@@ -266,6 +245,19 @@ const lang = getLangFromUrl(Astro.url);
     grid-template-columns: 280px 194px 196px 194px 280px;
     grid-template-rows: 75px 250px 100px 50px;    
   }
+
+  .grid-container-md {
+    display: grid;
+    grid-template-columns: 180px 94px 96px 94px 180px;
+    grid-template-rows: 75px 250px 100px 50px;  
+  }
+
+  .grid-container-sm {
+    display: grid;
+    grid-template-columns: 280px 194px 196px 194px 280px;
+    grid-template-rows: 75px 250px 100px 50px;  
+  }
+  
 
   .grid-education {
     display: grid;
@@ -282,7 +274,7 @@ const lang = getLangFromUrl(Astro.url);
   .grid-projects {
     display: grid;
     grid-template-columns: 590px 589.5px;
-    grid-template-rows: 30px 240px 60px;
+    grid-template-rows: 30px 400px 60px;
   }
 
 </style>

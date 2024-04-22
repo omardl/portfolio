@@ -2,14 +2,13 @@
 import Layout from '../../layouts/Layout.astro'
 
 import AboutMe from '../../components/AboutMe.astro'
-import Badge from '../../components/Badge.astro'
 import CardContact from '../../components/CardContact.astro'
 import CardProfilePhoto from '../../components/CardProfilePhoto.astro'
+import CardLanguage from '../../components/CardSpan2.astro'
 import CardLink from '../../components/CardLink.astro'
+import CardSpan from '../../components/CardSpan.astro'
 import CardSubtitle from '../../components/CardSubtitle.astro'
-import CardTheme from '../../components/CardTheme.astro'
 import CardTitle from '../../components/CardTitle.astro'
-import Contact from '../../components/Contact.astro'
 import Experiencie from '../../components/ExperienceTimeline.astro'
 import Learning from '../../components/EducationTimeline.astro'
 import Projects from '../../components/Proyects.astro'
@@ -23,7 +22,7 @@ import CardBadge from '@/components/CardBadge.astro'
 import CardClock from '../../components/CardClock.astro'
 
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import CardLanguage from '@/components/CardLanguage.astro'
+
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -40,7 +39,7 @@ const t = useTranslations(lang);
 					link='https://www.linkedin.com/in/omar-d-l'
 				/>
 
-				<CardTheme />
+				<CardSpan />
 
 				<CardClock />
 
@@ -65,8 +64,8 @@ const t = useTranslations(lang);
 				/>				
 			</div>
 			<a href="#education">
-				<div class="-mt-2 absolute flex justify-center bottom-1rem left-1/2 mr-2 w-6 h-10 px-2 py-3 border border-2 border-white rounded-full opacity-75">
-					<div class="rounded-full mt-[0.5px] bg-white w-[3px] h-[5px] scroll-animation">
+				<div class="-mt-2 absolute flex justify-center bottom-1rem left-1/2 mr-2 w-6 h-10 px-2 py-3 border border-2 border-[#212121] dark:border-white rounded-full opacity-75">
+					<div class="rounded-full mt-[0.5px] bg-[#212121] dark:bg-white w-[3px] h-[5px] scroll-animation">
 					</div>
 				</div>
 			</a>
@@ -74,7 +73,7 @@ const t = useTranslations(lang);
 		</section>
 
 		<section id="education" class="w-full mx-auto lg:w-[1240px] pt-24">
-			<h2 class="text-3xl font-semibold mb-5 flex gap-x-2 items-center">
+			<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold mb-5 flex gap-x-2 items-center">
 				<BooksIcon class="size-8"/>
 				{t('nav.education')}	
 			</h2>
@@ -82,7 +81,7 @@ const t = useTranslations(lang);
 		</section>
 
 		<section id="experience" class="w-full mx-auto lg:w-[1240px] pt-24">
-			<h2 class="text-3xl font-semibold mb-5 flex gap-x-2 items-center">
+			<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold mb-5 flex gap-x-2 items-center">
 				<ExperienceIcon class="size-8"/>
 				{t('nav.experience')}
 			</h2>
@@ -91,7 +90,7 @@ const t = useTranslations(lang);
 		</section>
 
 		<section id="projects" class="w-full mx-auto lg:w-[1240px] pt-24">
-			<h2 class="text-3xl font-semibold mb-5 flex gap-x-2 items-center">
+			<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold mb-5 flex gap-x-2 items-center">
 				<ProjectsIcon class="size-8"/>
 				{t('nav.projects')}
 			</h2>
@@ -100,7 +99,7 @@ const t = useTranslations(lang);
 		</section>
 
 		<section id="aboutme" class="w-full mx-auto lg:w-[1240px] pt-24">
-			<h2 class="text-3xl font-semibold mb-5 flex gap-x-2 items-center">
+			<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold mb-5 flex gap-x-2 items-center">
 				<AboutMeIcon class="size-8"/>
 				{t('nav.aboutme')}
 			</h2>
@@ -109,17 +108,3 @@ const t = useTranslations(lang);
 		</section>		
 	</main>
 </Layout>
-
-<style>
-    @keyframes pop {
-    0% {
-        opacity: 0;
-        transform: scale(0.5, 0.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
-    }
-</style>

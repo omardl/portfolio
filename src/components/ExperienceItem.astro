@@ -25,30 +25,30 @@ const {
 } = Astro.props
 ---
 
-<span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-1 ring-blue-700 bg-white text-blue-700">
+<span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-1 ring-gray-800 bg-blue-300 text-gray-800 dark:ring-blue-700 dark:bg-white dark:text-blue-700">
     <CalendarItem class="size-4"/>
 </span>
 
-<time class="mb-1 text-md font-normal leading-none text-gray-400 dark:text-gray-500">
+<time class="mb-1 text-md font-normal leading-none text-gray-800/80 dark:text-gray-300/80">
     {date}
 </time>
 
 
 <div class="grid-experience mt-4 grid-rows-1 grid-cols-3 gap-6">
-    <div class="shadow-grid hover:shadow-grid-hover group col-start-1 flex flex-col justify-center gap-y-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
-        <span class="text-lg font-semibold text-sky-300 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+    <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover group col-start-1 flex flex-col justify-center gap-y-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+        <span class="text-lg font-semibold text-gray-800/80 dark:text-sky-300 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
             {title}
         </span>
-        <span class="text-lg font-semibold text-sky-600 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+        <span class="text-lg font-semibold text-sky-700/80 dark:text-sky-600 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
             {job_description}
         </span>
     </div>
 
-    <a href={web} class="shadow-grid hover:shadow-grid-hover group overflow-hidden relative flex items-end col-start-2 border-[#212121] bg-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size: cover;`}  target="_blank" rel="noopener noreferrer">
-        <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
-            <InfoItem class="size-5 text-sky-300"/>
+    <a href={web} class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover group overflow-hidden relative flex items-end col-start-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size: cover;`}  target="_blank" rel="noopener noreferrer">
+        <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-sky-300 dark:bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
+            <InfoItem class="size-5 text-[#080c1c] dark:text-sky-300"/>
         </span>
-        <footer class="flex flew-row justify-between px-3 w-full absolute bg-[#080c1c] rounded-b-3xl text-sky-300 transition duration-500 ease-in-out translate-y-full group-hover:translate-y-0">
+        <footer class="flex flew-row justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out translate-y-full group-hover:translate-y-0">
             <span class="flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
                 <BuildingItem class="size-6" /> 
                 {place}

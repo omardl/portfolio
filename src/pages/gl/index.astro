@@ -1,27 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../../layouts/Layout.astro'
 
-import AboutMe from '../components/AboutMe.astro'
-import CardContact from '../components/CardContact.astro'
-import CardProfilePhoto from '../components/CardProfilePhoto.astro'
-import CardLink from '../components/CardLink.astro'
-import CardSpan from '../components/CardSpan.astro'
-import CardSubtitle from '../components/CardSubtitle.astro'
-import CardTitle from '../components/CardTitle.astro'
-import Experiencie from '../components/ExperienceTimeline.astro'
-import Learning from '../components/EducationTimeline.astro'
-import Projects from '../components/Proyects.astro'
+import AboutMe from '../../components/AboutMe.astro'
+import CardContact from '../../components/CardContact.astro'
+import CardProfilePhoto from '../../components/CardProfilePhoto.astro'
+import CardLink from '../../components/CardLink.astro'
+import CardSpan from '../../components/CardSpan.astro'
+import CardSubtitle from '../../components/CardSubtitle.astro'
+import CardTitle from '../../components/CardTitle.astro'
+import Experiencie from '../../components/ExperienceTimeline.astro'
+import Learning from '../../components/EducationTimeline.astro'
+import Projects from '../../components/Proyects.astro'
 
-import AboutMeIcon from '../icons/AboutMe.astro'
-import BooksIcon from '../icons/Books.astro'
-import ExperienceIcon from '../icons/Experience.astro'
-import ProjectsIcon from '../icons/Proyects.astro'
-import CardLocation from '@/components/CardLocation.astro'
-import CardBadge from '@/components/CardBadge.astro'
-import CardClock from '../components/CardClock.astro'
+import AboutMeIcon from '../../icons/AboutMe.astro'
+import BooksIcon from '../../icons/Books.astro'
+import ExperienceIcon from '../../icons/Experience.astro'
+import ProjectsIcon from '../../icons/Proyects.astro'
+import CardLocation from '../../components/CardLocation.astro'
+import CardBadge from '../../components/CardBadge.astro'
+import CardClock from '../../components/CardClock.astro'
 
-import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import CardLanguage from '@/components/CardSpan2.astro'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import CardLanguage from '../../components/CardSpan2.astro'
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -29,7 +29,7 @@ const t = useTranslations(lang);
 
 <Layout 
 	title="Omar Delgado López - porfolio"
-	description="Contrata a Omar, futuro graduado para finales de junio de 2024 en Ingeniería de Tecnologías de Telecomunicación en la Universidad de Vigo."
+	description="Emprega a Omar, futuro graduado para finais de xuño de 2024 en Enxeñaría de Tecnoloxías de Telecomunicación na Universidade de Vigo."
 >
 	<main>
 		<section id="home" class="mx-auto lg:w-[1240px] pt-28 ">

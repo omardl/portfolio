@@ -5,16 +5,21 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid hover:shadow-grid-hover col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[#212121] border-[#212121] icon backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotSub1" class="absolute z-10 duration-1000 size-72 rounded-full bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+    <div id="spotSub1" class="absolute z-10 duration-1000 size-72 rounded-full bg-sky-400 dark:bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
     
-    <div id="spotSub2" class="absolute z-10 duration-1000 size-12 rounded-full bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
+    <div id="spotSub2" class="absolute z-10 duration-1000 size-12 rounded-full bg-indigo-400 dark:bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
     
-    <div id="spotSub3" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
+    <div id="spotSub3" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-300 dark:bg-indigo-800 opacity-50 blur-md mb-52 ml-[490px]" />
     
-    <div id="spotSub4" class="absolute z-10 duration-1000 size-24 rounded-full bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
+    <div id="spotSub4" class="absolute z-10 duration-1000 size-24 rounded-full bg-sky-300 dark:bg-sky-700 opacity-60 blur-md mb-36 mr-80" />
     
-    <h2 class="z-20 [&>p>strong]:text-sky-400 [&>p>strong]:font-semibold mx-6 lg:text-xl text-wrap max-w-[700px]"> 
+    <div id="spotSub5" class="absolute z-10 duration-1000 size-96 rounded-full bg-indigo-400 dark:bg-indigo-700 opacity-30 blur-md mb-[720px] -ml-12" />
+    
+    <div id="spotSub6" class="absolute z-10 duration-1000 size-12 rounded-full bg-sky-400 dark:bg-sky-700 opacity-50 blur-md mb-80 ml-32" />
+    
+
+    <h2 class="z-20 text-gray-800/80 dark:text-white/80 duration-1000 font-semibold [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold mx-6 lg:text-xl text-wrap max-w-[700px]"> 
         <p> {t('subtitle.p1.text1')} <strong> {t('subtitle.p1.strongtext1')} </strong> {t('subtitle.p1.text2')} <strong> {t('subtitle.p1.strongtext2')} </strong> </p>
         <br>
         <p> {t('subtitle.p2.text1')} <strong> {t('subtitle.p2.strongtext1')} </strong> </p>
@@ -30,11 +35,15 @@ const t = useTranslations(lang);
       const spot2 = document.getElementById('spotSub2');
       const spot3 = document.getElementById('spotSub3');
       const spot4 = document.getElementById('spotSub4');
-      if (spot1 && spot2 && spot3 && spot4) {
+      const spot5 = document.getElementById('spotSub5');
+      const spot6 = document.getElementById('spotSub6');
+      if (spot1 && spot2 && spot3 && spot4 && spot5 && spot6) {
           spot1.style.transform = `translateY(${scrolledY / 3}px)`; 
           spot2.style.transform = `translateY(${scrolledY / 3}px)`; 
           spot3.style.transform = `translateY(${scrolledY / 3}px)`; 
           spot4.style.transform = `translateY(${scrolledY / 3}px)`; 
+          spot5.style.transform = `translateY(${scrolledY / 3}px)`; 
+          spot6.style.transform = `translateY(${scrolledY / 3}px)`; 
       }
   });
 

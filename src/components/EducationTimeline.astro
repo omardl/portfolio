@@ -12,7 +12,9 @@ const LEARNING = [
         img: '/teleco.webp',
         location: 'Vigo, Pontevedra',
         place: t('education.place.1'),
-        title: t('education.title.1')
+        title: t('education.title.1'),
+        position_text: 'col-start-1',
+        position_image: 'col-start-2'
     },
 
     {
@@ -20,12 +22,14 @@ const LEARNING = [
         img: '/Farixa.webp',
         location: 'Orense',
         place: 'CIFP A Farixa',
-        title: t('education.title.2')
+        title: t('education.title.2'),
+        position_text: 'col-start-2',
+        position_image: 'col-start-1'
     },
 ]
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">   
+<ol class="relative border-s border-gray-800 dark:border-gray-300 ml-4">   
     {
         LEARNING.map(learning => (
             <li class="mb-10 ms-6">  

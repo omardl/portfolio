@@ -5,7 +5,7 @@ interface Props {
 
 const { img } = Astro.props;
 ---
-<div class="shadow-grid hover:shadow-grid-hover pb-2 col-start-5 row-start-1 row-span-4 rounded-3xl overflow-hidden transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}');`}>
+<div class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover pb-2 col-start-5 row-start-1 row-span-4 rounded-3xl overflow-hidden transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}');`}>
     <div class="flex flex-row items-center justify-center gap-x-5">
         
         <div class="flex flex-col items-center justify-center">

@@ -5,7 +5,7 @@ interface Props {
 
 const { link } = Astro.props;
 ---
-<a href={link} class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
+<a href={link} class="relative w-fit block text-black dark:text-white after:block after:content-[''] after:absolute after:h-[2px] after:bg-[#212121] after:dark:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 duration-1000 after:origin-center after:rounded-full">
     <span class="flex flex-row gap-x-2">
         <slot></slot>
     </span>

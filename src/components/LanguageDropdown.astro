@@ -1,0 +1,61 @@
+---
+import FlagEN from "../icons/FlagEN.astro";
+import FlagES from "../icons/FlagES.astro";
+import FlagGL from "../icons/FlagGL.astro";
+import LangIcon from "../icons/Language.astro";
+
+import { languages } from '../i18n/ui';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdownMenu" class="z-20 text-gray-800/80 ring-2 outline-none ring-gray-800 hover:ring-4 hover:outline-none hover:ring-blue-700 hover:text-blue-700 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center dark:text-white/80 dark:ring-white/80 dark:hover:ring-sky-400 dark:hover:text-sky-400" type="button">
+    <LangIcon class="size-6"/>
+</button>
+
+<div id="dropdownMenu" class="z-10 absolute hidden bg-white divide-y divide-gray-100 mt-52 ml-[1120px] border-[2px] border-gray-500 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+        <li>
+            <a href="/" class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800/80 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                <FlagES className="size-8 mr-2"/>
+                {t('lang.es')}
+            </a>
+
+            {Object.entries(languages).map(([lang, label]) => (
+                (lang === 'en' && 
+                    <a href={`/${lang}/`} class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800/80 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                        <FlagEN className="size-8 mr-2" />
+                        {t('lang.en')}
+                    </a>
+                )
+            ))}
+            {Object.entries(languages).map(([lang, label]) => (
+                (lang === 'gl' && 
+                    <a href={`/${lang}/`} class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800/80 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                        <FlagGL className="size-8 mr-2 rounded-full" />
+                        {t('lang.gl')}
+                    </a>
+                )
+            ))}
+        </li>
+    </ul>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownButton = document.getElementById("dropdownDefaultButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        if (dropdownButton && dropdownMenu) {
+            dropdownButton.addEventListener("click", function() {
+                dropdownMenu.classList.toggle("hidden");
+            });
+        }
+    });   
+</script>

@@ -1,0 +1,32 @@
+---
+import LinkIcon from '../icons/Link.astro'
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover overflow-hidden grid-col-2 grid-row-3 flex flex-col items-center justify-center gap-y-2.5 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+  <div id="spotTheme" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-400 dark:bg-indigo-800 opacity-50 blur-md mt-24 mr-40" />
+  
+  <div class="z-20 flex flex-col justify-center items-center gap-y-3 font-semibold">
+    <span class="text-lg font-bold duration-1000 text-sky-800/70 dark:text-sky-400/80"> {t('span')} </span>
+    <span class="animate-bounce">
+      <LinkIcon class="rotate-135 size-8 text-sky-800 dark:text-sky-400" />
+    </span>
+  </div>
+
+</div>
+
+
+<script>
+
+  window.addEventListener('scroll', function() {
+      const scrolledY = window.scrollY; 
+      const spot = document.getElementById('spotTheme');
+      if (spot) {
+          spot.style.transform = `translateY(${scrolledY / 3}px)`; 
+      }
+  });
+
+</script>

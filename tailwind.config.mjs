@@ -9,7 +9,9 @@ export default {
 			boxShadow: {
 				'location-pulse': '0 0 1px 2px #dc2626',
 				'grid': '5px 5px 10px rgb(25, 25, 25), -5px -5px 10px rgb(60, 60, 60)',
+				'grid-mini': '2px 2px 5px rgb(25, 25, 25), -2px -2px 5px rgb(60, 60, 60)',
 				'grid-hover': '0px 0px 5px rgb(191, 219, 254), 0px 0px 20px rgb(29, 78, 216)',
+				'grid-hover-mini': '2px 2px 5px rgb(29, 78, 216), -2px -2px 5px rgb(29, 78, 216)',
 				'moon-shadow': 'inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb'
 			},
 
@@ -21,16 +23,25 @@ export default {
 				'Arduino-bg': '#C5FFFD',
 
 				'Docker-color': '#1D63ED',
-				'Docker-bg': '#D7F4FF',
+				'Docker-bg': '#BFEDFF',
 				
+				'Jetpack-color': '#002B41',
+				'Jetpack-bg': '#D2ECFC',
+
+				'Jira-color': '#2178f1',
+				'Jira-bg': '#d9e9ff',
+
+				'Kotlin-color': '#691394',
+				'Kotlin-bg': '#F3DEFC',
+
 				'MongoDB-color': '#00461E',
-				'MongoDB-bg': '#00ED64',
+				'MongoDB-bg': '#78EBA8',
 
 				'Mosquitto-color': '#3C5280',
 				'Mosquitto-bg': '#FEF2E2',
 				
 				'NFC-color': '#193859',
-				'NFC-bg': '#E5EEF9',
+				'NFC-bg': '#A1CBFF',
 
 				'NodeJS-color': '#35592C',
 				'NodeJS-bg': '#E7F4E4',
@@ -44,14 +55,14 @@ export default {
 				'SOFA-color': '#8C2D0E',
 				'SOFA-bg': '#FCE7D8',
 
-				'Solidity-color': '#3f3988',
-				'Solidity-bg': '#e2e7fd',
+				'Solidity-color': '#3F3988',
+				'Solidity-bg': '#E2E7FD',
 				
 				'SpringBoot-color': '#101B07',
-				'SpringBoot-bg': '#6CB52D',
+				'SpringBoot-bg': '#AFE87d',
 
 				'TensorFlow-color': '#271F00',
-				'TensorFlow-bg': '#FF8C00',
+				'TensorFlow-bg': '#FFD6A3',
 			},
 
 			keyframes: {
@@ -108,6 +119,7 @@ export default {
 
 			rotate: {
 				'35': '35deg',
+				'135': '135deg'
 			}
 		},
 	},

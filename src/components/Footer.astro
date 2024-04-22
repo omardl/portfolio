@@ -1,7 +1,12 @@
 ---
 import AstroIcon from '../icons/AstroIcon.astro';
 import HeartIcon from '../icons/Heart.astro';
+import GitHubIcon from '../icons/GitHub.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import MailIcon from '../icons/Gmail.astro'
 import TailwindIcon from '../icons/Tailwind.astro';
+
+import Contact from '../components/Contact.astro'
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
@@ -9,48 +14,38 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="rounded-lg shadow m-4 bg-gray-800">
-    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-      <span class="flex flex-row items-center gap-x-2 text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        <p>
+<footer class="rounded-lg m-4 flex flex-col items-center justify-evenly text-gray-900/80 dark:text-white/80 font-semibold">
+    <div class="w-full mx-auto max-w-screen-xl pt-2 flex flex-row items-center justify-center gap-x-2">
+        <span>
             {t('footer.text1')} 
-        </p> 
+        </span> 
         <HeartIcon />
-        <p>
+        <span>
             {t('footer.text2')} Astro
-        </p>
-        <AstroIcon />
-        <p>
+        </span>
+        <AstroIcon class="size-6 mt-1 -ml-1 "/>
+        <span>
             {t('footer.text3')} Tailwind
-        </p>
-        <TailwindIcon />
-    </span>
-    <ul class="flex flex-wrap gap-x-4 items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-        <li>
-            <a href="#home" class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> 
-                {t('nav.home')}
-            </a>
-        </li>
-        <li>
-            <a href="#education" class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                {t('nav.education')} 
-            </a>
-        </li>
-        <li>
-            <a href="#experience" class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> 
-                {t('nav.experience')} 
-            </a>
-        </li>
-        <li>
-            <a href="#projects" class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">
-                {t('nav.projects')} 
-            </a>
-        </li>
-        <li>
-            <a href="#aboutme" class="relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-500 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"> 
-                {t('nav.aboutme')} 
-            </a>
-        </li>
-    </ul>
+        </span>
+        <TailwindIcon class="size-6 mt-[1px]" />
+    </div>
+    <div class="flex flex-row items-center justify-center h-12 gap-x-12 pt-12 pb-24">
+        <div class="w-20">
+            <Contact href='https://github.com/omardl' >    
+                <GitHubIcon /> 
+            </Contact>
+        </div>
+
+        <div class="w-20">
+            <Contact href='https://www.linkedin.com/in/omar-d-l' >    
+                <LinkedInIcon /> 
+            </Contact>
+        </div>
+        
+        <div class="w-20">
+            <Contact href='mailto:omardelgadlop@gmail.com' >    
+                <MailIcon /> 
+            </Contact>
+        </div>
     </div>
 </footer>

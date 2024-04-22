@@ -1,6 +1,7 @@
 export const languages = {
     en: 'English',
     es: 'Español',
+    gl: 'Galego',
   };
   
   export const defaultLang = 'es';
@@ -64,6 +65,7 @@ export const languages = {
 
       'lang.en': 'English',
       'lang.es': 'Spanish',
+      'lang.gl': 'Galician',
 
       'nav.home': 'Home',
       'nav.education': 'Education',
@@ -71,20 +73,25 @@ export const languages = {
       'nav.projects': 'Projects',
       'nav.aboutme': 'About me',
 
-      'project.title.1': 'TFG',
-      'project.description.1': '',
-      'project.title.2': 'NodeSec',
-      'project.description.2': 'Capacity control system based on blockchain and automated, focused on massive events.',
-      'project.title.3': '',
-      'project.description.3': '',
-      'project.title.4': '',
-      'project.description.4': '',
-      'project.title.5': '',
-      'project.description.5': '',
-      'project.title.6': '',
-      'project.description.6': '',
-      'project.title.7': '',
-      'project.description.7': '',
+
+      'projects.description': 'Most of the following projects have been developed during the degree in Telecommunication Technologies Engineering.',
+      'project.title.1': 'Degree Final Proyect',
+      'project.description.1': 'Parameterisation of a bowel model for the simulation of a colonoscopy using the SOFA framework (Simulation Open Framework Architecture). Using a Python script, the physical properties of the bowel that model its behaviour and the characteristics of the simulation environment are assigned.',   
+      'project.title.2': 'Technical test for Jr. Android and Kotlin developer position.',
+      'project.description.2': 'Development of a simple Android application using Kotlin, Jetpack Compose and MVI architecture. ',
+      'project.title.3': 'Mint NFTs',
+      'project.description.3': 'Design of a web application that allows you to create and view your own NFTs and other types of digital tokens.',
+      'project.title.4': 'NodeSec',
+      'project.description.4': 'Capacity control system based on blockchain, focused on massive events. Use Tensorflow and NFC technology for the automated control of entrances and exits.',
+      'project.title.5': 'Sun boat',
+      'project.description.5': 'Design of the architecture and configuration of the communications protocol for a remotely piloted solar boat. Configuration of sensors (ultrasound, pitch-roll, GPS), webcam, IoT protocol and design of the website that will display the information in real time, later stored in a database.',
+      'project.title.6': 'API REST web for an online shop',
+      'project.description.6': 'Development of a REST API that makes requests to a server to create, get, update and delete objects from a database. The theme of an online shop has been used, allowing the user to consult and search among the available items. Administrators can log in to create, modify or delete items.',
+
+      'project.readme': 'More about',
+      'project.notfinished': 'Under development',
+
+      'span': 'Get in touch!',
 
       'subtitle.p1.text1': 'One step away from handing in the TFG and finishing the degree in',
       'subtitle.p1.strongtext1': 'Telecommunication Technology Engineering',
@@ -93,8 +100,6 @@ export const languages = {
 
       'subtitle.p2.text1': 'Specialised in',
       'subtitle.p2.strongtext1': 'telematic.',
-
-      'theme': 'Dark mode:',
       
       'timezone': 'en-EN',
 
@@ -155,8 +160,9 @@ export const languages = {
       'footer.text2': 'usando',
       'footer.text3': 'y',
 
-      'lang.en': 'Ingles',
+      'lang.en': 'Inglés',
       'lang.es': 'Español',
+      'lang.gl': 'Gallego',
 
       'nav.home': 'Inicio',
       'nav.education': 'Formacion',
@@ -164,20 +170,24 @@ export const languages = {
       'nav.projects': 'Proyectos',
       'nav.aboutme': 'Sobre mi',
 
-      'project.title.1': 'TFG',
-      'project.description.1': 'Parametrización de un modelo de intestino',
-      'project.title.2': 'NodeSec',
-      'project.description.2': 'Sistema de control de aforo basado en blockchain y automatizado, enfocado a eventos masivos.',
-      'project.title.3': 'Barco solar',
-      'project.description.3': 'Diseño y programacion de las ¿comunicaciones? de un barco solar pilotado de forma remota. Configuración de sensores, protocolo de comunicación IoT y diseño de la web que mostrará la información obtenida en tiempo real.',
-      'project.title.4': 'Mint NFTs',
-      'project.description.4': 'Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.',
-      'project.title.5': 'Prueba técnica para el puesto de desarrollador Android y Kotlin Jr.',
-      'project.description.5': 'Desarrollo de una aplicación Android sencilla mediante Kotlin, Jetpack Compose y arquitectura MVI.',
-      'project.title.6': 'Shop',
-      'project.description.6': 'Desarrollo de una API que permite la creación de tokens fungibles y no fungible (NFTs). Puedes ver el proceso de creación, añadir metadatos y ver los tokens asociados a tu cartera.',
-      'project.title.7': 'Seg',
-      'project.description.7': 'Desarrollo de una aplicación cliente y servidor que permitan el almacenamiento encriptado de archivos y su recuperación de manera segura, mediante certificado',
+      'projects.description': 'La mayoría de los siguientes proyectos han sido desarrollados durante el grado en Ingeniería de Tecnologías de Telecomunicación.',
+      'project.title.1': 'Trabajo de Fin de Grado',
+      'project.description.1': 'Parametrización de un modelo de intestino para la simulación de una colonoscopia mediante el framework SOFA (Simulation Open Framework Architecture). Mediante un script de Python, se asignan tanto las propiedades físicas del intestino que modelan su comportamiento como las características del entorno de simulación.',
+      'project.title.2': 'Prueba técnica para el puesto de desarrollador Android y Kotlin Jr.',
+      'project.description.2': 'Desarrollo de una aplicación Android sencilla mediante Kotlin, Jetpack Compose y arquitectura MVI.',
+      'project.title.3': 'Mint NFTs',
+      'project.description.3': 'Diseño de una aplicación web que permite crear y ver tus propios NFTs y otros tipos de tokens digitales.',
+      'project.title.4': 'NodeSec',
+      'project.description.4': 'Sistema de control de aforo para eventos masivos basado en blockchain. Uso de tecnología NFC y Tensorflow para el control automatizado de entradas y salidas.',
+      'project.title.5': 'Barco solar',
+      'project.description.5': 'Diseño de la arquitectura y configuración del protocolo de comunicaciones de un barco solar pilotado de forma remota. Configuración de sensores (ultrasonidos, pitch-roll, GPS), webcam, protocolo IoT y diseño de la web que mostrará la información en tiempo real, posteriormente almacenada en una base de datos.',
+      'project.title.6': 'REST API web para una tienda online',
+      'project.description.6': 'Desarrollo de una API REST que realiza peticiones a un servidor permitiendo crear, obtener, actualizar y eliminar objetos de una base de datos. Se ha usado la temática de una tienda online, permitiendo al usuario consultar y buscar entre los diversos artículos disponibles. Los administradores podrán iniciar sesión para crear, modificar o eliminar artículos.',
+     
+      'project.readme': 'Saber más',
+      'project.notfinished': 'En desarrollo',
+
+      'span': '¡Contactame!',
 
       'subtitle.p1.text1': 'A un paso de entregar el TFG y terminar el grado en',
       'subtitle.p1.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
@@ -187,10 +197,105 @@ export const languages = {
       'subtitle.p2.text1': 'Especializado en la',
       'subtitle.p2.strongtext1': 'rama telemática.',
 
-      'theme': 'Modo oscuro:',
-
       'timezone': 'es-ES',
 
       'title.text': 'Hola, soy',
     },
+
+    gl: {
+      'aboutme.p1.strongtext1': 'Comecei a carreira de Teleco,',
+      'aboutme.p1.text1': 'apaixonoume, obsesionoume, frustroume e abandoneina para',
+      'aboutme.p1.strongtext2': 'facer un FP.',
+      'aboutme.p1.text2': 'Anos despois tornei, afronteina, apaixonoume de novo e supereina. Non acougo se non',
+      'aboutme.p1.strongtext3': 'loito por algo ata o final.',
+      
+      'aboutme.p2.strongtext1': 'Son un cú inquedo.',
+      'aboutme.p2.text1': 'Demasiado curioso polo desenvolvemento software, non podo deixar pasar a oportunidade de aprender novas linguaxes, frameworks e tecnoloxías.',
+      
+      'aboutme.p3.text1': 'Un poco tímido e introvertido ao comezo, rodearme de xente coa que poder',
+      'aboutme.p3.strongtext1': 'facer equipo',
+      'aboutme.p3.text2': 'aprendendo dos mellores e axudando motivame e',
+      'aboutme.p3.strongtext2': 'empurrame a dar o mellor de min.',
+      
+      'aboutme.p4.strongtext1': 'Aínda non contratáronme, mais',
+      'aboutme.p4.strongtext2': 'ensináronme moito que aportar.',
+      'aboutme.p4.text1': 'a experiencia de todo o aprendido nos meus estudos, nos proxectos realizados e en cada traballo en equipo',
+
+      'aboutme.p5.text1': 'A paixón polo técnico',
+      'aboutme.p5.strongtext1': 'non sempre é todo.',
+      'aboutme.p5.text2': 'Cando un proxecto permite axudar e aportar un beneficio aos demáis, penso que',
+      'aboutme.p5.strongtext2': 'derradeiramente marca a diferencia.',
+
+      'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, o saberás cando o atopes. - Steve Jobs.”',
+      
+      'badge': 'Disponible para traballar',
+
+      'cv.link': 'Ver o meu CV',
+
+      'education.date.1': 'Actualmente...',
+      'education.date.2': 'Rematado en 2019',
+      'education.place.1': 'Universidade de Vigo',
+      'education.title.1': 'Grao en Enxeñería de Tecnoloxías de Telecomunicación. Especialización na pola de Telemática',
+      'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
+
+      'experience.date.1': 'Xullo - agosto, 2023',
+      'experience.date.2': 'Febreiro - marzo, 2023',
+      'experience.date.3': 'Maio - xuño, 2018',
+      'experience.date.4': 'Marzo - abril, 2018',
+      'experience.job.1': 'Desenvolvedor de software',
+      'experience.job.2': 'Atención e asistencia ao persoal dos stands e conferencias. Apoio e axuda á organización do foro.',
+      'experience.job.3': 'Menteemento de sistemas informáticos e eléctricos',
+      'experience.job.4': 'Instalación e manteemento de sistemas de telecomunicación en vivendas e edificios',
+      'experience.place.2': 'Universidade de Vigo',
+      'experience.title.1': 'Prácticas do Grao en Enxeñería de Tecnoloxías de Telecomunicación',
+      'experience.title.2': 'Colaborador do Foro Tecnolóxico de Emprego da Universidade de Vigo',
+      'experience.title.3': 'Prácticas como técnico en Sistemas Informáticos',
+      'experience.title.4': 'Prácticas como técnico en Sistemas de Telecomunicación',
+
+      'footer.text1': 'Feito con',
+      'footer.text2': 'usando',
+      'footer.text3': 'e',
+
+      'lang.en': 'Inglés',
+      'lang.es': 'Español',
+      'lang.gl': 'Galego',
+
+      'nav.home': 'Inicio',
+      'nav.education': 'Formación',
+      'nav.experience': 'Experiencia',
+      'nav.projects': 'Proxectos',
+      'nav.aboutme': 'Sobre min',
+
+      'projects.description': 'A maioría dos seguintes proxectos desenvolvéronse ao longo do grao en Enxeñería de Tecnoloxías de Telecomunicación.',
+      'project.title.1': 'Traballo de Fin de Grao',
+      'project.description.1': 'Parametrización dun modelo de intestino para a simulación dunha colonoscopia mediante o framework SOFA (Simulation Open Framework Architecture). Mediante un script de Python, asignanse tanto as propiedades físicas do intestino que modelan o seu comportamento como as características do entorno de simulación.',
+      'project.title.2': 'Proba técnica para o posto de desenvolvedor Android e Kotlin Jr.',
+      'project.description.2': 'Desenvolvemento dunha aplicación Android sinxela mediante Kotlin, Jetpack Compose y arquitectura MVI.',
+      'project.title.3': 'Mint NFTs',
+      'project.description.3': 'Deseño dunha aplicación web que permite crear e ver os teus propios NFTs e outros tipos de tokens dixitais.',
+      'project.title.4': 'NodeSec',
+      'project.description.4': 'Sistema de control de aforo para eventos masivos basado en blockchain. Uso de tecnoloxía NFC e Tensorflow para o control automatizado de entradas e saídas.',
+      'project.title.5': 'Barco solar',
+      'project.description.5': 'Deseño da arquitectura e configuración do protocolo de comunicacions dun barco solar pilotado de forma remota. Configuración de sensores (ultrasonidos, pitch-roll, GPS), webcam, protocolo IoT e deseño da web que mostrará a información en tempo real, posteriormente almacenada nunha base de datos.',
+      'project.title.6': 'REST API web para unha tenda online',
+      'project.description.6': 'Desenvolvemento dunha API REST que realiza peticions a un servidor permitiendo crear, obtener, actualizar e eliminar elementos dunha base de datos. Usouse a temática dunha tenda online, permitindo ao usuario consultar e buscar entre os diversos artículos dispoñibles. Os administradores poderán iniciar sesión para crear, modificar ou eliminar artículos.',
+     
+      'project.readme': 'Saber mais',
+      'project.notfinished': 'En desenvolvemento',
+
+      'span': 'Contactame!',
+
+      'subtitle.p1.text1': 'A un paso de entregar o TFG e rematar o grao en',
+      'subtitle.p1.strongtext1': 'Enxeñería de Tecnoloxías de Telecomunicación',
+      'subtitle.p1.text2': 'na',
+      'subtitle.p1.strongtext2': 'Universidade de Vigo.',
+
+      'subtitle.p2.text1': 'Especializado na',
+      'subtitle.p2.strongtext1': 'pola telemática.',
+
+      'timezone': 'es-ES',
+
+      'title.text': 'Ola, son',
+    }
+
   } as const;

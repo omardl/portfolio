@@ -1,11 +1,13 @@
 ---
-import NavItem from '../components/NavItem.astro'
+import LanguageDropdown from './LanguageDropdown.astro'
+import NavItem from './NavItem.astro'
+import ThemeToggle from './ThemeToggle.astro'
 
 import AboutMeIcon from '../icons/AboutMe.astro'
 import BooksIcon from '../icons/Books.astro'
 import ExperienceIcon from '../icons/Experience.astro'
 import HomeIcon from '../icons/Home.astro'
-import LogoIcon from '../icons/Logo2.astro'
+import LogoIcon from '../icons/Logo3.astro'
 import ProyectsIcon from '../icons/Proyects.astro'
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
@@ -42,11 +44,11 @@ const NAVs = [
 ]
 ---
 
-<header class=" flex items-center justify-between fixed top-0 z-10 right-0 left-0 py-2 border-b-2 border-sky-400/90 backdrop-blur-sm w-[1240px] mx-auto">
+<header id="headerComponent" class=" flex items-center justify-between fixed top-0 z-10 right-0 left-0 py-2 border-b-2 border-sky-700/90 dark:border-sky-400/90 dark:bg-none backdrop-blur-sm w-[1240px] mx-auto h-[82px]">
     
     <LogoIcon class="size-16" /> 
 
-    <nav class="flex justify-center gap-x-4 md:gap-x-8 xl:gap-x-10 opacity-70">
+    <nav class="flex justify-center gap-x-4 md:gap-x-8 xl:gap-x-10 opacity-80">
         {
             NAVs.map(navItem => (  
                 <NavItem link={navItem.link}>
@@ -56,4 +58,9 @@ const NAVs = [
             ))
         } 
     </nav>
+
+    <ThemeToggle />
+
+    <LanguageDropdown />
+
 </header>

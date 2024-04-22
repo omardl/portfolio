@@ -1,52 +1,37 @@
 ---
-import AngularIcon from '../icons/Angular.astro';
-import ArduinoIcon from '../icons/Arduino.astro';
-import DockerIcon from '../icons/Docker.astro';
-import GitHubIcon from '../icons/GitHub.astro';
-import CodeIcon from '../icons/Code.astro';
-import MongoDBIcon from '../icons/MongoDB.astro';
-import MosquittoIcon from '../icons/Mosquitto.astro';
-import NFCIcon from '../icons/NFC.astro';
-import NodeJSIcon from '../icons/NodeJS.astro';
-import NodeRedIcon from '../icons/NodeRed.astro';
-import PythonIcon from '../icons/Python.astro';
-import SOFAIcon from '../icons/SOFA.astro';
-import SolidityIcon from '../icons/Solidity.astro';
-import SpringBootIcon from '../icons/SpringBoot.astro';
-import TensorFlowIcon from '../icons/TensorFlow.astro';
+import AngularIcon from '../icons/Angular.astro'
+import ArduinoIcon from '../icons/Arduino.astro'
+import DockerIcon from '../icons/Docker.astro'
+import GitHubIcon from '../icons/GitHub.astro'
+import JetpackComposeIcon from '../icons/JetpackCompose.astro'
+import JiraIcon from '../icons/Jira.astro'
+import KotlinIcon from '../icons/Kotlin.astro'
+import MongoDBIcon from '../icons/MongoDB.astro'
+import MosquittoIcon from '../icons/Mosquitto.astro'
+import NFCIcon from '../icons/NFC.astro'
+import NodeJSIcon from '../icons/NodeJS.astro'
+import NodeRedIcon from '../icons/NodeRed.astro'
+import PythonIcon from '../icons/Python.astro'
+import ReadmeIcon from '../icons/Readme.astro'
+import SOFAIcon from '../icons/SOFA.astro'
+import SolidityIcon from '../icons/Solidity.astro'
+import SpringBootIcon from '../icons/SpringBoot.astro'
+import TensorFlowIcon from '../icons/TensorFlow.astro'
+import UnderDevelopmentIcon from '../icons/UnderDevelopment.astro'
+
+import Badge from '../components/Badge.astro';
+import Contact from '../components/Contact.astro';
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const IMAGES = {
-    barcoSolar1: {
-        title: 'Web',
-        description: 'NodeRed dashboard for sensor responses',
-        image: '/project_images/barcoSolar.webp'
-    }, 
-
-    barcoSolar2: {
-        title: 'Scheme',
-        description: 'Scheme of technologies and protocols used in the project',
-        image: '/project_images/barcoSolar2.webp'
-    },
-
-    SOFASnapshot: {
-        title: 'SOFA snapshot',
-        description: 'Bowel preview of SOFA simulation',
-        image: 'project_images/TFG.webp'
-    }
-
-    /** SOFA 2: coming soon */
-}
-
 const TAGS = {
     Angular: {
         name: 'Angular',
         class: 'text-Angular-color bg-Angular-bg border-Angular-color',
-        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#DE002D_0%,#590113_50%,#DE002D_100%)]',
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#DE002D_0%,#590113_50%,#DE002D_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#DE002D_0%,#590113_50%,#DE002D_100%)]',
         icon: AngularIcon
     },
 
@@ -62,6 +47,27 @@ const TAGS = {
         class: 'text-Docker-color bg-Docker-bg border-Docker-color',
         bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#1D63ED_0%,#0c2659_50%,#1D63ED_100%)]',    
         icon: DockerIcon
+    },
+
+    Jetpack: {
+        name: 'Jetpack Compose',
+        class: 'text-Jetpack-color bg-Jetpack-bg border-Jetpack-color',
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#2EC781_0%,#145738_50%,#2EC781_100%)]',
+        icon: JetpackComposeIcon
+    },
+
+    Jira: {
+        name: 'Jira',
+        class: 'text-Jira-color bg-Jira-bg border-Jira-color',
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#2178f1_0%,#0a1e38_50%,#2178f1_100%)]',
+        icon: JiraIcon
+    },
+
+    Kotlin: {
+        name: 'Kotlin',
+        class: 'text-Kotlin-color bg-Kotlin-bg border-Kotlin-color',
+        bg_gradient: 'bg-[conic-gradient(from_90deg_at_50%_50%,#A729E5_0%,#430c5e_50%,#A729E5_100%)]',  
+        icon: KotlinIcon
     },
 
     MongoDB: {
@@ -135,199 +141,133 @@ const TAGS = {
     }
 }
 
-/**
- * listado:
- * 1. tfg
- * 2. ancora
- * 3. nft
- * 4. rest api
- * 5.lpro
- * 6. rsfm
- * 7. seg B ¿?
- */
 const PROJECTS = [
     {
-        title: t('project.title.1'),
+        title: t('project.title.1'),        
         description: t('project.description.1'),
-        image: '/project_images/TFG.webp',
-        link: '',
-        git: '',
-        tags: [TAGS.SOFA, TAGS.Python],
+        image: '/project_images/SOFA.webp',
+        position_text: 'col-start-2',
+        position_image: 'col-start-1',
+        progress: t('project.notfinished'),
+        tags: [TAGS.SOFA, TAGS.Python]
     },
 
     {
         title: t('project.title.2'),
         description: t('project.description.2'),
-        image: '',
-        link: '',
-        git: '',
-        tags: [TAGS.Arduino, TAGS.Docker, TAGS.MongoDB, TAGS.NFC, TAGS.NodeRed, TAGS.Python, TAGS.SpringBoot, TAGS.TensorFlow],
+        image: '/project_images/Android.webp',
+        git: 'https://github.com/omardl/Android-tecnhical-test',
+        readme: 'https://github.com/omardl/Android-tecnhical-test/blob/main/README.md',
+        position_text: 'col-start-1',
+        position_image: 'col-start-2',
+        tags: [TAGS.Kotlin, TAGS.Jetpack],
     },
 
     {
         title: t('project.title.3'),
         description: t('project.description.3'),
-        image: '/project_images/barcoSolar.webp',
-        link: '',
-        git: '',
-        tags: [TAGS.Arduino, TAGS.Docker, TAGS.Mosquitto, TAGS.NodeRed, TAGS.Python],
+        image: '/project_images/MintAPI.webp',
+        git: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo--',
+        readme: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo--/blob/master/README.md',
+        position_text: 'col-start-2',
+        position_image: 'col-start-1',
+        tags: [TAGS.Angular, TAGS.Solidity],
     },
 
     {
         title: t('project.title.4'),
         description: t('project.description.4'),
-        image: '',
-        link: '',
-        git: '',
-        tags: [TAGS.Angular, TAGS.Solidity],
+        image: '/project_images/NodeSec.webp',
+        git: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain',
+        readme: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain/blob/main/README.md',
+        position_text: 'col-start-1',
+        position_image: 'col-start-2',
+        tags: [TAGS.Arduino, TAGS.MongoDB, TAGS.NFC, TAGS.NodeRed, TAGS.Python, TAGS.SpringBoot, TAGS.TensorFlow],
     },
 
     {
         title: t('project.title.5'),
         description: t('project.description.5'),
-        image: '',
-        git: '',
-        tags: [],
+        image: '/project_images/sunBoat.webp',
+        git: 'https://github.com/omardl/Sun-boat--RSFM-GETT-UVigo',
+        readme: 'https://github.com/omardl/Design-and-configuration-of-the-communications-arquitecture-and-protocols-for-a-sun-boat./blob/main/README.md',
+        position_text: 'col-start-2',
+        position_image: 'col-start-1',
+        tags: [TAGS.Arduino, TAGS.Docker, TAGS.Jira, TAGS.MongoDB, TAGS.Mosquitto, TAGS.NodeRed, TAGS.Python],
     },
 
     {
         title: t('project.title.6'),
         description: t('project.description.6'),
-        image: '',
-        link: '',
-        git: '',
-        tags: [TAGS.Angular, TAGS.NodeJS],
+        image: '/project_images/REST_API.webp',
+        readme: 'https://github.com/omardl/REST-API-web-shop--GETT-UVigo-/blob/main/README.md',
+        git: 'https://github.com/omardl/REST-API-web-shop--GETT-UVigo-',
+        position_text: 'col-start-1',
+        position_image: 'col-start-2',
+        tags: [TAGS.Angular, TAGS.MongoDB, TAGS.NodeJS],
     },
 
-    {
-        title: t('project.title.7'),
-        description: t('project.description.7'),
-        image: '',
-        link: '',
-        git: '',
-        tags: []
-    }
 ]
+
 ---
-
-{/*
-
-SPAN BUENO:
-
-<span class={`flex flex-row items-center gap-x-2 text-xs font-medium me-2 my-2 px-2.5 py-0.5 rounded-full border text-opacity-100 bg-opacity-100 ${tag.class} `}>
-                            <tag.icon class={`size-6 bg-slate-50 rounded-full border ${tag.class}`}/> {tag.icon.name}
-</span>     
-*/}
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover grid-cols-[1240px] grid-rows-[300px] p-6 rounded-3xl">
+    <span class="row-start-1 col-start-1 col-span-2 text-md font-semibold text-pretty text-gray-800/80 dark:text-sky-300">
+        {t('projects.description')}
+    </span>
+</div>
 {
     PROJECTS.map(project => (
-        <div class="shadow-grid hover:shadow-grid-hover grid-projects group grid-rows-2 p-6 my-12 grid-cols-2 gap-6 border-[#212121] bg-[#212121] backdrop-blur-sm bg-opacity-40 rounded-3xl">
+    
+        <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover grid-projects grid-rows-2 p-6 my-12 grid-cols-2 gap-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
             <div class="row-start-1 col-start-1 col-span-2 flex items-center justify-center">
-                <span class="row-start-1 col-start-1 col-span-2 text-2xl font-semibold text-sky-300">
+                <span class="row-start-1 col-start-1 col-span-2 text-2xl font-semibold text-gray-800/80 underline dark:text-sky-300">
                     {project.title}
                 </span>
             </div>
 
-            <div class="row-start-2 row-span-2 col-start-1 flex flex-col gap-y-6 justify-center border-[#212121] border-[3px] rounded-3xl">
-                <span class="text-lg font-semibold text-sky-600 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+            <div class={`row-start-2 row-span-2 ${project.position_text} flex flex-col gap-y-3 justify-center rounded-3xl`}>
+                <span class="text-lg font-semibold text-gray-800/80 dark:text-sky-500 mt-1 mx-4 text-pretty hover:mx-6 duration-300">
                     {project.description}
-                </span>  
-                <div class="h-[1px] bg-sky-400 "></div>
+                </span> 
+            
+                <div class="h-[1.5px] bg-blue-600 dark:bg-sky-400 my-6 rounded-3px"></div>
+            
                 <div class="gap-x-4 mx-4 flex flex-wrap text-pretty">
                     {project.tags.map((tag) => (        
                         <span class="flex justify-center relative my-2 inline-flex h-[36px] overflow-hidden rounded-full p-0.5" >
                             <span class={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] ${tag.bg_gradient}`} />
-                            <div class="inline-flex items-center justify-center px-3 py-1 gap-x-2 text-slate-50 bg-[#212121] rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap">
-                                <tag.icon class={`size-7 bg-slate-50 rounded-full border-[2px] ${tag.class}`}/> {tag.icon.name}
+                            <div class={`inline-flex items-center justify-center px-3 py-1 gap-x-2 ${tag.class} dark:text-slate-50 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap`}>
+                                <tag.icon class={`size-7 bg-slate-50 rounded-full border-[2px] ${tag.class}`}/> {tag.name}
                             </div>
                         </span>       
                     ))}    
                 </div>
+
             </div>
-            
-            <div class="relative flex flex-col items-center row-start-2 col-start-2 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-                    <img class="transition duration-500 md:group-hover:scale-95" loading="lazy" src={project.image} />
+                
+            <div class={`relative group flex flex-col justify-center row-start-2 ${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
+                <img class="transition duration-500 scale-110 group-hover:scale-100" loading="lazy" src={project.image} />
             </div>
 
-            <div class="flex flex-row items-center justify-evenly col-start-2 row-start-3">
-                <a href={project.git} class="shadow-grid hover:shadow-grid-hover opacity-80 bg-[linear-gradient(110deg,#07090D,45%,#4D4B4B,55%,#07090D)] border border-white/30 animate-[backgroundShine_3s_linear_infinite] bg-[length:250%_100%] rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:text-sky-400 hover:border-sky-400" target="_blank" rel="noopener noreferrer">
-                    <GitHubIcon class="size-5" />
-                    GitHub
-                </a>
-                <a href={project.link} class="shadow-grid hover:shadow-grid-hover opacity-80 bg-[linear-gradient(110deg,#07090D,45%,#4D4B4B,55%,#07090D)] border border-white/30 animate-[backgroundShine_3s_linear_infinite] bg-[length:250%_100%] rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:text-sky-400 hover:border-sky-400" target="_blank" rel="noopener noreferrer">
-                    <CodeIcon class="size-5" />
-                    Preview
-                </a>
-            </div>
-        </div>                                                                  
+            <div class={`flex flex-row items-center justify-evenly ${project.position_image} row-start-3`}>
+                    {project.progress &&
+                        <div class="w-auto h-12">
+                            <Badge> <UnderDevelopmentIcon class="mr-2"/> {project.progress}  </Badge>               
+                        </div>
+                    }
+                    {project.git && 
+                        <Contact href={project.git} >    
+                            <GitHubIcon class="size-5" />
+                            GitHub 
+                        </Contact>
+                    }
+                    {project.readme &&          
+                        <Contact href={project.readme} >    
+                            <ReadmeIcon class="size-5" />
+                            {t('project.readme')}   
+                        </Contact>
+                    }
+            </div>            
+        </div>                          
     ))
 }
-
-
-<!--div id="carousel-container" class="relative w-full" data-carousel="static">
-    < Carousel wrapper >
-    <div id="carousel-items" class="relative h-56 overflow-hidden rounded-lg md:h-96">
-      < Carousel items will be dynamically generated here >
-    </div>
-    < Slider indicators >
-    <div id="slider-indicators" class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
-      < Slider indicators will be dynamically generated here >
-    </div>
-    < Slider controls >
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-      < Previous button content >
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-      < Next button content >
-    </button>
-  </div-->
-  
-  <!--script>
-    // Your JavaScript code to dynamically generate carousel items and indicators
-  
-    // Sample items array (replace this with your actual items array)
-    const items = [
-      { images: ["/docs/images/carousel/carousel-1.svg", "/docs/images/carousel/carousel-2.svg"] },
-      { images: ["/docs/images/carousel/carousel-3.svg", "/docs/images/carousel/carousel-4.svg", "/docs/images/carousel/carousel-5.svg"] }
-      // Add more items as needed
-    ];
-  
-    const carouselItemsContainer = document.getElementById('carousel-items');
-    const sliderIndicatorsContainer = document.getElementById('slider-indicators');
-  
-    // Function to generate carousel items
-    function generateCarouselItems() {
-      carouselItemsContainer.innerHTML = ''; // Clear existing items
-  
-      items.forEach((item, index) => {
-        const carouselItem = document.createElement('div');
-        carouselItem.classList.add('hidden', 'duration-700', 'ease-in-out');
-        if (index === 0) {
-          carouselItem.dataset.carouselItem = 'active';
-        } else {
-          carouselItem.dataset.carouselItem = '';
-        }
-  
-        item.images.forEach(image => {
-          const img = document.createElement('img');
-          img.src = image;
-          img.classList.add('absolute', 'block', 'w-full', '-translate-x-1/2', '-translate-y-1/2', 'top-1/2', 'left-1/2');
-          img.alt = '...';
-          carouselItem.appendChild(img);
-        });
-  
-        carouselItemsContainer.appendChild(carouselItem);
-  
-        // Generate slider indicators
-        const indicatorButton = document.createElement('button');
-        indicatorButton.type = 'button';
-        indicatorButton.classList.add('w-3', 'h-3', 'rounded-full');
-        indicatorButton.setAttribute('aria-current', index === 0 ? 'true' : 'false');
-        indicatorButton.setAttribute('aria-label', `Slide ${index + 1}`);
-        indicatorButton.dataset.carouselSlideTo = index;
-        sliderIndicatorsContainer.appendChild(indicatorButton);
-      });
-    }
-  
-    generateCarouselItems();
-  </script-->
-

@@ -1,0 +1,43 @@
+<label class="z-20 -mr-24 inline-block w-[60px] h-[34px] relative">
+    <input id="themeToggle" type="checkbox" class="peer opacity-0 size-0">
+    <span class="slider absolute cursor-pointer inset-0 rounded-full duration-500 bg-blue-500/40 before:absolute before:content-[''] before:size-[24px] before:duration-500 before:bg-[linear-gradient(40deg,#ff0080,#ff8c00_70%)] before:left-[10%] before:top-1/2 before:rounded-full before:-translate-y-1/2 peer-checked:bg-[#303136] peer-checked:before:translate-x-full peer-checked:before:bg-[linear-gradient(40deg,#303136,#303136_70%)] peer-checked:before:shadow-moon-shadow"></span>
+</label>
+
+<script>
+    let checkbox = document.getElementById("themeToggle") as HTMLInputElement;
+
+    if (checkbox) {
+
+        if (localStorage.getItem('color-theme') === 'dark' || document.documentElement.classList.contains('dark')) {
+            checkbox.checked = true;
+        } else {
+            checkbox.checked = false;
+        }
+
+        checkbox.addEventListener('change', function() {
+            
+            // if set via local storage previously
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+
+                }
+
+            // if NOT set via local storage previously
+            } else {    
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+            
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            } 
+        });
+    }
+</script>
