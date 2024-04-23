@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class='flex justify-center items-center gap-x-4'>
+<section class='flex justify-center items-center gap-x-4 w-[1240px]'>
     <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover flex flex-row items-center p-6 border-[1px] border-[#212121] hover:border-blue-800 backdrop-blur-sm bg-opacity-40 rounded-3xl hover">
         <div class='flex flex-col justify-center py-4 font-semibold'>    
             <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
@@ -33,7 +33,7 @@ const t = useTranslations(lang);
 </section>
 
 
-<section class="my-12">
+<section class="my-12 w-[1240px]">
     <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover p-4 border-[#212121] bg-blue-300 dark:bg-[#212121]/20 backdrop-blur-sm bg-opacity-40 rounded-3xl">
         <span class="italic opacity-60 text-[#212121] dark:text-white font-semibold"> {t('aboutme.phrase')} </span>
         <span class="italic pr-2 border-[#212121] dark:border-[#fff] border-r-2 animate-[typing_1s_ease-in-out_infinite]"> </span>

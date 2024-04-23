@@ -39,7 +39,7 @@ const lang = getLangFromUrl(Astro.url);
     </div>
   
 		<div class="fixed inset-0 z-[-10] pointer-events-none"> 
-      <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-100 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,30,30,0),rgba(125,189,219,0.6))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+      <div class="absolute top-0 z-[-2] h-full w-full bg-neutral-100 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(30,30,30,0),rgba(125,189,219,0.6))] dark:bg-neutral-950 dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
       <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
       <div class="wave bg-sky-600/25 dark:bg-blue-600/25"></div>
@@ -246,23 +246,11 @@ const lang = getLangFromUrl(Astro.url);
     grid-template-rows: 75px 250px 100px 50px;    
   }
 
-  .grid-container-md {
-    display: grid;
-    grid-template-columns: 180px 94px 96px 94px 180px;
-    grid-template-rows: 75px 250px 100px 50px;  
-  }
-
-  .grid-container-sm {
-    display: grid;
-    grid-template-columns: 280px 194px 196px 194px 280px;
-    grid-template-rows: 75px 250px 100px 50px;  
-  }
-  
 
   .grid-education {
     display: grid;
     grid-template-columns: 590px 589.5px;
-    grid-template-rows: 200px;
+    grid-template-rows: 240px;
   }
 
   .grid-experience {
