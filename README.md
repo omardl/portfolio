@@ -2,8 +2,8 @@
 
 ## En desarrollo
 
-![Light Theme](https://github.com/omardl/portfolio/assets/105445540/65c6c874-b403-4424-a587-1163be70b108)
+![LightTheme](https://github.com/omardl/portfolio/assets/105445540/388b0972-df6d-4274-ad58-a5f67ebd6345)
 
-![DarkTheme](https://github.com/omardl/portfolio/assets/105445540/2107b469-c36c-4283-8174-f6259e3198df)
+![DarkTheme](https://github.com/omardl/portfolio/assets/105445540/83ebe30d-bdb0-4fb5-a3bf-cf64513ee27e)
 
 # Autor - Omar Delgado
