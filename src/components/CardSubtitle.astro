@@ -5,7 +5,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover col-start-2 col-span-3 row-start-2 flex items-center justify-center overflow-hidden border border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover col-start-2 xl:col-start-4 col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-6 row-start-2 row-span-1 flex items-center justify-center overflow-hidden border border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
     <div id="spotSub1" class="absolute z-10 duration-1000 size-72 rounded-full bg-sky-400 dark:bg-sky-900 opacity-50 blur-md mt-36 ml-72" />
     
     <div id="spotSub2" class="absolute z-10 duration-1000 size-12 rounded-full bg-indigo-400 dark:bg-indigo-700 opacity-70 blur-md mt-24 ml-96" />
@@ -19,7 +19,7 @@ const t = useTranslations(lang);
     <div id="spotSub6" class="absolute z-10 duration-1000 size-12 rounded-full bg-sky-400 dark:bg-sky-700 opacity-50 blur-md mb-80 ml-32" />
     
 
-    <h2 class="z-20 text-gray-800/80 dark:text-white/80 duration-1000 font-semibold [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold mx-6 lg:text-xl text-wrap max-w-[700px]"> 
+    <h2 class="z-20 text-gray-800/80 dark:text-white/80 duration-1000 font-semibold [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold mx-3 md:mx-6 text-[9px] sm:text-sm md:text-base lg:text-lg xl:text-xl text-pretty max-w-[700px]"> 
         <p> {t('subtitle.p1.text1')} <strong> {t('subtitle.p1.strongtext1')} </strong> {t('subtitle.p1.text2')} <strong> {t('subtitle.p1.strongtext2')} </strong> </p>
         <br>
         <p> {t('subtitle.p2.text1')} <strong> {t('subtitle.p2.strongtext1')} </strong> </p>

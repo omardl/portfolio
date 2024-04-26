@@ -7,12 +7,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover relative overflow-hidden row-start-1 col-start-4 font-semibold text-lg text-gray-800/80 dark:text-white/80 flex justify-center items-center border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover relative overflow-hidden row-start-3 lg:row-start-1 row-span-1 col-start-2 md:col-start-3 lg:col-start-4 xl:col-start-8 col-span-1 xl:col-span-2 font-semibold text-lg text-gray-800/80 dark:text-white/80 flex justify-center items-center border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
     <div id="spotLink" class="z-10 absolute duration-1000 size-36 rounded-full bg-indigo-300 dark:bg-indigo-800 opacity-50 blur-md mt-44 ml-12" />
     <a href="/CV" class="z-20 group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-800/80 after:dark:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
-        <span class="flex flex-row gap-x-2 duration-1000 transform:none">
+        <span class="flex flex-row gap-x-1 md:gap-x-2 text-sm xl:text-base duration-1000 transform:none">
             {t('cv.link')}
-            <LinkIcon class="size-7 group-hover:-rotate-45 duration-300" /> 
+            <LinkIcon class="size-5 xl:size-7 group-hover:-rotate-45 duration-300" /> 
         </span>
     <a>
 </div>

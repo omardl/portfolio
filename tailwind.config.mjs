@@ -7,7 +7,7 @@ export default {
 		extend: {
 
 			boxShadow: {
-				'location-pulse': '0 0 1px 2px #dc2626',
+				'location-pulse': '0 0 1px 2px',
 				'grid': '5px 5px 10px rgb(25, 25, 25), -5px -5px 10px rgb(60, 60, 60)',
 				'grid-mini': '2px 2px 5px rgb(25, 25, 25), -2px -2px 5px rgb(60, 60, 60)',
 				'grid-hover': '0px 0px 5px rgb(191, 219, 254), 0px 0px 20px rgb(29, 78, 216)',
@@ -65,6 +65,10 @@ export default {
 				'TensorFlow-bg': '#FFD6A3',
 			},
 
+			height: {
+				'1/10': '10%'
+			},
+
 			keyframes: {
 				backgroundShine: {
 					from: {
@@ -120,6 +124,11 @@ export default {
 			rotate: {
 				'35': '35deg',
 				'135': '135deg'
+			},
+
+			width: {
+				'17/20': '85%',
+				'19/20': '95%'
 			}
 		},
 	},

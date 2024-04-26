@@ -22,7 +22,7 @@ const lang = getLangFromUrl(Astro.url);
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
     <script>
@@ -35,7 +35,7 @@ const lang = getLangFromUrl(Astro.url);
 	</head>
 
 	<body>
-    <div id="mouse" class="glowing-mouse blur-2xl size-72 rounded-full">
+    <div id="mouse" class="glowing-mouse blur-2xl size-6 lg:size-72 rounded-full ">
     </div>
   
     <div class="fixed inset-0 z-[-10] pointer-events-none"> 
@@ -165,6 +165,7 @@ const lang = getLangFromUrl(Astro.url);
       opacity: 0.5;
     }
   }
+
 
   .background-layer:nth-child(1) {
     animation-name: fade-in;

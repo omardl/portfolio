@@ -210,8 +210,8 @@ const PROJECTS = [
 ]
 
 ---
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover w-[1240px] p-6 rounded-3xl">
-    <span class="row-start-1 col-start-1 text-2xl font-semibold text-pretty text-gray-800/80 dark:text-sky-300">
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover p-6 rounded-3xl">
+    <span class="row-start-1 col-start-1 text-lg xl:text-2xl font-semibold text-pretty text-gray-800/80 dark:text-sky-300">
         {t('projects.description')}
     </span>
 </div>
@@ -219,15 +219,15 @@ const PROJECTS = [
 {
     PROJECTS.map(project => (
     
-        <div class="grid-projects w-[1240px] shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover p-6 my-12 gap-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
-            <div class="row-start-1 col-start-1 col-span-2 flex items-center justify-center">
-                <span class="row-start-1 col-start-1 col-span-2 text-2xl font-semibold text-gray-800/80 underline dark:text-sky-300">
+        <div class="grid grid-cols-1 grid-rows-[60px_auto_350px_60px] lg:grid-cols-2 lg:grid-rows-[30px_350px_60px] xl:grid-rows-[30px_400px_60px] shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover py-3 lg:py-6 px-6 my-12 gap-3 lg:gap-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+            <div class="row-start-1 col-start-1 col-span-1 lg:col-span-2 flex items-center justify-center">
+                <span class="text-[22px] xl:text-2xl font-semibold text-center text-gray-800/80 underline dark:text-sky-300">
                     {project.title}
                 </span>
             </div>
 
-            <div class={`row-start-2 row-span-2 ${project.position_text} flex flex-col gap-y-3 justify-center rounded-3xl`}>
-                <span class="text-lg font-semibold text-gray-800/80 dark:text-sky-500 mt-1 mx-4 text-pretty hover:mx-6 duration-300">
+            <div class={`row-start-2 row-span-1 lg:row-span-2 xl:${project.position_text} flex flex-col gap-y-0 lg:gap-y-3 justify-center rounded-3xl`}>
+                <span class="text-base xl:text-xl font-semibold text-gray-800/80 dark:text-sky-500 mt-1 mx-4 text-pretty hover:mx-6 duration-300">
                     {project.description}
                 </span> 
             
@@ -246,11 +246,11 @@ const PROJECTS = [
 
             </div>
                 
-            <div class={`relative group flex flex-col justify-center row-start-2 ${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
-                <img class="transition duration-500 scale-110 group-hover:scale-100" loading="lazy" src={project.image} />
+            <div class={`relative group flex flex-col justify-center row-start-3 lg:row-start-2 col-start-1 lg:${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
+                <img class="transition duration-500 scale-110 group-hover:scale-105 xl:group-hover:scale-100" loading="lazy" src={project.image} />
             </div>
 
-            <div class={`flex flex-row items-center justify-evenly ${project.position_image} row-start-3`}>
+            <div class={`flex flex-row items-center justify-evenly col-start-1 lg:${project.position_image} row-start-4 lg:row-start-3`}>
                     {project.progress &&
                         <div class="w-auto h-12">
                             <Badge> <UnderDevelopmentIcon class="mr-2"/> {project.progress}  </Badge>               

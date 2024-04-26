@@ -13,12 +13,12 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="flex flex-center justify-center row-start-4 col-start-1">
+<div class="hidden lg:flex flex-col items-center justify-center row-start-4 col-start-1 col-span-1 xl:col-span-3">
     <a
       href={link}
       target="_blank"
       rel="noopener noreferer"
-      class="flex items-center transition md:justify-center"
+      class="flex h-[30px] md:h-[50px] items-center transition md:justify-center"
     >
         <Badge> {t('badge')} </Badge> 
     </a>

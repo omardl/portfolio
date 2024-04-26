@@ -1,11 +1,22 @@
 ---
 import Badge from './Badge.astro'
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
 interface Props {
     img: string;
 }
 
 const { img } = Astro.props;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover col-start-1 row-start-2 row-span-2 rounded-3xl transition-transform border-[#212121] duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size:cover;`} >
+<div class="shadow-grid-mini flex justify-center items-end bg-top md:bg-center xl:bg-left hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover col-start-1 col-span-1 xl:col-span-3 row-span-2 row-start-2 rounded-3xl transition-transform border-[#212121] duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size:cover;`} >
+    <div class="lg:hidden mx-auto mb-2">
+        <a href="https://www.linkedin.com/in/omar-d-l" target="_blank" rel="noopener noreferer" class="flex h-[30px] md:h-[40px] items-center transition md:justify-center">
+            <Badge> {t('badge')} </Badge> 
+        </a>    
+    </div>
+</div>

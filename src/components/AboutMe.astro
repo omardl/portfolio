@@ -5,36 +5,46 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class='flex justify-center items-center gap-x-4 w-[1240px]'>
-    <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover flex flex-row items-center p-6 border-[1px] border-[#212121] hover:border-blue-800 backdrop-blur-sm bg-opacity-40 rounded-3xl hover">
+<section class='flex justify-center items-center gap-x-4'>
+    <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover flex flex-col lg:flex-row items-center p-6 border-[1px] border-[#212121] hover:border-blue-800 backdrop-blur-sm bg-opacity-40 rounded-3xl hover">        
         <div class='flex flex-col justify-center py-4 font-semibold'>    
-            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
+            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 text-base xl:text-lg hover:mx-4 duration-300"> 
                 <p> <strong> {t('aboutme.p1.strongtext1')} </strong> {t('aboutme.p1.text1')} <strong>{t('aboutme.p1.strongtext2')} </strong> {t('aboutme.p1.text2')} <strong> {t('aboutme.p1.strongtext3')} </strong> </p>
             </div>
-            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
+            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 text-base xl:text-lg hover:mx-4 duration-300"> 
                 <p> <strong> {t('aboutme.p2.strongtext1')} </strong> {t('aboutme.p2.text1')} </p>
             </div>
-            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
+            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 text-base xl:text-lg hover:mx-4 duration-300"> 
                 <p> {t('aboutme.p3.text1')} <strong> {t('aboutme.p3.strongtext1')}  </strong> {t('aboutme.p3.text2')}  <strong> {t('aboutme.p3.strongtext2')}  </strong> </p>
             </div>
-            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
+            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 text-base xl:text-lg hover:mx-4 duration-300"> 
                 <p> <strong> {t('aboutme.p4.strongtext1')}  </strong> {t('aboutme.p4.text1')} <strong> {t('aboutme.p4.strongtext2')} </strong> </p>
             </div>
-            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 hover:mx-4 duration-300"> 
+            <div class="text-gray-800/80 dark:text-white/80 [&>p>strong]:text-sky-700 [&>p>strong]:dark:text-sky-400 [&>p>strong]:font-bold text-pretty mx-2 my-2 text-base xl:text-lg hover:mx-4 duration-300"> 
                 <p> {t('aboutme.p5.text1')} <strong> {t('aboutme.p5.strongtext1')} </strong> {t('aboutme.p5.text2')} <strong> {t('aboutme.p5.strongtext2')} </strong> </p>
             </div>
         </div>
+
         <img
-            class="rounded-full size-64 bg-inherit hover:scale-105 duration-300"
+            class="rounded-full hidden lg:flex size-52 xl:size-64 bg-inherit hover:scale-105 duration-300"
             src="/programming.webp"
             alt="about me draw"
         />
     </div>
 </section>
 
+<section class="my-12">
+    <div class="flex justify-center">
+        <img
+            class="rounded-full flex lg:hidden size-36 bg-inherit hover:scale-105 duration-300"
+            src="/programming.webp"
+            alt="about me draw"
+        />
+    </div>
+</section>
 
-<section class="my-12 w-[1240px]">
-    <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover p-4 border-[#212121] bg-blue-300 dark:bg-[#212121]/20 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+<section class="my-12">
+    <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover p-8 text-base xl:text-lg border-[#212121] bg-blue-300 dark:bg-[#212121]/20 backdrop-blur-sm bg-opacity-40 rounded-3xl">
         <span class="italic opacity-60 text-[#212121] dark:text-white font-semibold"> {t('aboutme.phrase')} </span>
         <span class="italic pr-2 border-[#212121] dark:border-[#fff] border-r-2 animate-[typing_1s_ease-in-out_infinite]"> </span>
     </div>

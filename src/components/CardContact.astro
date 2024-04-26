@@ -10,30 +10,33 @@ const CONTACT = [
         icon: GmailIcon,
         name: 'Mail',
         link: 'mailto:omardelgadlop@gmail.com',
-        grid_col: 2,
-        grid_row: 4
+        grid_col_lg: 2,
+        grid_col_xl: 4
+
     },
     {
         icon: LinkedInIcon,
         name: 'LinkedIn',
         link: 'https://www.linkedin.com/in/omar-d-l',
-        grid_col: 3,
-        grid_row: 4
+        grid_col_lg: 3,
+        grid_col_xl: 6
+
     },
     {
         icon: GitHubIcon,
         name: 'GitHub',
         link: 'https://github.com/omardl',
-        grid_col: 4,
-        grid_row: 4
+        grid_col_lg: 4,
+        grid_col_xl: 8
+
     },
 ]
 ---
 {
     CONTACT.map(contact => (   
-        <div class={`row-start-${contact.grid_row} ol-start-${contact.grid_col} flex flex-row justify-center items-center `}>                    
+        <div class={`col-start-2 md:col-start-${contact.grid_col_lg} col-span-2 md:col-span-1 xl:col-start-${contact.grid_col_xl} xl:col-span-2 row-start-7 md:row-start-5 lg:row-start-4 hidden md:flex flex-auto lg:flex-row justify-center items-center`}>                    
             <Contact href={contact.link} >    
-                <contact.icon />
+                <contact.icon class="size-5 sm:size-6"/>
                 {contact.name}   
             </Contact>
         </div>

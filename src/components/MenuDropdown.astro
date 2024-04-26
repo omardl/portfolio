@@ -1,0 +1,158 @@
+---
+import AboutMeIcon from '../icons/AboutMe.astro'
+import BooksIcon from '../icons/Books.astro'
+import ExperienceIcon from '../icons/Experience.astro'
+import FlagEN from "../icons/FlagEN.astro";
+import FlagES from "../icons/FlagES.astro";
+import FlagGL from "../icons/FlagGL.astro";
+import HomeIcon from '../icons/Home.astro'
+import LangIcon from "../icons/Language.astro";
+import MenuIcon from "../icons/Menu.astro";
+import ProyectsIcon from '../icons/Proyects.astro';
+
+import NavItem from './NavItem.astro';
+
+import { languages } from '../i18n/ui';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const NAVs = [
+    {
+        title: t('nav.home'),
+        link: '#home',
+        icon: HomeIcon
+    }, 
+    {
+        title: t('nav.education'),
+        link: '#education',
+        icon: BooksIcon
+    },
+    {
+        title: t('nav.experience'),
+        link: '#experience',
+        icon: ExperienceIcon
+    },
+    {
+        title: t('nav.projects'),
+        link: '#projects',
+        icon: ProyectsIcon
+    },
+    {
+        title: t('nav.aboutme'),
+        link: '#aboutme',
+        icon: AboutMeIcon
+    }
+]
+
+---
+
+<button id="dropdownDefaultButton" data-dropdown-toggle="dropdownMenu" class="relative z-20 text-gray-800/80 ring-2 outline-none ring-gray-800 hover:ring-4 hover:outline-none hover:ring-blue-700 hover:text-blue-700 font-medium rounded-lg text-sm p-1.5 text-center inline-flex items-center dark:text-white/80 dark:ring-white/80 dark:hover:ring-sky-400 dark:hover:text-sky-400" type="button">
+    <LangIcon class="hidden size-0 lg:size-6 lg:block"/>
+    <MenuIcon class="flex size-6 lg:hidden lg:size-0" />
+</button>
+
+<div id="dropdownMenu" class="z-10 absolute hidden bg-white divide-y divide-gray-100 top-16 right-0 border-[2px] border-gray-500 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="flex flex-col items-center py-2 text-sm" aria-labelledby="dropdownDefaultButton">
+        <li>
+
+            <nav class="md:hidden flex flex-col justify-center gap-y-4 mt-4 opacity-80">
+
+                {
+                    NAVs.map(navItem => (  
+                        <NavItem link={navItem.link} >
+                            <navItem.icon class="size-6 mr-2"/>
+                            <span> {navItem.title} </span>
+                        </NavItem>   
+                    ))
+                }  
+        
+            </nav>
+
+            <div class="md:hidden border-b-2 mt-6 mb-4 border-gray-800/80 dark:border-white/80"></div>
+
+
+            <a href="/" class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                <FlagES className="size-8 mr-2"/>
+                {t('lang.es')}
+            </a>
+
+            {Object.entries(languages).map(([lang, label]) => (
+                (lang === 'gl' && 
+                    <a href={`/${lang}/`} class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                        <FlagGL className="size-8 mr-2 rounded-full" />
+                        {t('lang.gl')}
+                    </a>
+                )
+            ))}
+
+            {Object.entries(languages).map(([lang, label]) => (
+                (lang === 'en' && 
+                    <a href={`/${lang}/`} class="flex flex-row items-center block px-2 py-2 hover:bg-slate-200 dark:hover:bg-gray-600 text-gray-800 hover:text-sky-600/80 dark:text-white/80 dark:hover:text-sky-400/80"> 
+                        <FlagEN className="size-8 mr-2" />
+                        {t('lang.en')}
+                    </a>
+                )
+            ))}
+
+            <div class="lg:hidden border-b-2 my-4 border-gray-800/80 dark:border-white/80"></div>
+
+            <label class="z-20 left-8 mt-3 mb-5 inline-block lg:hidden w-[60px] h-[34px] relative">
+                <input id="themeToggleMenu" type="checkbox" class="peer opacity-0 size-0">
+                <span class="slider absolute cursor-pointer inset-0 rounded-full duration-500 bg-blue-500/40 before:absolute before:content-[''] before:size-[24px] before:duration-500 before:bg-[linear-gradient(40deg,#ff0080,#ff8c00_70%)] before:left-[10%] before:top-1/2 before:rounded-full before:-translate-y-1/2 peer-checked:bg-[#303136] peer-checked:before:translate-x-full peer-checked:before:bg-[linear-gradient(40deg,#303136,#303136_70%)] peer-checked:before:shadow-moon-shadow"></span>
+            </label>
+        </li>
+
+    </ul>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownButton = document.getElementById("dropdownDefaultButton");
+        const dropdownMenu = document.getElementById("dropdownMenu");
+
+        if (dropdownButton && dropdownMenu) {
+            dropdownButton.addEventListener("click", function() {
+                dropdownMenu.classList.toggle("hidden");
+            });
+        }
+    });   
+
+    let checkbox = document.getElementById("themeToggleMenu") as HTMLInputElement;
+
+    if (checkbox) {
+
+        if (localStorage.getItem('color-theme') === 'dark' || document.documentElement.classList.contains('dark')) {
+            checkbox.checked = true;
+        } else {
+            checkbox.checked = false;
+        }
+
+        checkbox.addEventListener('change', function() {
+            
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+
+                }
+
+            } else {    
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+            
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            } 
+        });
+    }
+</script>

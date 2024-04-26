@@ -1,5 +1,5 @@
 ---
-import LanguageDropdown from './LanguageDropdown.astro'
+import LanguageDropdown from './MenuDropdown.astro'
 import NavItem from './NavItem.astro'
 import ThemeToggle from './ThemeToggle.astro'
 
@@ -44,23 +44,25 @@ const NAVs = [
 ]
 ---
 
-<header id="headerComponent" class="flex items-center justify-between fixed top-0 z-10 right-0 left-0 py-2 border-b-2 border-sky-700/90 dark:border-sky-400/90 dark:bg-none backdrop-blur-sm w-[1240px] mx-auto h-[82px]">
-    
+<header id="headerComponent" class="flex flex-row items-center justify-between md:text-sm lg:text-base xl:text-lg fixed top-0 z-10 right-0 left-0 py-2 border-b-2 border-sky-700/90 dark:border-sky-400/90 dark:bg-none backdrop-blur-sm mx-auto w-17/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] 2xl:w-17/20 h-[82px]">
+        
     <LogoIcon class="size-16" /> 
 
-    <nav class="flex justify-center gap-x-4 md:gap-x-8 xl:gap-x-10 opacity-80">
+    <nav class="hidden md:flex flex-row justify-center md:gap-x-3 lg:gap-x-6 xl:gap-x-12 2xl:gap-x-14 opacity-80">
+
         {
             NAVs.map(navItem => (  
                 <NavItem link={navItem.link}>
-                    <navItem.icon class="size-6"/>
-                    {navItem.title} 
+                    <navItem.icon class="md:size-5 lg:size-6 xl:size-8"/>
+                    <span> {navItem.title} </span>
                 </NavItem>   
             ))
-        } 
+        }  
+
     </nav>
 
-    <ThemeToggle/>
+    <ThemeToggle /> 
 
-    <LanguageDropdown/>
+    <LanguageDropdown />
 
 </header>

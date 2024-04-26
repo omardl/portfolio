@@ -14,7 +14,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<footer class="rounded-lg w-[1240px] mx-auto m-4 flex flex-col items-center justify-evenly text-gray-900/80 dark:text-white/80 font-semibold">
+<footer class="rounded-lg w-17/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] 2xl:w-17/20 mx-auto m-4 flex flex-col items-center justify-evenly text-gray-900/80 dark:text-white/80 font-semibold">
     <div class="w-full mx-auto max-w-screen-xl pt-2 flex flex-row items-center justify-center gap-x-2">
         <span>
             {t('footer.text1')} 
@@ -31,8 +31,8 @@ const t = useTranslations(lang);
     </div>
     <div class="flex flex-row items-center justify-center h-12 gap-x-12 pt-12 pb-24">
         <div class="w-20">
-            <Contact href='https://github.com/omardl' >    
-                <GitHubIcon /> 
+            <Contact href='mailto:omardelgadlop@gmail.com' >    
+                <MailIcon /> 
             </Contact>
         </div>
 
@@ -41,10 +41,10 @@ const t = useTranslations(lang);
                 <LinkedInIcon /> 
             </Contact>
         </div>
-        
+
         <div class="w-20">
-            <Contact href='mailto:omardelgadlop@gmail.com' >    
-                <MailIcon /> 
+            <Contact href='https://github.com/omardl' >    
+                <GitHubIcon /> 
             </Contact>
         </div>
     </div>
