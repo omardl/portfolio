@@ -6,11 +6,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover overflow-hidden col-start-2 md:col-start-3 lg:col-start-2  col-span-1 xl:col-start-4 xl:col-span-2 row-start-4 lg:row-start-3 row-span-1 flex flex-col items-center justify-center gap-y-2.5 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover overflow-hidden col-start-1 md:col-start-2 col-span-1 xl:col-start-4 xl:col-span-2 row-start-4 md:row-start-3 row-span-1 flex flex-col items-center justify-center gap-y-2.5 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
   <div id="spotTheme" class="absolute z-10 duration-1000 size-36 rounded-full bg-indigo-400 dark:bg-indigo-800 opacity-50 blur-md mt-24 mr-40" />
   
-  <div class="z-20 flex flex-col justify-center items-center gap-y-3 font-semibold">
-    <span class="text-base xl:text-lg font-bold duration-1000 text-sky-800/70 dark:text-sky-400/80"> {t('span')} </span>
+  <div class="z-20 flex flex-col justify-center items-center gap-y-2 md:gap-y-1.5  lg:gap-y-3 font-semibold">
+    <span class="text-lg xl:text-2xl font-bold duration-1000 text-sky-800/70 dark:text-sky-400/80"> {t('span')} </span>
     <span class="animate-bounce">
       <LinkIcon class="rotate-135 size-8 text-sky-800 dark:text-sky-400" />
     </span>

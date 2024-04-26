@@ -15,34 +15,39 @@ const t = useTranslations(lang);
 ---
 
 <footer class="rounded-lg w-17/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] 2xl:w-17/20 mx-auto m-4 flex flex-col items-center justify-evenly text-gray-900/80 dark:text-white/80 font-semibold">
-    <div class="w-full mx-auto max-w-screen-xl pt-2 flex flex-row items-center justify-center gap-x-2">
-        <span>
-            {t('footer.text1')} 
-        </span> 
-        <HeartIcon />
-        <span>
-            {t('footer.text2')} Astro
-        </span>
-        <AstroIcon class="size-6 mt-1 -ml-1 "/>
-        <span>
-            {t('footer.text3')} Tailwind
-        </span>
-        <TailwindIcon class="size-6 mt-[1px]" />
+    <div class="w-full mx-auto max-w-screen-xl pt-2 flex flex-col md:flex-row items-center justify-center gap-x-2">
+        <div class="flex flex-row items-center justify-center">
+            <span class="mr-2 text-sm md:text-base">
+                {t('footer.text1')} 
+            </span> 
+            <HeartIcon />
+        </div>
+        
+        <div class="flex flex-row items-center justify-center">
+            <span class="mr-2 text-sm md:text-base">
+                {t('footer.text2')} Astro
+            </span>
+            <AstroIcon class="size-6 mt-1 -ml-1 "/>
+            <span class="ml-1 mr-2 text-sm md:text-base">
+                {t('footer.text3')} Tailwind
+            </span>
+            <TailwindIcon class="size-6 mt-[1px]" />
+        </div>
     </div>
-    <div class="flex flex-row items-center justify-center h-12 gap-x-12 pt-12 pb-24">
-        <div class="w-20">
+    <div class="flex flex-row items-center justify-center h-12 gap-x-6 md:gap-x-12 pt-12 pb-24">
+        <div class="w-16 md:w-20">
             <Contact href='mailto:omardelgadlop@gmail.com' >    
                 <MailIcon /> 
             </Contact>
         </div>
 
-        <div class="w-20">
+        <div class="w-16 md:w-20">
             <Contact href='https://www.linkedin.com/in/omar-d-l' >    
                 <LinkedInIcon /> 
             </Contact>
         </div>
 
-        <div class="w-20">
+        <div class="w-16 md:w-20">
             <Contact href='https://github.com/omardl' >    
                 <GitHubIcon /> 
             </Contact>

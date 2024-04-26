@@ -67,6 +67,8 @@ export const languages = {
       'lang.es': 'Spanish',
       'lang.gl': 'Galician',
 
+      'menu.lang': 'Language',
+
       'nav.home': 'Home',
       'nav.education': 'Education',
       'nav.experience': 'Experience',
@@ -164,6 +166,8 @@ export const languages = {
       'lang.es': 'Español',
       'lang.gl': 'Gallego',
 
+      'menu.lang': 'Idioma',
+
       'nav.home': 'Inicio',
       'nav.education': 'Formacion',
       'nav.experience': 'Experiencia',
@@ -259,6 +263,8 @@ export const languages = {
       'lang.en': 'Inglés',
       'lang.es': 'Español',
       'lang.gl': 'Galego',
+
+      'menu.lang': 'Idioma',
 
       'nav.home': 'Inicio',
       'nav.education': 'Formación',

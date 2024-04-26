@@ -75,11 +75,11 @@ export default {
 						backgroundPosition: "0 0"
 					},
 					
+
 					to: {
 						backgroundPosition: "-200% 0"
 					},
 				},
-
 				pulsate: {
 					'0%': {
 						transform: 'scale(0.1, 0.1)',
@@ -128,6 +128,7 @@ export default {
 
 			width: {
 				'17/20': '85%',
+				'18/20': '92%',
 				'19/20': '95%'
 			}
 		},

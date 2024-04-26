@@ -34,7 +34,7 @@ const CONTACT = [
 ---
 {
     CONTACT.map(contact => (   
-        <div class={`col-start-2 md:col-start-${contact.grid_col_lg} col-span-2 md:col-span-1 xl:col-start-${contact.grid_col_xl} xl:col-span-2 row-start-7 md:row-start-5 lg:row-start-4 hidden md:flex flex-auto lg:flex-row justify-center items-center`}>                    
+        <div class={`col-start-2 md:col-start-${contact.grid_col_lg} col-span-2 md:col-span-1 xl:col-start-${contact.grid_col_xl} xl:col-span-2 row-start-7 md:row-start-5 lg:row-start-4 hidden lg:flex flex-auto lg:flex-row justify-center items-center`}>                    
             <Contact href={contact.link} >    
                 <contact.icon class="size-5 sm:size-6"/>
                 {contact.name}   
