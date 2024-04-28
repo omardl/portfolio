@@ -219,7 +219,7 @@ const PROJECTS = [
 {
     PROJECTS.map(project => (
     
-        <div class="grid grid-cols-1 grid-rows-[auto_auto_180px_60px] lg:grid-cols-2 lg:grid-rows-[30px_350px_60px] xl:grid-rows-[30px_400px_60px] shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover py-3 lg:py-6 px-6 my-12 gap-3 lg:gap-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+        <div class="grid grid-cols-1 grid-rows-[auto_auto_180px_60px] sm:grid-rows-[auto_auto_400px_60px] lg:grid-cols-2 lg:grid-rows-[30px_350px_60px] xl:grid-rows-[30px_400px_60px] shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover py-3 lg:py-6 px-6 my-12 gap-3 lg:gap-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
             <div class="row-start-1 col-start-1 col-span-1 lg:col-span-2 flex items-center justify-center">
                 <span class="text-[22px] xl:text-2xl font-semibold text-center text-gray-800/80 underline dark:text-sky-300">
                     {project.title}
@@ -237,7 +237,7 @@ const PROJECTS = [
                     {project.tags.map((tag) => (        
                         <span class="flex justify-center relative my-2 inline-flex h-[36px] overflow-hidden rounded-full p-0.5" >
                             <span class={`absolute inset-[-1000%] animate-[spin_2s_linear_infinite] ${tag.bg_gradient}`} />
-                            <div class={`inline-flex items-center justify-center px-3 py-1 gap-x-2 ${tag.class} text-xs dark:text-slate-50 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap`}>
+                            <div class={`inline-flex items-center justify-center px-3 py-1 gap-x-2 ${tag.class} text-xs dark:text-slate-50 rounded-full dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap`}>
                                 <tag.icon class={`size-6 md:size-7 bg-slate-50 rounded-full border-[2px] ${tag.class}`}/> {tag.name}
                             </div>
                         </span>       
@@ -247,7 +247,7 @@ const PROJECTS = [
             </div>
                 
             <div class={`relative group flex flex-col justify-center row-start-3 lg:row-start-2 col-start-1 lg:${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
-                <img class="transition duration-500 scale-110 group-hover:scale-105 xl:group-hover:scale-100" loading="lazy" src={project.image} />
+                <img class="transition duration-500 scale-105 sm:scale-100 lg:scale-110 group-hover:scale-100 sm:group-hover:scale-105 lg:group-hover:scale-100" loading="lazy" src={project.image} />
             </div>
 
             <div class={`flex flex-row items-center justify-evenly col-start-1 lg:${project.position_image} row-start-4 lg:row-start-3`}>
@@ -255,7 +255,7 @@ const PROJECTS = [
                         <div class="w-auto h-12">  
                             <span class="relative inline-flex h-full w-full overflow-hidden rounded-full p-0.5" >
                                 <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] duration-1000 bg-[conic-gradient(from_90deg_at_50%_50%,#55bff2_0%,#006ba8_50%,#55bff2_100%)] dark:bg-[conic-gradient(from_90deg_at_50%_50%,#51a9e4_0%,#214255_50%,#51a9e4_100%)]" />
-                                <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm md:text-base font-semibold text-black/80 duration-1000 dark:text-sky-600 bg-sky-300/80 dark:bg-[#0f0f0f] rounded-full cursor-pointer backdrop-blur-3xl whitespace-nowrap">
+                                <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm md:text-base font-semibold text-black/80 duration-1000 dark:text-sky-600 bg-sky-300/80 dark:bg-[#0f0f0f] rounded-full backdrop-blur-3xl whitespace-nowrap">
                                     <UnderDevelopmentIcon class="mr-2 text-base"/> {project.progress}
                                 </div>
                             </span>           

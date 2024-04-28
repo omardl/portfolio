@@ -7,10 +7,13 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover relative overflow-hidden row-start-3 lg:row-start-1 row-span-1 col-start-2 md:col-start-3 lg:col-start-4 xl:col-start-8 col-span-1 xl:col-span-2 font-semibold text-lg text-gray-800/80 dark:text-white/80 flex justify-center items-center border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
-    <div id="spotLink" class="z-10 absolute duration-1000 size-36 rounded-full bg-indigo-300 dark:bg-indigo-800 opacity-50 blur-md mt-44 ml-12" />
+<div class="overflow-hidden shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover relative row-start-3 lg:row-start-1 row-span-1 col-start-2 md:col-start-3 lg:col-start-4 xl:col-start-8 col-span-1 xl:col-span-2 font-semibold text-lg text-gray-800/80 dark:text-white/80 flex justify-center items-center border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+    <div id="spotLink1" class="absolute z-10 duration-1000 size-0 lg:size-36 rounded-full bg-indigo-300 dark:bg-indigo-800 opacity-50 blur-md mt-44 ml-12" />
+    <div id="spotLink2" class="absolute z-10 duration-1000 size-72 lg:size-0 rounded-full bg-sky-400 dark:bg-sky-900 opacity-50 blur-md mb-40 ml-20" />
+    <div id="spotLink3" class="absolute z-10 duration-1000 size-12 lg:size-0 rounded-full bg-indigo-400 dark:bg-indigo-700 opacity-70 blur-md ml-16 mb-60" />
+
     <a href="/CV.pdf" class="z-20 group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-800/80 after:dark:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
-        <span class="flex flex-row gap-x-1 md:gap-x-2 text-sm xl:text-base duration-1000 transform:none">
+        <span class="flex flex-row gap-x-1 xl:gap-x-2 text-sm xl:text-base duration-1000 transform:none">
             {t('cv.link')}
             <LinkIcon class="size-5 xl:size-7 group-hover:-rotate-45 duration-300" /> 
         </span>
@@ -20,9 +23,15 @@ const t = useTranslations(lang);
 <script>
     window.addEventListener('scroll', function() {
         const scrolledY = window.scrollY; 
-        const spot = document.getElementById('spotLink');
-        if (spot) {
-            spot.style.transform = `translateY(${scrolledY / 3}px)`; 
+
+        const spot1 = document.getElementById('spotLink1');
+        const spot2 = document.getElementById('spotLink2');
+        const spot3 = document.getElementById('spotLink3');
+        
+        if (spot1 && spot2 && spot3) {
+            spot1.style.transform = `translateY(${scrolledY / 3}px)`; 
+            spot2.style.transform = `translateY(${scrolledY / 3}px)`; 
+            spot3.style.transform = `translateY(${scrolledY / 3}px)`; 
         }
     });  
 </script>

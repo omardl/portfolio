@@ -29,19 +29,19 @@ const {
     {date}
 </time>
 
-<div class="grid grid-cols-1 lg:grid-cols-2 grid-rows-[auto_240px] lg:grid-rows-[190px] xl:grid-rows-[240px] mt-4 gap-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-[auto_240px] sm:grid-rows-[190px] sm:grid-rows-[170px] xl:grid-rows-[240px] mt-4 gap-6">
     <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover group flex items-center grid-col-1 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
-        <h3 class="text-base lg:text-base xl:text-lg font-semibold text-gray-800/80 dark:text-sky-300 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+        <h3 class="text-base lg:text-base xl:text-lg font-semibold text-gray-800/80 dark:text-sky-300 py-3 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
             {title}
         </h3>
     </div>
 
-    <div class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover bg-top group overflow-hidden relative flex items-end grid-row-2 lg:grid-col-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size:cover;`}>
+    <div class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover bg-top group overflow-hidden relative flex items-end grid-row-2 sm:grid-col-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105" style={`background-image: url('${img}'); background-size:cover;`}>
         <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-sky-300 dark:bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
             <InfoItem class="size-5 text-[#080c1c] dark:text-sky-300"/>
         </span>
-        <footer class="flex flew-row items-center justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out lg:translate-y-full group-hover:translate-y-0">
-            <div class="w-full flex flex-col md:flex-row items-start justify-between">
+        <footer class="flex flew-row items-center justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out xl:translate-y-full group-hover:translate-y-0">
+            <div class="w-full flex flex-col lg:flex-row items-start justify-between">
                 <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
                     <BuildingItem class="size-6" /> 
                     {place}

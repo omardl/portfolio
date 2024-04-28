@@ -169,7 +169,7 @@ export const languages = {
       'menu.lang': 'Idioma',
 
       'nav.home': 'Inicio',
-      'nav.education': 'Formacion',
+      'nav.education': 'Formación',
       'nav.experience': 'Experiencia',
       'nav.projects': 'Proyectos',
       'nav.aboutme': 'Sobre mi',
@@ -191,7 +191,7 @@ export const languages = {
       'project.readme': 'Saber más',
       'project.notfinished': 'En desarrollo',
 
-      'span': '¡Contactame!',
+      'span': '¡Contáctame!',
 
       'subtitle.p1.text1': 'A un paso de entregar el TFG y terminar el grado en',
       'subtitle.p1.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
@@ -213,33 +213,33 @@ export const languages = {
       'aboutme.p1.text2': 'Anos despois tornei, afronteina, apaixonoume de novo e supereina. Non acougo se non',
       'aboutme.p1.strongtext3': 'loito por algo ata o final.',
       
-      'aboutme.p2.strongtext1': 'Son un cú inquedo.',
+      'aboutme.p2.strongtext1': 'Son un cu inquedo.',
       'aboutme.p2.text1': 'Demasiado curioso polo desenvolvemento software, non podo deixar pasar a oportunidade de aprender novas linguaxes, frameworks e tecnoloxías.',
       
       'aboutme.p3.text1': 'Un poco tímido e introvertido ao comezo, rodearme de xente coa que poder',
-      'aboutme.p3.strongtext1': 'facer equipo',
-      'aboutme.p3.text2': 'aprendendo dos mellores e axudando motivame e',
-      'aboutme.p3.strongtext2': 'empurrame a dar o mellor de min.',
+      'aboutme.p3.strongtext1': 'facer equipo,',
+      'aboutme.p3.text2': 'aprendendo dos mellores e axudando, motívame e',
+      'aboutme.p3.strongtext2': 'empúrrame a dar o mellor de min.',
       
-      'aboutme.p4.strongtext1': 'Aínda non contratáronme, mais',
+      'aboutme.p4.strongtext1': 'Aínda non me contrataron, mais',
       'aboutme.p4.strongtext2': 'ensináronme moito que aportar.',
-      'aboutme.p4.text1': 'a experiencia de todo o aprendido nos meus estudos, nos proxectos realizados e en cada traballo en equipo',
+      'aboutme.p4.text1': 'a experiencia de todo o aprendido nos meus estudos, nos proxectos realizados e en cada traballo en equipo,',
 
       'aboutme.p5.text1': 'A paixón polo técnico',
       'aboutme.p5.strongtext1': 'non sempre é todo.',
       'aboutme.p5.text2': 'Cando un proxecto permite axudar e aportar un beneficio aos demáis, penso que',
       'aboutme.p5.strongtext2': 'derradeiramente marca a diferencia.',
 
-      'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, o saberás cando o atopes. - Steve Jobs.”',
+      'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
       
-      'badge': 'Disponible para traballar',
+      'badge': 'Dispoñible para traballar',
 
       'cv.link': 'Ver o meu CV',
 
       'education.date.1': 'Actualmente...',
       'education.date.2': 'Rematado en 2019',
       'education.place.1': 'Universidade de Vigo',
-      'education.title.1': 'Grao en Enxeñería de Tecnoloxías de Telecomunicación. Especialización na pola de Telemática',
+      'education.title.1': 'Grao en Enxeñaría de Tecnoloxías de Telecomunicación. Especialización na póla de Telemática',
       'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
 
       'experience.date.1': 'Xullo - agosto, 2023',
@@ -248,10 +248,10 @@ export const languages = {
       'experience.date.4': 'Marzo - abril, 2018',
       'experience.job.1': 'Desenvolvedor de software',
       'experience.job.2': 'Atención e asistencia ao persoal dos stands e conferencias. Apoio e axuda á organización do foro.',
-      'experience.job.3': 'Menteemento de sistemas informáticos e eléctricos',
-      'experience.job.4': 'Instalación e manteemento de sistemas de telecomunicación en vivendas e edificios',
+      'experience.job.3': 'Mentemento de sistemas informáticos e eléctricos',
+      'experience.job.4': 'Instalación e mantemento de sistemas de telecomunicación en vivendas e edificios',
       'experience.place.2': 'Universidade de Vigo',
-      'experience.title.1': 'Prácticas do Grao en Enxeñería de Tecnoloxías de Telecomunicación',
+      'experience.title.1': 'Prácticas do Grao en Enxeñaría de Tecnoloxías de Telecomunicación',
       'experience.title.2': 'Colaborador do Foro Tecnolóxico de Emprego da Universidade de Vigo',
       'experience.title.3': 'Prácticas como técnico en Sistemas Informáticos',
       'experience.title.4': 'Prácticas como técnico en Sistemas de Telecomunicación',
@@ -272,11 +272,11 @@ export const languages = {
       'nav.projects': 'Proxectos',
       'nav.aboutme': 'Sobre min',
 
-      'projects.description': 'A maioría dos seguintes proxectos desenvolvéronse ao longo do grao en Enxeñería de Tecnoloxías de Telecomunicación.',
+      'projects.description': 'A maioría dos seguintes proxectos desenvolvéronse ao longo do grao en Enxeñaría de Tecnoloxías de Telecomunicación.',
       'project.title.1': 'Traballo de Fin de Grao',
-      'project.description.1': 'Parametrización dun modelo de intestino para a simulación dunha colonoscopia mediante o framework SOFA (Simulation Open Framework Architecture). Mediante un script de Python, asignanse tanto as propiedades físicas do intestino que modelan o seu comportamento como as características do entorno de simulación.',
+      'project.description.1': 'Parametrización dun modelo de intestino para a simulación dunha colonoscopia mediante o framework SOFA (Simulation Open Framework Architecture). Mediante un script de Python, asígnanse tanto as propiedades físicas do intestino que modelan o seu comportamento como as características do entorno de simulación.',
       'project.title.2': 'Proba técnica para o posto de desenvolvedor Android e Kotlin Jr.',
-      'project.description.2': 'Desenvolvemento dunha aplicación Android sinxela mediante Kotlin, Jetpack Compose y arquitectura MVI.',
+      'project.description.2': 'Desenvolvemento dunha aplicación Android sinxela mediante Kotlin, Jetpack Compose e arquitectura MVI.',
       'project.title.3': 'Mint NFTs',
       'project.description.3': 'Deseño dunha aplicación web que permite crear e ver os teus propios NFTs e outros tipos de tokens dixitais.',
       'project.title.4': 'NodeSec',
@@ -284,20 +284,20 @@ export const languages = {
       'project.title.5': 'Barco solar',
       'project.description.5': 'Deseño da arquitectura e configuración do protocolo de comunicacions dun barco solar pilotado de forma remota. Configuración de sensores (ultrasonidos, pitch-roll, GPS), webcam, protocolo IoT e deseño da web que mostrará a información en tempo real, posteriormente almacenada nunha base de datos.',
       'project.title.6': 'REST API web para unha tenda online',
-      'project.description.6': 'Desenvolvemento dunha API REST que realiza peticions a un servidor permitiendo crear, obtener, actualizar e eliminar elementos dunha base de datos. Usouse a temática dunha tenda online, permitindo ao usuario consultar e buscar entre os diversos artículos dispoñibles. Os administradores poderán iniciar sesión para crear, modificar ou eliminar artículos.',
+      'project.description.6': 'Desenvolvemento dunha API REST que realiza peticións a un servidor permitindo crear, obter, actualizar e eliminar elementos dunha base de datos. Usouse a temática dunha tenda online, permitindo ao usuario consultar e buscar entre os diversos artigos dispoñibles. Os administradores poderán iniciar sesión para crear, modificar ou eliminar artigos.',
      
       'project.readme': 'Saber mais',
       'project.notfinished': 'En desenvolvemento',
 
-      'span': 'Contactame!',
+      'span': 'Contáctame!',
 
       'subtitle.p1.text1': 'A un paso de entregar o TFG e rematar o grao en',
-      'subtitle.p1.strongtext1': 'Enxeñería de Tecnoloxías de Telecomunicación',
+      'subtitle.p1.strongtext1': 'Enxeñaría de Tecnoloxías de Telecomunicación',
       'subtitle.p1.text2': 'na',
       'subtitle.p1.strongtext2': 'Universidade de Vigo.',
 
       'subtitle.p2.text1': 'Especializado na',
-      'subtitle.p2.strongtext1': 'pola telemática.',
+      'subtitle.p2.strongtext1': 'póla telemática.',
 
       'timezone': 'es-ES',
 
