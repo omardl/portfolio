@@ -146,6 +146,7 @@ const PROJECTS = [
         title: t('project.title.1'),        
         description: t('project.description.1'),
         image: '/project_images/SOFA.webp',
+        alt_img: 'Omar\'s portfolio TFG',
         position_text: 'col-start-2',
         position_image: 'col-start-1',
         progress: t('project.notfinished'),
@@ -156,6 +157,7 @@ const PROJECTS = [
         title: t('project.title.2'),
         description: t('project.description.2'),
         image: '/project_images/Android.webp',
+        alt_img: 'Omar\'s portfolio Android technical test',
         git: 'https://github.com/omardl/Android-tecnhical-test',
         readme: 'https://github.com/omardl/Android-tecnhical-test/blob/main/README.md',
         position_text: 'col-start-1',
@@ -167,6 +169,7 @@ const PROJECTS = [
         title: t('project.title.3'),
         description: t('project.description.3'),
         image: '/project_images/MintAPI.webp',
+        alt_img: 'Omar\'s portfolio MintAPI project',
         git: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo',
         readme: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo/blob/master/README.md',
         position_text: 'col-start-2',
@@ -178,6 +181,7 @@ const PROJECTS = [
         title: t('project.title.4'),
         description: t('project.description.4'),
         image: '/project_images/NodeSec.webp',
+        alt_img: 'Omar\'s portfolio NodeSec project',
         git: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain--GET-UVigo',
         readme: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain--GET-UVigo/blob/main/README.md',
         position_text: 'col-start-1',
@@ -189,6 +193,7 @@ const PROJECTS = [
         title: t('project.title.5'),
         description: t('project.description.5'),
         image: '/project_images/sunBoat.webp',
+        alt_img: 'Omar\'s portfolio Sun boat project',
         git: 'https://github.com/omardl/Sun-boat---Design-and-configuration-of-the-communications-arquitecture-and-protocols--GETT-UVigo',
         readme: 'https://github.com/omardl/Sun-boat---Design-and-configuration-of-the-communications-arquitecture-and-protocols--GETT-UVigo/blob/main/README.md',
         position_text: 'col-start-2',
@@ -200,6 +205,7 @@ const PROJECTS = [
         title: t('project.title.6'),
         description: t('project.description.6'),
         image: '/project_images/REST_API.webp',
+        alt_img: 'Omar\'s portfolio REST API project',
         readme: 'https://github.com/omardl/REST-API-webshop--GETT-UVigo/blob/main/README.md',
         git: 'https://github.com/omardl/REST-API-webshop--GETT-UVigo',
         position_text: 'col-start-1',
@@ -247,7 +253,7 @@ const PROJECTS = [
             </div>
                 
             <div class={`relative group flex flex-col justify-center row-start-3 lg:row-start-2 col-start-1 lg:${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
-                <img class="transition duration-500 scale-105 sm:scale-100 lg:scale-110 group-hover:scale-100 sm:group-hover:scale-105 lg:group-hover:scale-100" loading="lazy" src={project.image} />
+                <img class="transition duration-500 scale-105 sm:scale-100 lg:scale-110 group-hover:scale-100 sm:group-hover:scale-105 lg:group-hover:scale-100" loading="lazy" alt={project.alt_img} src={project.image} />
             </div>
 
             <div class={`flex flex-row items-center justify-evenly col-start-1 lg:${project.position_image} row-start-4 lg:row-start-3`}>

@@ -12,7 +12,7 @@ const t = useTranslations(lang);
     <div id="spotLink2" class="absolute z-10 duration-1000 size-72 lg:size-0 rounded-full bg-sky-400 dark:bg-sky-900 opacity-50 blur-md mb-40 ml-20" />
     <div id="spotLink3" class="absolute z-10 duration-1000 size-12 lg:size-0 rounded-full bg-indigo-400 dark:bg-indigo-700 opacity-70 blur-md ml-16 mb-60" />
 
-    <a href="/CV.pdf" class="z-20 group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-800/80 after:dark:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
+    <a href="/CV.pdf" aria-label="CV-link" class="z-20 group relative w-fit block after:block after:content-[''] after:absolute after:h-[2px] after:bg-gray-800/80 after:dark:bg-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center after:rounded-full">
         <span class="flex flex-row gap-x-1 xl:gap-x-2 text-sm xl:text-base duration-1000 transform:none">
             {t('cv.link')}
             <LinkIcon class="size-5 xl:size-7 group-hover:-rotate-45 duration-300" /> 

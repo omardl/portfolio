@@ -23,10 +23,16 @@ export const languages = {
       'aboutme.p3.text2': 'learning from the best and helping them motivates me and',
       'aboutme.p3.strongtext2': 'drives me to do my best.',
 
-      'aboutme.p4.text1': 'Passion for the technical skills',
-      'aboutme.p4.strongtext1': 'is not always everything.',
-      'aboutme.p4.text2': 'When a project can help and benefit others, I think',
-      'aboutme.p4.strongtext2': 'it really makes a difference.',
+      'aboutme.p4.text1': 'Throughout my academic training and internships, in every project and teamwork, I have learned the value of',
+      'aboutme.p4.strongtext1': 'collaborating side by side with others',
+      'aboutme.p4.text2': 'and the importance of',
+      'aboutme.p4.strongtext2': 'surpassing oneself',
+      'aboutme.p4.text3': 'in every new challenge.',
+      
+      'aboutme.p5.text1': 'Passion for the technical skills',
+      'aboutme.p5.strongtext1': 'is not always everything.',
+      'aboutme.p5.text2': 'When a project can help and benefit others, I think',
+      'aboutme.p5.strongtext2': 'it really makes a difference.',
 
       'aboutme.phrase': '“The only way to be truly satisfied is to do what you think is great work. And the only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. As with all matters of the heart, you\'ll know it when you find it. - Steve Jobs.”',
 
@@ -118,10 +124,16 @@ export const languages = {
       'aboutme.p3.text2': 'aprendiendo de los mejores y ayudando me motiva y',
       'aboutme.p3.strongtext2': 'me impulsa a dar lo mejor de mi.',
 
-      'aboutme.p4.text1': 'La pasión por lo técnico',
-      'aboutme.p4.strongtext1': 'no siempre lo es todo.',
-      'aboutme.p4.text2': 'Cuando un proyecto permite ayudar y aportar un beneficio a los demás, creo que',
-      'aboutme.p4.strongtext2': 'realmente marca la diferencia.',
+      'aboutme.p4.text1': 'A lo largo de mi formación académica y las prácticas, en cada proyecto realizado y cada trabajo en equipo, he aprendido el valor de',
+      'aboutme.p4.strongtext1': 'colaborar codo a codo con los demás',
+      'aboutme.p4.text2': 'y la importancia de',
+      'aboutme.p4.strongtext2': 'superarse a uno mismo',
+      'aboutme.p4.text3': 'en cada nuevo reto.',
+
+      'aboutme.p5.text1': 'La pasión por lo técnico',
+      'aboutme.p5.strongtext1': 'no siempre lo es todo.',
+      'aboutme.p5.text2': 'Cuando un proyecto permite ayudar y aportar un beneficio a los demás, creo que',
+      'aboutme.p5.strongtext2': 'realmente marca la diferencia.',
 
       'aboutme.phrase': '“La única manera de estar verdaderamente satisfecho es hacer lo que crees que es un gran trabajo. Y la única manera de hacer un gran trabajo es amar lo que haces. Si aún no lo has encontrado, sigue buscando. No te conformes. Al igual que con todos los asuntos del corazón, lo sabrás cuando lo encuentres. - Steve Jobs.”',
       
@@ -207,16 +219,23 @@ export const languages = {
       'aboutme.p2.strongtext1': 'Son un cu inquedo.',
       'aboutme.p2.text1': 'Demasiado curioso polo desenvolvemento software, non podo deixar pasar a oportunidade de aprender novas linguaxes, frameworks e tecnoloxías.',
       
-      'aboutme.p3.text1': 'Un poco tímido e introvertido ao comezo, rodearme de xente coa que poder',
+      'aboutme.p3.text1': 'Un pouco tímido e introvertido ao comezo, rodearme de xente coa que poder',
       'aboutme.p3.strongtext1': 'facer equipo,',
       'aboutme.p3.text2': 'aprendendo dos mellores e axudando, motívame e',
       'aboutme.p3.strongtext2': 'empúrrame a dar o mellor de min.',
-      
-      'aboutme.p4.text1': 'A paixón polo técnico',
-      'aboutme.p4.strongtext1': 'non sempre é todo.',
-      'aboutme.p4.text2': 'Cando un proxecto permite axudar e aportar un beneficio aos demáis, penso que',
-      'aboutme.p4.strongtext2': 'derradeiramente marca a diferencia.',
 
+      'aboutme.p4.text1': 'Ao longo da miña formación académica e as prácticas, en cada proxecto realizado e cada traballo en equipo, aprendín o valor de',
+      'aboutme.p4.strongtext1': 'colaborar cóbado con cóbado xunto aos demáis',
+      'aboutme.p4.text2': 'e a importancia de',
+      'aboutme.p4.strongtext2': 'superarse a un mesmo',
+      'aboutme.p4.text3': 'en cada novo reto.',
+
+      'aboutme.p5.text1': 'A paixón polo técnico',
+      'aboutme.p5.strongtext1': 'non sempre é todo.',
+      'aboutme.p5.text2': 'Cando un proxecto permite axudar e aportar un beneficio aos demáis, penso que',
+      'aboutme.p5.strongtext2': 'derradeiramente marca a diferencia.',
+
+    
       'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
       
       'badge': 'Dispoñible para traballar',
