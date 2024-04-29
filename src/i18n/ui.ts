@@ -68,6 +68,9 @@ export const languages = {
       'lang.es': 'Spanish',
       'lang.gl': 'Galician',
 
+      'location.sancibrao': 'San Ciprián de Viñas',
+      'location.ourense': 'Orense',
+
       'menu.lang': 'Language',
 
       'nav.home': 'Home',
@@ -169,6 +172,9 @@ export const languages = {
       'lang.es': 'Español',
       'lang.gl': 'Gallego',
 
+      'location.sancibrao': 'San Ciprián de Viñas',
+      'location.ourense': 'Orense',
+
       'menu.lang': 'Idioma',
 
       'nav.home': 'Inicio',
@@ -235,7 +241,6 @@ export const languages = {
       'aboutme.p5.text2': 'Cando un proxecto permite axudar e aportar un beneficio aos demáis, penso que',
       'aboutme.p5.strongtext2': 'derradeiramente marca a diferencia.',
 
-    
       'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
       
       'badge': 'Dispoñible para traballar',
@@ -269,6 +274,9 @@ export const languages = {
       'lang.en': 'Inglés',
       'lang.es': 'Español',
       'lang.gl': 'Galego',
+
+      'location.sancibrao': 'San Cibrao das Viñas',
+      'location.ourense': 'Ourense',
 
       'menu.lang': 'Idioma',
 
