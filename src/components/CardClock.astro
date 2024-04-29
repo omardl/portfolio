@@ -31,7 +31,7 @@
         } else if (lang == 'en') {
 
             time = now.toLocaleTimeString("en-EN", { hour: '2-digit', minute: '2-digit', hour12: false });
-            date = now.toLocaleDateString("en-EN", { weekday: 'long' }) + ', ' + now.toLocaleDateString("en-EN", { day: 'numeric' }) + ' ' + now.toLocaleDateString("en-EN", { month: 'long' })
+            date = now.toLocaleDateString("en-EN", { weekday: 'long' }).toLowerCase() + ', ' + now.toLocaleDateString("en-EN", { day: 'numeric' }) + ' ' + now.toLocaleDateString("en-EN", { month: 'long' }).toLowerCase();
         
         } else if (lang == 'gl') {
 
@@ -44,7 +44,7 @@
 
             time = now.toLocaleTimeString("gl-ES", { hour: '2-digit', minute: '2-digit' });
             date = weekday + ', ' + day + ' de ' + month;
-            
+
         } else {
 
             time = now.toLocaleTimeString("es-ES", { hour: '2-digit', minute: '2-digit' });
