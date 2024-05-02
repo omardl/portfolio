@@ -147,8 +147,8 @@ const PROJECTS = [
         description: t('project.description.1'),
         image: '/project_images/SOFA.webp',
         alt_img: 'Omar\'s portfolio TFG',
-        position_text: 'col-start-2',
-        position_image: 'col-start-1',
+        position_text: 'lg:col-start-2',
+        position_image: 'lg:col-start-1',
         progress: t('project.notfinished'),
         tags: [TAGS.SOFA, TAGS.Python]
     },
@@ -160,8 +160,8 @@ const PROJECTS = [
         alt_img: 'Omar\'s portfolio Android technical test',
         git: 'https://github.com/omardl/Android-tecnhical-test',
         readme: 'https://github.com/omardl/Android-tecnhical-test/blob/main/README.md',
-        position_text: 'col-start-1',
-        position_image: 'col-start-2',
+        position_text: 'lg:col-start-1',
+        position_image: 'lg:col-start-2',
         tags: [TAGS.Kotlin, TAGS.Jetpack],
     },
 
@@ -172,8 +172,8 @@ const PROJECTS = [
         alt_img: 'Omar\'s portfolio MintAPI project',
         git: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo',
         readme: 'https://github.com/omardl/Mint-NFTs-API--GETT-UVigo/blob/master/README.md',
-        position_text: 'col-start-2',
-        position_image: 'col-start-1',
+        position_text: 'lg:col-start-2',
+        position_image: 'lg:col-start-1',
         tags: [TAGS.Angular, TAGS.Solidity],
     },
 
@@ -184,8 +184,8 @@ const PROJECTS = [
         alt_img: 'Omar\'s portfolio NodeSec project',
         git: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain--GET-UVigo',
         readme: 'https://github.com/omardl/NodeSec---Capacity-control-system-based-on-blockchain--GET-UVigo/blob/main/README.md',
-        position_text: 'col-start-1',
-        position_image: 'col-start-2',
+        position_text: 'lg:col-start-1',
+        position_image: 'lg:col-start-2',
         tags: [TAGS.Arduino, TAGS.MongoDB, TAGS.NFC, TAGS.NodeRed, TAGS.Python, TAGS.SpringBoot, TAGS.TensorFlow],
     },
 
@@ -196,8 +196,8 @@ const PROJECTS = [
         alt_img: 'Omar\'s portfolio Sun boat project',
         git: 'https://github.com/omardl/Sun-boat---Design-and-configuration-of-the-communications-arquitecture-and-protocols--GETT-UVigo',
         readme: 'https://github.com/omardl/Sun-boat---Design-and-configuration-of-the-communications-arquitecture-and-protocols--GETT-UVigo/blob/main/README.md',
-        position_text: 'col-start-2',
-        position_image: 'col-start-1',
+        position_text: 'lg:col-start-2',
+        position_image: 'lg:col-start-1',
         tags: [TAGS.Arduino, TAGS.Docker, TAGS.Jira, TAGS.MongoDB, TAGS.Mosquitto, TAGS.NodeRed, TAGS.Python],
     },
 
@@ -208,8 +208,8 @@ const PROJECTS = [
         alt_img: 'Omar\'s portfolio REST API project',
         readme: 'https://github.com/omardl/REST-API-webshop--GETT-UVigo/blob/main/README.md',
         git: 'https://github.com/omardl/REST-API-webshop--GETT-UVigo',
-        position_text: 'col-start-1',
-        position_image: 'col-start-2',
+        position_text: 'lg:col-start-1',
+        position_image: 'lg:col-start-2',
         tags: [TAGS.Angular, TAGS.MongoDB, TAGS.NodeJS],
     },
 
@@ -232,7 +232,7 @@ const PROJECTS = [
                 </span>
             </div>
 
-            <div class={`row-start-2 row-span-1 lg:row-span-2 xl:${project.position_text} flex flex-col gap-y-0 lg:gap-y-3 justify-center rounded-3xl`}>
+            <div class={`row-start-2 row-span-1 lg:row-span-2 ${project.position_text} flex flex-col gap-y-0 lg:gap-y-3 justify-center rounded-3xl`}>
                 <span class="text-base xl:text-xl font-semibold text-gray-800/80 dark:text-sky-500 mt-1 mx-4 text-pretty hover:mx-6 duration-300">
                     {project.description}
                 </span> 
@@ -252,11 +252,11 @@ const PROJECTS = [
 
             </div>
                 
-            <div class={`relative group flex flex-col justify-center row-start-3 lg:row-start-2 col-start-1 lg:${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
+            <div class={`relative group flex flex-col justify-center row-start-3 lg:row-start-2 col-start-1 ${project.position_image} gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`}>
                 <img class="transition duration-500 scale-105 sm:scale-100 lg:scale-110 group-hover:scale-100 sm:group-hover:scale-105 lg:group-hover:scale-100" loading="lazy" alt={project.alt_img} src={project.image} />
             </div>
 
-            <div class={`flex flex-row items-center justify-evenly col-start-1 lg:${project.position_image} row-start-4 lg:row-start-3`}>
+            <div class={`flex flex-row items-center justify-evenly col-start-1 ${project.position_image} row-start-4 lg:row-start-3`}>
                     {project.progress &&
                         <div class="w-auto h-12">  
                             <span class="relative inline-flex h-full w-full overflow-hidden rounded-full p-0.5" >
