@@ -36,11 +36,12 @@ export const languages = {
 
       'aboutme.phrase': '“The only way to be truly satisfied is to do what you think is great work. And the only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. As with all matters of the heart, you\'ll know it when you find it. - Steve Jobs.”',
   
-      'actual.date': 'from may 2024.',
-      'actual.job': 'Junior backend developer at',
-      'actual.place': 'SEDIX Ingeniería Técnica en Informática',
-
-      'badge': 'Jr. backend developer',
+      'actual.date': 'May 2024 - nowadays',
+      'actual.job': 'Web application development using Spring Boot, MySQL and Angular',
+      'actual.location': 'Villagarcía de Arosa, Pontevedra',
+      'actual.title': 'Jr. Software developer',
+  
+      'badge': 'Jr. Software Developer',
 
       'cv.link': 'See my CV',
 
@@ -103,6 +104,10 @@ export const languages = {
 
       'span': 'Get in touch!',
 
+      'subtitle.p0.strongtext1': 'Junior Software Developer',
+      'subtitle.p0.text': 'at',
+      'subtitle.p0.strongtext2': 'SEDIX.',
+
       'subtitle.p1.text1': 'One step away from handing in the TFG and finishing the degree in',
       'subtitle.p1.strongtext1': 'Telecommunication Technology Engineering',
       'subtitle.p1.text2': 'at',
@@ -144,11 +149,12 @@ export const languages = {
 
       'aboutme.phrase': '“La única manera de estar verdaderamente satisfecho es hacer lo que crees que es un gran trabajo. Y la única manera de hacer un gran trabajo es amar lo que haces. Si aún no lo has encontrado, sigue buscando. No te conformes. Al igual que con todos los asuntos del corazón, lo sabrás cuando lo encuentres. - Steve Jobs.”',
       
-      'actual.date': 'desde mayo del 2024.',
-      'actual.job': 'Desarrollador backend Junior en',
-      'actual.place': 'SEDIX Ingeniería Técnica en Informática',
+      'actual.date': 'Mayo del 2024 - actualidad',
+      'actual.job': 'Desarrollo de aplicaciones web mediante Spring Boot, MySQL y Angular',
+      'actual.location': 'Villagarcía de Arosa, Pontevedra',
+      'actual.title': 'Desarrollador de Software Jr.',
 
-      'badge': 'Desarrollador backend Jr.',
+      'badge': 'Desarrollador de Software Jr.',
 
       'cv.link': 'Ver mi CV',
 
@@ -210,6 +216,10 @@ export const languages = {
 
       'span': '¡Contáctame!',
 
+      'subtitle.p0.strongtext1': 'Desarrollador de Software Junior',
+      'subtitle.p0.text': 'en',
+      'subtitle.p0.strongtext2': 'SEDIX.',
+
       'subtitle.p1.text1': 'A un paso de entregar el TFG y terminar el grado en',
       'subtitle.p1.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
       'subtitle.p1.text2': 'en la',
@@ -251,11 +261,12 @@ export const languages = {
 
       'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
       
-      'actual.date': 'dende maio do 2024.',
-      'actual.job': 'Desenvolvedor backend junior en',
-      'actual.place': 'SEDIX Ingeniería Técnica en Informática',
+      'actual.date': 'Maio do 2024 - actualidade',
+      'actual.job': 'Desenvolvemento de aplicacións web mediante Spring Boot, MySQL e Angular',
+      'actual.location': 'Vilagarcía de Arousa, Pontevedra',
+      'actual.title': 'Desenvolvedor de Software Jr.',
 
-      'badge': 'Desenvolvedor backend Jr.',
+      'badge': 'Desenvolvedor de Software Jr.',
 
       'cv.link': 'Ver o meu CV',
 
@@ -316,6 +327,10 @@ export const languages = {
       'project.notfinished': 'En desenvolvemento',
 
       'span': 'Contáctame!',
+
+      'subtitle.p0.strongtext1': 'Desenvolvedor de Software Junior',
+      'subtitle.p0.text': 'en',
+      'subtitle.p0.strongtext2': 'SEDIX.',
 
       'subtitle.p1.text1': 'A un paso de entregar o TFG e rematar o grao en',
       'subtitle.p1.strongtext1': 'Enxeñaría de Tecnoloxías de Telecomunicación',

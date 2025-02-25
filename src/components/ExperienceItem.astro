@@ -50,10 +50,12 @@ const {
         </span>
         <footer class="flex flew-row justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out xl:translate-y-full group-hover:translate-y-0">
             <div class="w-full flex flex-col lg:flex-row items-start justify-between">
-                <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
-                    <BuildingItem class="size-6" /> 
-                    {place}
-                </span>
+                {place &&
+                    <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
+                        <BuildingItem class="size-6" /> 
+                        {place}
+                    </span>
+                }
     
                 <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
                     <MapItem class="size-6" /> 

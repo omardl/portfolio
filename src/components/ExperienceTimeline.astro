@@ -8,6 +8,16 @@ const t = useTranslations(lang);
 
 const EXPERIENCE = [
     {
+        date: t('actual.date'),
+        img: '/sedix.webp',
+        job_description: t('actual.job'),
+        location: t('actual.location'),
+        place: '',
+        title: t('actual.title'),
+        web: 'https://sedix.es/'
+    },
+
+    {
         date: t('experience.date.1'),
         img: '/Centum.webp',
         job_description: t('experience.job.1'),
@@ -48,16 +58,6 @@ const EXPERIENCE = [
     },
 ]
 ---
-
-<div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover mt-6 mb-12 p-6 rounded-3xl">
-    <span class="row-start-1 col-start-1 text-lg xl:text-2xl font-semibold text-pretty text-gray-800/80 dark:text-sky-300">
-        {t('actual.job')}
-        <a href="https://sedix.es/" class="italic" target="_blank" rel="noopener noreferrer">
-            {t('actual.place')} 
-        </a>
-        {t('actual.date')}
-    </span>
-</div>
 
 <ol class="relative border-s border-gray-800 dark:border-gray-300 ml-3">                  
     {
