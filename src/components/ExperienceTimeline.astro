@@ -1,5 +1,8 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
+import CalendarItem from '../icons/Calendar.astro'
+import InfoItem from '../icons/InfoClickable.astro'
+import MapItem from '../icons/Map.astro'
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
@@ -7,16 +10,6 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const EXPERIENCE = [
-    {
-        date: t('actual.date'),
-        img: '/sedix.webp',
-        job_description: t('actual.job'),
-        location: t('actual.location'),
-        place: '',
-        title: t('actual.title'),
-        web: 'https://sedix.es/'
-    },
-
     {
         date: t('experience.date.1'),
         img: '/Centum.webp',
@@ -59,7 +52,45 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class="relative border-s border-gray-800 dark:border-gray-300 ml-3">                  
+
+
+<ol class="relative border-s border-gray-800 dark:border-gray-300 ml-3">
+    <li class="mb-10 ms-6">   
+        <span class="absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-1 ring-gray-800 bg-blue-300 text-gray-800 dark:ring-blue-700 dark:bg-white dark:text-blue-700">
+            <CalendarItem class="size-4"/>
+        </span>
+    
+        <time class="mb-1 text-base font-normal leading-none text-gray-800/80 dark:text-gray-300/80">
+            {t('actual.date')}
+        </time>
+    
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 grid-rows-[auto_240px] sm:grid-rows-[260px] md:grid-rows-[240px] xl:grid-rows-[240px] mt-4 gap-6">
+            <div class="shadow-grid-mini hover:shadow-grid-hover-mini dark:shadow-grid hover:dark:shadow-grid-hover group col-start-1 flex flex-col justify-center gap-y-6 border-[1px] border-[#212121] hover:border-blue-800 hover:dark:border-sky-400 backdrop-blur-sm bg-opacity-40 rounded-3xl">
+                <span class="text-base lg:text-base xl:text-lg font-semibold text-gray-800/80 dark:text-sky-300 pt-3 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+                    {t('actual.title')}
+                </span>
+                <span class="text-base lg:text-base xl:text-lg font-semibold text-sky-700/80 dark:text-sky-600 pb-3 mt-1 mx-4 text-pretty group-hover:mx-6 duration-300">
+                    {t('actual.job')}
+                </span>
+            </div>
+    
+            
+            <a href={'https://sedix.es/'} class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover group overflow-hidden relative flex items-end row-start-2 sm:row-start-1 sm:col-start-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105 bg-center lg:bg-top" style={`background-image: url('${'sedix.webp'}'); background-size: contain; background-repeat: no-repeat; background-color: white;`}  target="_blank" rel="noopener noreferrer">
+                <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-sky-300 dark:bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
+                    <InfoItem class="size-5 text-[#080c1c] dark:text-sky-300"/>
+                </span>
+                <footer class="flex flew-row justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out xl:translate-y-full group-hover:translate-y-0">
+                    <div class="w-full flex flex-col lg:flex-row items-start justify-between">
+                        <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
+                            <MapItem class="size-6" /> 
+                            {t('actual.location')}
+                        </span>
+                    </div>
+                </footer>  
+            </a>
+        </div>  
+    </li>                
     {
         EXPERIENCE.map(experience => (
             <li class="mb-10 ms-6">  

@@ -30,7 +30,7 @@ const {
 </span>
 
 <time class="mb-1 text-base font-normal leading-none text-gray-800/80 dark:text-gray-300/80">
-    {date}
+    {date}  
 </time>
 
 
@@ -44,19 +44,18 @@ const {
         </span>
     </div>
 
+    
     <a href={web} class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover group overflow-hidden relative flex items-end row-start-2 sm:row-start-1 sm:col-start-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105 bg-center lg:bg-top" style={`background-image: url('${img}'); background-size: cover;`}  target="_blank" rel="noopener noreferrer">
         <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-sky-300 dark:bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
             <InfoItem class="size-5 text-[#080c1c] dark:text-sky-300"/>
         </span>
         <footer class="flex flew-row justify-between px-3 w-full absolute bg-sky-300 dark:bg-[#080c1c] text-[#080c1c] dark:text-sky-300 rounded-b-3xl transition duration-500 ease-in-out xl:translate-y-full group-hover:translate-y-0">
             <div class="w-full flex flex-col lg:flex-row items-start justify-between">
-                {place &&
-                    <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
-                        <BuildingItem class="size-6" /> 
-                        {place}
-                    </span>
-                }
-    
+                <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
+                    <BuildingItem class="size-6" /> 
+                    {place}
+                </span>
+                
                 <span class="text-pretty flex flex-row items-center justify-center p-1 gap-2 font-semibold" >
                     <MapItem class="size-6" /> 
                     {location}
