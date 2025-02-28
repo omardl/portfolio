@@ -36,12 +36,13 @@ export const languages = {
 
       'aboutme.phrase': '“The only way to be truly satisfied is to do what you think is great work. And the only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. As with all matters of the heart, you\'ll know it when you find it. - Steve Jobs.”',
   
-      'actual.date': 'May 2024 - nowadays',
+      'actual.date': 'May 2024 - February 2025',
       'actual.job': 'Web application development using Spring Boot, MySQL and Angular',
       'actual.location': 'Villagarcía de Arosa, Pontevedra',
       'actual.title': 'Jr. Software developer',
+      'actual.img': 'sedix.webp',
   
-      'badge': 'Jr. Software Developer',
+      'badge': 'Open to work',
 
       'cv.link': 'See my CV',
 
@@ -83,8 +84,7 @@ export const languages = {
       'nav.experience': 'Experience',
       'nav.projects': 'Projects',
       'nav.aboutme': 'About me',
-
-
+      
       'projects.description': 'Most of the following projects have been developed during the degree in Telecommunication Technologies Engineering.',
       'project.title.1': 'Degree Final Proyect',
       'project.description.1': 'Parameterisation of a bowel model for the simulation of a colonoscopy using the SOFA framework (Simulation Open Framework Architecture). Using a Python script, the physical properties of the bowel that model its behaviour and the characteristics of the simulation environment are assigned.',   
@@ -104,10 +104,7 @@ export const languages = {
 
       'span': 'Get in touch!',
 
-      'subtitle.p0.strongtext1': 'Junior Software Developer',
-      'subtitle.p0.text': 'at',
-      'subtitle.p0.strongtext2': 'SEDIX.',
-
+      
       'subtitle.p1.text1': 'One step away from handing in the TFG and finishing the degree in',
       'subtitle.p1.strongtext1': 'Telecommunication Technology Engineering',
       'subtitle.p1.text2': 'at',
@@ -115,6 +112,10 @@ export const languages = {
 
       'subtitle.p2.text1': 'Specialised in',
       'subtitle.p2.strongtext1': 'telematic.',
+
+      'subtitle.p3.text1': 'Almost one year of experience in',
+      'subtitle.p3.strongtext1': 'web applications development',
+      'subtitle.p3.text2': 'working with Spring Boot, MySQL and Angular.',
       
       'timezone': 'en-EN',
 
@@ -149,12 +150,13 @@ export const languages = {
 
       'aboutme.phrase': '“La única manera de estar verdaderamente satisfecho es hacer lo que crees que es un gran trabajo. Y la única manera de hacer un gran trabajo es amar lo que haces. Si aún no lo has encontrado, sigue buscando. No te conformes. Al igual que con todos los asuntos del corazón, lo sabrás cuando lo encuentres. - Steve Jobs.”',
       
-      'actual.date': 'Mayo del 2024 - actualidad',
+      'actual.date': 'Mayo del 2024 - Febrero del 2025',
       'actual.job': 'Desarrollo de aplicaciones web mediante Spring Boot, MySQL y Angular',
       'actual.location': 'Villagarcía de Arosa, Pontevedra',
       'actual.title': 'Desarrollador de Software Jr.',
+      'actual.img': 'sedix.webp',
 
-      'badge': 'Desarrollador de Software Jr.',
+      'badge': 'Disponible para trabajar',
 
       'cv.link': 'Ver mi CV',
 
@@ -216,10 +218,6 @@ export const languages = {
 
       'span': '¡Contáctame!',
 
-      'subtitle.p0.strongtext1': 'Desarrollador de Software Junior',
-      'subtitle.p0.text': 'en',
-      'subtitle.p0.strongtext2': 'SEDIX.',
-
       'subtitle.p1.text1': 'A un paso de entregar el TFG y terminar el grado en',
       'subtitle.p1.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
       'subtitle.p1.text2': 'en la',
@@ -227,6 +225,10 @@ export const languages = {
 
       'subtitle.p2.text1': 'Especializado en la',
       'subtitle.p2.strongtext1': 'rama telemática.',
+
+      'subtitle.p3.text1': 'Casi un año de experiencia en',
+      'subtitle.p3.strongtext1': 'desarrollo de aplicaciones web',
+      'subtitle.p3.text2': 'trabajando con Spring Boot, MySQL y Angular.',
 
       'timezone': 'es-ES',
 
@@ -261,12 +263,13 @@ export const languages = {
 
       'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
       
-      'actual.date': 'Maio do 2024 - actualidade',
+      'actual.date': 'Maio do 2024 - Febreiro do 2025',
       'actual.job': 'Desenvolvemento de aplicacións web mediante Spring Boot, MySQL e Angular',
       'actual.location': 'Vilagarcía de Arousa, Pontevedra',
       'actual.title': 'Desenvolvedor de Software Jr.',
+      'actual.img': 'sedix.webp',
 
-      'badge': 'Desenvolvedor de Software Jr.',
+      'badge': 'Dispoñible para traballar',
 
       'cv.link': 'Ver o meu CV',
 
@@ -328,10 +331,6 @@ export const languages = {
 
       'span': 'Contáctame!',
 
-      'subtitle.p0.strongtext1': 'Desenvolvedor de Software Junior',
-      'subtitle.p0.text': 'en',
-      'subtitle.p0.strongtext2': 'SEDIX.',
-
       'subtitle.p1.text1': 'A un paso de entregar o TFG e rematar o grao en',
       'subtitle.p1.strongtext1': 'Enxeñaría de Tecnoloxías de Telecomunicación',
       'subtitle.p1.text2': 'na',
@@ -339,6 +338,10 @@ export const languages = {
 
       'subtitle.p2.text1': 'Especializado na',
       'subtitle.p2.strongtext1': 'póla telemática.',
+
+      'subtitle.p3.text1': 'Casi un ano de experiencia en',
+      'subtitle.p3.strongtext1': 'desenvolvemento de aplicacions web',
+      'subtitle.p3.text2': 'traballando con Spring Boot, MySQL e Angular.',
 
       'timezone': 'es-ES',
 

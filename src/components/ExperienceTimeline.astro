@@ -8,6 +8,7 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const actual_img = 'sedix.webp';
 
 const EXPERIENCE = [
     {
@@ -76,7 +77,7 @@ const EXPERIENCE = [
             </div>
     
             
-            <a href={'https://sedix.es/'} class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover group overflow-hidden relative flex items-end row-start-2 sm:row-start-1 sm:col-start-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105 bg-center lg:bg-top" style={`background-image: url('${'sedix.webp'}'); background-size: contain; background-repeat: no-repeat; background-color: white;`}  target="_blank" rel="noopener noreferrer">
+            <a href={'https://sedix.es/'} class="shadow-grid-mini hover:shadow-none dark:shadow-grid hover:dark:shadow-grid-hover group overflow-hidden relative flex items-end row-start-2 sm:row-start-1 sm:col-start-2 border-[#212121] rounded-3xl transition-transform duration-300 hover:scale-105 bg-center lg:bg-top" style={`background-image: url('${actual_img}'); background-size: contain; background-repeat: no-repeat; background-color: white;`}  target="_blank" rel="noopener noreferrer">
                 <span class="absolute flex items-center justify-center size-6 ml-3 mb-1 rounded-full bg-sky-300 dark:bg-[#080c1c] animate-[tilt_1s_ease-in-out_infinite_alternate]">
                     <InfoItem class="size-5 text-[#080c1c] dark:text-sky-300"/>
                 </span>
