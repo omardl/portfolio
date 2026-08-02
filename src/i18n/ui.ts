@@ -36,12 +36,6 @@ export const languages = {
 
       'aboutme.phrase': '“The only way to be truly satisfied is to do what you think is great work. And the only way to do great work is to love what you do. If you haven\'t found it yet, keep looking. Don\'t settle. As with all matters of the heart, you\'ll know it when you find it. - Steve Jobs.”',
   
-      'actual.date': 'May 2024 - February 2025',
-      'actual.job': 'Web application development using Spring Boot, MySQL and Angular',
-      'actual.location': 'Villagarcía de Arosa, Pontevedra',
-      'actual.title': 'Jr. Software developer',
-      'actual.img': 'sedix.webp',
-  
       'badge': 'Open to work',
 
       'cv.link': 'See my CV',
@@ -52,19 +46,33 @@ export const languages = {
       'education.title.1': 'Degree in Telecommunications Technology Engineering. Specialised in telematic',
       'education.title.2': 'FP Superior in Telecommunication and Computer Systems',
 
-      'experience.date.1': 'July - august, 2023',
-      'experience.date.2': 'February - march, 2023',
-      'experience.date.3': 'May - june, 2018',
-      'experience.date.4': 'March - april, 2018',
-      'experience.job.1': 'Software developer',
-      'experience.job.2': 'Attention and assistance to stand and conference staff. Support and assistance to the staff forum organization.',
-      'experience.job.3': 'Maintenance of computer and electrical systems',
-      'experience.job.4': 'Installation and maintenance of telecommunication systems in dwellings and buildings',
-      'experience.place.2': 'University of Vigo',
-      'experience.title.1': 'Internship in the Degree in Telecommunications Technology Engineering Degree',
-      'experience.title.2': 'Collaborator of the Technological Employment Forum of the University of Vigo.',
-      'experience.title.3': 'Internship as a Computer Systems Technician',
-      'experience.title.4': 'Internship as a Telecommunication Systems Technician',
+      'experience.date.1': 'March - april, 2018',
+      'experience.job.1': 'Development of automation scripts using Python and implementation of improvements across various projects using technologies such as Django, Node.js and Angular; as part of the internship for the Bachelor’s Degree in Telecommunications Engineering.',
+      'experience.title.1': 'Internship as a Telecommunication Systems Technician',
+
+      'experience.date.2': 'May - june, 2018',
+      'experience.job.2': 'Maintenance of computer and electrical systems',
+      'experience.title.2': 'Internship as a Computer Systems Technician',
+      
+      'experience.date.3': 'February - march, 2023',
+      'experience.job.3': 'Attention and assistance to stand and conference staff. Support and assistance to the staff forum organization.',
+      'experience.place.3': 'University of Vigo',
+      'experience.title.3': 'Collaborator of the Technological Employment Forum of the University of Vigo.',
+      
+      'experience.date.4': 'July - august, 2023',
+      'experience.job.4': 'Development of automation scripts using Python and implementation of improvements across various projects using technologies such as Django, NodeJS and Angular; as part of the internship for the Bachelor’s degree in Telecommunications Engineering.',
+      'experience.title.4': 'Jr. Software developer',
+      
+      'experience.date.5': 'May 2024 - February 2025',
+      'experience.job.5': 'Development and maintenance of web application backends implementing REST APIs, authentication and authorisation systems, data access and persistence, technical documentation and service integration using Java, Spring Framework, Spring Boot and MySQL. Occasional support for the frontend team in the development and maintenance of features using Angular.',
+      'experience.location.5': 'Villagarcía de Arosa, Pontevedra',
+      'experience.title.5': 'Jr. Software developer',
+
+      'experience.date.6': 'June 2025 - June 2026',
+      'experience.job.6': 'Development, maintenance and enhancement of MES solutions using TrakSYS for industrial environments, implementing functional improvements, system migrations and the development of customised web pages and reports using C# and SQL Server.',
+      'experience.title.6': 'MES Consultant & Developer Jr.',
+
+      'actual.img': 'sedix.webp',
 
       'footer.text1': 'Made with',
       'footer.text2': 'using',
@@ -104,18 +112,16 @@ export const languages = {
 
       'span': 'Get in touch!',
 
-      
-      'subtitle.p1.text1': 'One step away from handing in the TFG and finishing the degree in',
-      'subtitle.p1.strongtext1': 'Telecommunication Technology Engineering',
-      'subtitle.p1.text2': 'at',
-      'subtitle.p1.strongtext2': 'University of Vigo.',
+      'subtitle.p1.strongtext1': 'Software developer',
+      'subtitle.p1.text1': 'with experience in web application development and the digitization of industrial environments using technologies such as',
+      'subtitle.p1.strongtext2': 'Spring Boot, Angular, SQL Server, C#, and .NET.',
 
-      'subtitle.p2.text1': 'Specialised in',
-      'subtitle.p2.strongtext1': 'telematic.',
+      'subtitle.p2.text1': 'Graduate in',
+      'subtitle.p2.strongtext1': 'Telecommunication Technology Engineering',
+      'subtitle.p2.text2': 'at University of Vigo, specialised in',
+      'subtitle.p2.strongtext2': 'telematic.',
 
-      'subtitle.p3.text1': 'Almost one year of experience in',
-      'subtitle.p3.strongtext1': 'web applications development',
-      'subtitle.p3.text2': 'working with Spring Boot, MySQL and Angular.',
+      'subtitle.p3.text1': 'A proactive, responsible professional committed to continuous learning.',
       
       'timezone': 'en-EN',
 
@@ -149,12 +155,6 @@ export const languages = {
       'aboutme.p5.strongtext2': 'realmente marca la diferencia.',
 
       'aboutme.phrase': '“La única manera de estar verdaderamente satisfecho es hacer lo que crees que es un gran trabajo. Y la única manera de hacer un gran trabajo es amar lo que haces. Si aún no lo has encontrado, sigue buscando. No te conformes. Al igual que con todos los asuntos del corazón, lo sabrás cuando lo encuentres. - Steve Jobs.”',
-      
-      'actual.date': 'Mayo del 2024 - Febrero del 2025',
-      'actual.job': 'Desarrollo de aplicaciones web mediante Spring Boot, MySQL y Angular',
-      'actual.location': 'Villagarcía de Arosa, Pontevedra',
-      'actual.title': 'Desarrollador de Software Jr.',
-      'actual.img': 'sedix.webp',
 
       'badge': 'Disponible para trabajar',
 
@@ -165,20 +165,32 @@ export const languages = {
       'education.place.1': 'Universidad de Vigo',
       'education.title.1': 'Grado en Ingeniería de Tecnologías de Telecomunicación. Especialización en la rama de Telemática',
       'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
-
-      'experience.date.1': 'Julio - agosto, 2023',
-      'experience.date.2': 'Febrero - marzo, 2023',
-      'experience.date.3': 'Mayo - junio, 2018',
-      'experience.date.4': 'Marzo - abril, 2018',
-      'experience.job.1': 'Desarrollador de software',
-      'experience.job.2': 'Atención y asistencia al personal de los estands y conferencias. Apoyo y ayuda a la organización del foro.',
-      'experience.job.3': 'Mantenimiento de sistemas informáticos y eléctricos',
-      'experience.job.4': 'Instalación y mantenimiento de sistemas de telecomunicación en viviendas y edificios',
-      'experience.place.2': 'Universidad de Vigo',
-      'experience.title.1': 'Prácticas del Grado en Ingeniería de Tecnologías de Telecomunicación',
-      'experience.title.2': 'Colaborador del Foro Tecnológico de Empleo de la Universidad de Vigo',
-      'experience.title.3': 'Prácticas como técnico en Sistemas Informáticos',
-      'experience.title.4': 'Prácticas como técnico en Sistemas de Telecomunicación',
+      
+      'experience.date.1': 'Marzo - abril, 2018',
+      'experience.job.1': 'Instalación y mantenimiento de sistemas de telecomunicación en viviendas y edificios',
+      'experience.title.1': 'Prácticas como técnico en Sistemas de Telecomunicación',
+      
+      'experience.date.2': 'Mayo - junio, 2018',
+      'experience.job.2': 'Mantenimiento de sistemas informáticos y eléctricos',
+      'experience.title.2': 'Prácticas como técnico en Sistemas Informáticos',
+      
+      'experience.date.3': 'Febrero - marzo, 2023',
+      'experience.job.3': 'Atención y asistencia al personal de los estands y conferencias. Apoyo y ayuda a la organización del foro.',
+      'experience.place.3': 'Universidad de Vigo',
+      'experience.title.3': 'Colaborador del Foro Tecnológico de Empleo de la Universidad de Vigo',
+      
+      'experience.date.4': 'Julio - agosto, 2023',
+      'experience.job.4': 'Desarrollo de scripts de automatización con Python e implementación de mejoras en diferentes proyectos utilizando tecnologías como Django, NodeJS o Angular; como parte de las prácticas del Grado en Ingeniería de Tecnologías de Telecomunicación.',
+      'experience.title.4': 'Desarrollador de Software Jr.',
+      
+      'experience.date.5': 'Mayo del 2024 - Febrero del 2025',
+      'experience.job.5': 'Desarrollo y mantenimiento del backend de aplicaciones web implementando APIs REST, sistemas de autenticación y autorización, acceso y persistencia de datos, documentación técnica e integración de servicios utilizando Java, Spring Framework, Spring Boot y MySQL. Apoyo puntual al equipo de frontend en el desarrollo y mantenimiento de funcionalidades mediante Angular.',
+      'experience.location.5': 'Villagarcía de Arosa, Pontevedra',
+      'experience.title.5': 'Desarrollador de Software Jr.',
+      
+      'experience.date.6': 'Junio 2025, Junio - 2026',
+      'experience.job.6': 'Desarrollo, mantenimiento y evolución de soluciones MES con TrakSYS para entornos industriales, implementando mejoras funcionales, migraciones de sistemas y desarrollo de páginas web e informes personalizados mediante C# y SQL Server.',
+      'experience.title.6': 'Consultor y desarrollador MES Jr.',
 
       'footer.text1': 'Hecho con',
       'footer.text2': 'usando',
@@ -218,17 +230,16 @@ export const languages = {
 
       'span': '¡Contáctame!',
 
-      'subtitle.p1.text1': 'A un paso de entregar el TFG y terminar el grado en',
-      'subtitle.p1.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
-      'subtitle.p1.text2': 'en la',
-      'subtitle.p1.strongtext2': 'Universidad de Vigo.',
+      'subtitle.p1.strongtext1': 'Desarrollador de software',
+      'subtitle.p1.text1': 'con experiencia en desarrollo de aplicaciones web y digitalización de entornos industriales utilizando tecnologías como',
+      'subtitle.p1.strongtext2': 'Spring Boot, Angular, SQL Server, C# y .NET.',
 
-      'subtitle.p2.text1': 'Especializado en la',
-      'subtitle.p2.strongtext1': 'rama telemática.',
+      'subtitle.p2.text1': 'Graduado en',
+      'subtitle.p2.strongtext1': 'Ingeniería de Tecnologías de Telecomunicación',
+      'subtitle.p2.text2': 'en la Universidad de Vigo, especializado en la rama',
+      'subtitle.p2.strongtext2': 'telemática.',
 
-      'subtitle.p3.text1': 'Casi un año de experiencia en',
-      'subtitle.p3.strongtext1': 'desarrollo de aplicaciones web',
-      'subtitle.p3.text2': 'trabajando con Spring Boot, MySQL y Angular.',
+      'subtitle.p3.text1': 'Profesional proactivo, responsable y orientado al aprendizaje continuo.',
 
       'timezone': 'es-ES',
 
@@ -262,12 +273,6 @@ export const languages = {
       'aboutme.p5.strongtext2': 'derradeiramente marca a diferencia.',
 
       'aboutme.phrase': '“A única maneira de estar derradeiramente satisfeito é facer o que cres que é un gran traballo. E a única maneira de facer un gran traballo é amar o que fas. Se aínda non o atopas, segue na súa procura. Non debes conformarte. Ao igual que con todos os asuntos do corazón, saberalo cando o atopes. - Steve Jobs.”',
-      
-      'actual.date': 'Maio do 2024 - Febreiro do 2025',
-      'actual.job': 'Desenvolvemento de aplicacións web mediante Spring Boot, MySQL e Angular',
-      'actual.location': 'Vilagarcía de Arousa, Pontevedra',
-      'actual.title': 'Desenvolvedor de Software Jr.',
-      'actual.img': 'sedix.webp',
 
       'badge': 'Dispoñible para traballar',
 
@@ -279,19 +284,31 @@ export const languages = {
       'education.title.1': 'Grao en Enxeñaría de Tecnoloxías de Telecomunicación. Especialización na póla de Telemática',
       'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
 
-      'experience.date.1': 'Xullo - agosto, 2023',
-      'experience.date.2': 'Febreiro - marzo, 2023',
-      'experience.date.3': 'Maio - xuño, 2018',
-      'experience.date.4': 'Marzo - abril, 2018',
-      'experience.job.1': 'Desenvolvedor de software',
-      'experience.job.2': 'Atención e asistencia ao persoal dos stands e conferencias. Apoio e axuda á organización do foro.',
-      'experience.job.3': 'Mentemento de sistemas informáticos e eléctricos',
-      'experience.job.4': 'Instalación e mantemento de sistemas de telecomunicación en vivendas e edificios',
-      'experience.place.2': 'Universidade de Vigo',
-      'experience.title.1': 'Prácticas do Grao en Enxeñaría de Tecnoloxías de Telecomunicación',
-      'experience.title.2': 'Colaborador do Foro Tecnolóxico de Emprego da Universidade de Vigo',
-      'experience.title.3': 'Prácticas como técnico en Sistemas Informáticos',
-      'experience.title.4': 'Prácticas como técnico en Sistemas de Telecomunicación',
+      'experience.date.1': 'Marzo - abril, 2018',
+      'experience.job.1': 'Instalación e mantemento de sistemas de telecomunicación en vivendas e edificios.',
+      'experience.title.1': 'Prácticas como técnico en Sistemas de Telecomunicación',
+      
+      'experience.date.2': 'Maio - xuño, 2018',
+      'experience.job.2': 'Mentemento de sistemas informáticos e eléctricos.',
+      'experience.title.2': 'Prácticas como técnico en Sistemas Informáticos',
+      
+      'experience.date.3': 'Febreiro - marzo, 2023',
+      'experience.job.3': 'Atención e asistencia ao persoal dos stands e conferencias. Apoio e axuda á organización do foro.',
+      'experience.place.3': 'Universidade de Vigo',
+      'experience.title.3': 'Colaborador do Foro Tecnolóxico de Emprego da Universidade de Vigo',
+      
+      'experience.date.4': 'Xullo - agosto, 2023',
+      'experience.job.4': 'Desenvolvemento de scripts de automatización con Python e implementación de melloras en varios proxectos empregando tecnoloxías como Django, Node.js e Angular; como parte das prácticas profesionais do Grao en Enxeñaría de Tecnoloxías de Telecomunicación.',
+      'experience.title.4': 'Desenvolvedor de Software Jr.',
+      
+      'experience.date.5': 'Maio do 2024 - Febreiro do 2025',
+      'experience.job.5': 'Desenvolvemento e mantemento de back-ends de aplicacións web, implementando APIs REST, sistemas de autenticación e autorización, acceso e persistencia de datos, documentación técnica e integración de servizos empregando Java, o Spring Framework, Spring Boot e MySQL. Apoio ocasional ao equipo de frontend no desenvolvemento e mantemento de funcionalidades empregando Angular.',
+      'experience.location.5': 'Vilagarcía de Arousa, Pontevedra',
+      'experience.title.5': 'Desenvolvedor de Software Jr.',
+      
+      'experience.date.6': 'Xuño do 2025 - Xuño do 2026',
+      'experience.job.6': 'Desenvolvemento, mantemento e mellora de solucións MES con TrakSYS para contornos industriais, implementando melloras funcionais, migracións de sistemas e o desenvolvemento de páxinas web e informes personalizados con C# e SQL Server.',
+      'experience.title.6': 'Consultor e desenvolvedor MES Jr.',
 
       'footer.text1': 'Feito con',
       'footer.text2': 'usando',
@@ -331,17 +348,17 @@ export const languages = {
 
       'span': 'Contáctame!',
 
-      'subtitle.p1.text1': 'A un paso de entregar o TFG e rematar o grao en',
-      'subtitle.p1.strongtext1': 'Enxeñaría de Tecnoloxías de Telecomunicación',
-      'subtitle.p1.text2': 'na',
-      'subtitle.p1.strongtext2': 'Universidade de Vigo.',
+      'subtitle.p1.strongtext1': 'Desenvolvedor de software',
+      'subtitle.p1.text1': 'con experiencia no desenvolvemento de aplicacions web e na dixitalización de contornos industriais empregando tecnoloxías como',
+      'subtitle.p1.strongtext2': 'Spring Boot, Angular, SQL Server, C# e .NET.',
 
-      'subtitle.p2.text1': 'Especializado na',
-      'subtitle.p2.strongtext1': 'póla telemática.',
+      'subtitle.p2.text1': 'Licenciado en',
+      'subtitle.p2.strongtext1': 'Enxeñaría de Tecnoloxías de Telecomunicación',
+      'subtitle.p2.text2': 'pola Universidade de Vigo, especializado na pola',
+      'subtitle.p2.strongtext2': 'telemática.',
 
-      'subtitle.p3.text1': 'Casi un ano de experiencia en',
-      'subtitle.p3.strongtext1': 'desenvolvemento de aplicacions web',
-      'subtitle.p3.text2': 'traballando con Spring Boot, MySQL e Angular.',
+
+      'subtitle.p3.text1': 'Profesional proactivo e responsable comprometido co aprendizaxe continuo.',
 
       'timezone': 'es-ES',
 
