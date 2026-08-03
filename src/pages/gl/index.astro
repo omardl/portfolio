@@ -30,7 +30,7 @@ const t = useTranslations(lang);
 
 <Layout 
 	title="Omar Delgado López - porfolio"
-	description="Emprega a Omar, futuro graduado para finais de xuño de 2024 en Enxeñaría de Tecnoloxías de Telecomunicación na Universidade de Vigo."
+	description="Graduado en Enxeñaría de Tecnoloxías de Telecomunicación na Universidade de Vigo."
 >
 	<main>
 		<section id="home" class="mx-auto w-18/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] pt-28">
@@ -64,22 +64,12 @@ const t = useTranslations(lang);
 				/>	
 				
 			</div>
-			<a href="#education" class="hidden xl:flex">
+			<a href="#experience" class="hidden xl:flex">
 				<div class="-mt-2 absolute flex justify-center bottom-1rem left-1/2 mr-2 w-6 h-10 px-2 py-3 border border-2 border-[#212121] dark:border-white rounded-full opacity-75">
 					<div class="rounded-full mt-[0.5px] bg-[#212121] dark:bg-white w-[3px] h-[5px] scroll-animation">
 					</div>
 				</div>
 			</a>
-			
-		</section>
-
-		<section id="education" class="mx-auto w-18/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] pt-24">
-			
-				<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold -ml-[5px] mb-5 flex gap-x-2 items-center">
-					<BooksIcon class="size-8"/>
-					{t('nav.education')}
-				</h2>
-				<Learning />
 			
 		</section>
 
@@ -90,6 +80,16 @@ const t = useTranslations(lang);
 			</h2>
 			
 			<Experiencie />
+		</section>
+
+		<section id="education" class="mx-auto w-18/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] pt-24">
+			
+				<h2 class="text-3xl text-gray-800/80 dark:text-sky-300/80 duration-1000 font-semibold -ml-[5px] mb-5 flex gap-x-2 items-center">
+					<BooksIcon class="size-8"/>
+					{t('nav.education')}
+				</h2>
+				<Learning />
+			
 		</section>
 
 		<section id="projects" class="mx-auto w-18/20 md:w-[700px] lg:w-[980px] xl:w-[1240px] pt-24">

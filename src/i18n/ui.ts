@@ -23,7 +23,7 @@ export const languages = {
       'aboutme.p3.text2': 'learning from the best and helping them motivates me and',
       'aboutme.p3.strongtext2': 'drives me to do my best.',
 
-      'aboutme.p4.text1': 'Throughout my academic training and internships, in every project and teamwork, I have learned the value of',
+      'aboutme.p4.text1': 'Throughout my experience academic training, in every project and teamwork, I have learned the value of',
       'aboutme.p4.strongtext1': 'collaborating side by side with others',
       'aboutme.p4.text2': 'and the importance of',
       'aboutme.p4.strongtext2': 'surpassing oneself',
@@ -40,18 +40,25 @@ export const languages = {
 
       'cv.link': 'See my CV',
 
-      'education.date.1': 'Currently...',
-      'education.date.2': 'Finalised in 2019',
-      'education.place.1': 'University of Vigo',
-      'education.title.1': 'Degree in Telecommunications Technology Engineering. Specialised in telematic',
-      'education.title.2': 'FP Superior in Telecommunication and Computer Systems',
+      
+      'education.date.1': 'Finalised in 2019',
+      'education.title.1': 'FP Superior in Telecommunication and Computer Systems',
+      
+      'education.date.2': 'Finalised in 2025',
+      'education.place.2': 'University of Vigo',
+      'education.title.2': 'Degree in Telecommunications Technology Engineering. Specialised in telematic',
+      
+      'education.date.3': 'October 2026 - June 2027',
+      'education.place.3': 'University of Camilo José Cela',
+      'education.title.3': 'Master’s Degree in Cybersecurity',
+      'education.location.3': 'Remotely',
 
       'experience.date.1': 'March - april, 2018',
       'experience.job.1': 'Development of automation scripts using Python and implementation of improvements across various projects using technologies such as Django, Node.js and Angular; as part of the internship for the Bachelor’s Degree in Telecommunications Engineering.',
       'experience.title.1': 'Internship as a Telecommunication Systems Technician',
 
       'experience.date.2': 'May - june, 2018',
-      'experience.job.2': 'Maintenance of computer and electrical systems',
+      'experience.job.2': 'Maintenance of computer and electrical systems.',
       'experience.title.2': 'Internship as a Computer Systems Technician',
       
       'experience.date.3': 'February - march, 2023',
@@ -143,7 +150,7 @@ export const languages = {
       'aboutme.p3.text2': 'aprendiendo de los mejores y ayudando me motiva y',
       'aboutme.p3.strongtext2': 'me impulsa a dar lo mejor de mi.',
 
-      'aboutme.p4.text1': 'A lo largo de mi formación académica y las prácticas, en cada proyecto realizado y cada trabajo en equipo, he aprendido el valor de',
+      'aboutme.p4.text1': 'A lo largo de mi experiencia y mi formación académica, en cada proyecto realizado y cada trabajo en equipo, he aprendido el valor de',
       'aboutme.p4.strongtext1': 'colaborar codo a codo con los demás',
       'aboutme.p4.text2': 'y la importancia de',
       'aboutme.p4.strongtext2': 'superarse a uno mismo',
@@ -160,18 +167,25 @@ export const languages = {
 
       'cv.link': 'Ver mi CV',
 
-      'education.date.1': 'Actualmente...',
-      'education.date.2': 'Finalizado en 2019',
-      'education.place.1': 'Universidad de Vigo',
-      'education.title.1': 'Grado en Ingeniería de Tecnologías de Telecomunicación. Especialización en la rama de Telemática',
-      'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
+      'education.date.1': 'Finalizado en 2019',
+      'education.title.1': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
       
+      'education.date.2': 'Finalizado en 2025',
+      'education.place.2': 'Universidad de Vigo',
+      'education.title.2': 'Grado en Ingeniería de Tecnologías de Telecomunicación. Especialización en la rama de Telemática',
+      
+      
+      'education.date.3': 'Octubre 2026 - Junio 2027',
+      'education.place.3': 'Universidad Camilo José Cela',
+      'education.title.3': 'Máster en Ciberseguridad',
+      'education.location.3': 'En remoto',
+
       'experience.date.1': 'Marzo - abril, 2018',
-      'experience.job.1': 'Instalación y mantenimiento de sistemas de telecomunicación en viviendas y edificios',
+      'experience.job.1': 'Instalación y mantenimiento de sistemas de telecomunicación en viviendas y edificios.',
       'experience.title.1': 'Prácticas como técnico en Sistemas de Telecomunicación',
       
       'experience.date.2': 'Mayo - junio, 2018',
-      'experience.job.2': 'Mantenimiento de sistemas informáticos y eléctricos',
+      'experience.job.2': 'Mantenimiento de sistemas informáticos y eléctricos.',
       'experience.title.2': 'Prácticas como técnico en Sistemas Informáticos',
       
       'experience.date.3': 'Febrero - marzo, 2023',
@@ -183,12 +197,12 @@ export const languages = {
       'experience.job.4': 'Desarrollo de scripts de automatización con Python e implementación de mejoras en diferentes proyectos utilizando tecnologías como Django, NodeJS o Angular; como parte de las prácticas del Grado en Ingeniería de Tecnologías de Telecomunicación.',
       'experience.title.4': 'Desarrollador de Software Jr.',
       
-      'experience.date.5': 'Mayo del 2024 - Febrero del 2025',
+      'experience.date.5': 'Mayo 2024 - Febrero 2025',
       'experience.job.5': 'Desarrollo y mantenimiento del backend de aplicaciones web implementando APIs REST, sistemas de autenticación y autorización, acceso y persistencia de datos, documentación técnica e integración de servicios utilizando Java, Spring Framework, Spring Boot y MySQL. Apoyo puntual al equipo de frontend en el desarrollo y mantenimiento de funcionalidades mediante Angular.',
       'experience.location.5': 'Villagarcía de Arosa, Pontevedra',
       'experience.title.5': 'Desarrollador de Software Jr.',
       
-      'experience.date.6': 'Junio 2025, Junio - 2026',
+      'experience.date.6': 'Junio 2025 - Junio 2026',
       'experience.job.6': 'Desarrollo, mantenimiento y evolución de soluciones MES con TrakSYS para entornos industriales, implementando mejoras funcionales, migraciones de sistemas y desarrollo de páginas web e informes personalizados mediante C# y SQL Server.',
       'experience.title.6': 'Consultor y desarrollador MES Jr.',
 
@@ -278,11 +292,17 @@ export const languages = {
 
       'cv.link': 'Ver o meu CV',
 
-      'education.date.1': 'Actualmente...',
-      'education.date.2': 'Rematado en 2019',
-      'education.place.1': 'Universidade de Vigo',
-      'education.title.1': 'Grao en Enxeñaría de Tecnoloxías de Telecomunicación. Especialización na póla de Telemática',
-      'education.title.2': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
+      'education.date.1': 'Rematado en 2019',
+      'education.title.1': 'FP Superior en Sistemas de Telecomunicación e Informáticos',
+    
+      'education.date.2': 'Rematado en 2025',
+      'education.place.2': 'Universidade de Vigo',
+      'education.title.2': 'Grao en Enxeñaría de Tecnoloxías de Telecomunicación. Especialización na póla de Telemática',
+      
+      'education.date.3': 'Outubro 2026- Xuño 2027',
+      'education.place.3': 'Universidade Camilo José Cela',
+      'education.title.3': 'Mestrado en Ciberseguridade',
+      'education.location.3': 'En remoto',
 
       'experience.date.1': 'Marzo - abril, 2018',
       'experience.job.1': 'Instalación e mantemento de sistemas de telecomunicación en vivendas e edificios.',
@@ -301,12 +321,12 @@ export const languages = {
       'experience.job.4': 'Desenvolvemento de scripts de automatización con Python e implementación de melloras en varios proxectos empregando tecnoloxías como Django, Node.js e Angular; como parte das prácticas profesionais do Grao en Enxeñaría de Tecnoloxías de Telecomunicación.',
       'experience.title.4': 'Desenvolvedor de Software Jr.',
       
-      'experience.date.5': 'Maio do 2024 - Febreiro do 2025',
-      'experience.job.5': 'Desenvolvemento e mantemento de back-ends de aplicacións web, implementando APIs REST, sistemas de autenticación e autorización, acceso e persistencia de datos, documentación técnica e integración de servizos empregando Java, o Spring Framework, Spring Boot e MySQL. Apoio ocasional ao equipo de frontend no desenvolvemento e mantemento de funcionalidades empregando Angular.',
+      'experience.date.5': 'Maio 2024 - Febreiro 2025',
+      'experience.job.5': 'Desenvolvemento e mantemento do backend de aplicacións web, implementando APIs REST, sistemas de autenticación e autorización, acceso e persistencia de datos, documentación técnica e integración de servizos empregando Java, o Spring Framework, Spring Boot e MySQL. Apoio ocasional ao equipo de frontend no desenvolvemento e mantemento de funcionalidades empregando Angular.',
       'experience.location.5': 'Vilagarcía de Arousa, Pontevedra',
       'experience.title.5': 'Desenvolvedor de Software Jr.',
       
-      'experience.date.6': 'Xuño do 2025 - Xuño do 2026',
+      'experience.date.6': 'Xuño 2025 - Xuño 2026',
       'experience.job.6': 'Desenvolvemento, mantemento e mellora de solucións MES con TrakSYS para contornos industriais, implementando melloras funcionais, migracións de sistemas e o desenvolvemento de páxinas web e informes personalizados con C# e SQL Server.',
       'experience.title.6': 'Consultor e desenvolvedor MES Jr.',
 
